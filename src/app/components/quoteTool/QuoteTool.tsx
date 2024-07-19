@@ -39,6 +39,7 @@ const companies = [
 
 const QuoteTool: React.FC = () => {
     const [activeIndex, setActiveIndex] = useState<number>(0);
+    const [activeTitle, setActiveTitle] = useState<string>(companies[0].title);
 
     const handleNavLeft = () => {
         setActiveIndex((prevIndex) => (prevIndex > 0 ? prevIndex - 1 : companies.length - 1));
@@ -50,7 +51,7 @@ const QuoteTool: React.FC = () => {
 
     return (
         <QuoteToolWrapper>
-            <CompaniesList companies={companies} activeIndex={activeIndex} />
+            <CompaniesList companies={companies} activeIndex={activeIndex} setActiveTitle={setActiveTitle} />
             <Pointer />
             <ElementWrapper>
                 <ChildWrapper>
@@ -59,7 +60,7 @@ const QuoteTool: React.FC = () => {
                         <div>Some text</div>
                     </LeftColumn>
                     <RightColumn>
-                        <Title>Title</Title>
+                        <Title>{activeTitle}</Title>
                         <Paragraph>
                             This is a paragraph with some content. Lorem ipsum dolor sit amet,
                             consectetur adipiscing elit.

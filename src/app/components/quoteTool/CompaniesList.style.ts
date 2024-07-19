@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 interface CompaniesListWrapperProps {
     activeIndex: number;
+    itemWidth: number;
 }
 
 interface CompanyProps {
@@ -14,7 +15,7 @@ export const CompaniesListWrapper = styled.div<CompaniesListWrapperProps>`
   position: relative;
   overflow: hidden; /* Ensure the overflow is hidden to make the list move smoothly */
   width: 100%;
-  transform: ${({ activeIndex }) => `translateX(-${activeIndex * 100}px)`};
+  transform: ${({ activeIndex, itemWidth }) => `translateX(-${activeIndex * itemWidth}px)`};
   transition: transform 0.5s ease;
 `;
 
@@ -34,7 +35,7 @@ export const Company = styled.div<CompanyProps>`
 
 export const CompanyImage = styled.img`
   width: auto; /* Adjust as needed */
-  height: 70px; /* Adjust as needed */
+  height: 65px; /* Adjust as needed */
   object-fit: cover;
 `;
 
