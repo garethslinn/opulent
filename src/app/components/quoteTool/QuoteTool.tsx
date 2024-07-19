@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ButtonConst as BUTTON_CONSTANTS } from '../Button/Button.const';
 import {
     QuoteToolWrapper,
@@ -50,14 +50,19 @@ const QuoteTool: React.FC = () => {
         setActiveIndex((prevIndex) => (prevIndex < companies.length - 1 ? prevIndex + 1 : 0));
     };
 
-    React.useEffect(() => {
+    useEffect(() => {
         setActiveTitle(companies[activeIndex].title);
         setActiveDescription(companies[activeIndex].description);
     }, [activeIndex]);
 
     return (
         <QuoteToolWrapper>
-            <CompaniesList companies={companies} activeIndex={activeIndex} setActiveTitle={setActiveTitle} />
+            <CompaniesList
+                companies={companies}
+                activeIndex={activeIndex}
+                setActiveTitle={setActiveTitle}
+                setActiveDescription={setActiveDescription}
+            />
             <Pointer />
             <ElementWrapper>
                 <ChildWrapper>
