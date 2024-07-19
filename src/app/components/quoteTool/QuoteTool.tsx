@@ -20,26 +20,27 @@ import Button from "@/app/components/Button/Button";
 import CompaniesList from "@/app/components/QuoteTool/CompaniesList"; // Adjust the path as needed
 
 const companies = [
-    { title: "AIG", image: "/assets/images/brands/aig.svg" },
-    { title: "AKQA", image: "/assets/images/brands/akqa.svg" },
-    { title: "Argos", image: "/assets/images/brands/argos.svg" },
-    { title: "BP", image: "/assets/images/brands/bp.svg" },
-    { title: "BT", image: "/assets/images/brands/bt.svg" },
-    { title: "Cisco", image: "/assets/images/brands/cisco.svg" },
-    { title: "Grant Thornton", image: "/assets/images/brands/grant_thornton.svg" },
-    { title: "Logica", image: "/assets/images/brands/Logica.svg" },
-    { title: "NBrown", image: "/assets/images/brands/nbrown.svg" },
-    { title: "Premier Foods", image: "/assets/images/brands/premier_foods.svg" },
-    { title: "Sainsburys", image: "/assets/images/brands/sainsburys.svg" },
-    { title: "Tesco", image: "/assets/images/brands/tesco.svg" },
-    { title: "Uswitch", image: "/assets/images/brands/uswitch.svg" },
-    { title: "William Hill", image: "/assets/images/brands/william_hill.svg" },
+    { title: "AIG", image: "/assets/images/brands/aig.svg", description: "AIG is a leading global insurance organization." },
+    { title: "AKQA", image: "/assets/images/brands/akqa.svg", description: "AKQA is an ideas and innovation company." },
+    { title: "Argos", image: "/assets/images/brands/argos.svg", description: "Argos is a British catalog retailer." },
+    { title: "BP", image: "/assets/images/brands/bp.svg", description: "BP is a British multinational oil and gas company." },
+    { title: "BT", image: "/assets/images/brands/bt.svg", description: "BT is a British multinational telecommunications company." },
+    { title: "Cisco", image: "/assets/images/brands/cisco.svg", description: "Cisco is a multinational technology conglomerate." },
+    { title: "Grant Thornton", image: "/assets/images/brands/grant_thornton.svg", description: "Grant Thornton is one of the world's largest professional services networks." },
+    { title: "Logica", image: "/assets/images/brands/Logica.svg", description: "Logica was a multinational IT and management consultancy company." },
+    { title: "NBrown", image: "/assets/images/brands/nbrown.svg", description: "N Brown Group is a British home shopping company." },
+    { title: "Premier Foods", image: "/assets/images/brands/premier_foods.svg", description: "Premier Foods plc is a British food manufacturer." },
+    { title: "Sainsburys", image: "/assets/images/brands/sainsburys.svg", description: "Sainsbury's is the second largest chain of supermarkets in the United Kingdom." },
+    { title: "Tesco", image: "/assets/images/brands/tesco.svg", description: "Tesco is a British multinational groceries and general merchandise retailer." },
+    { title: "Uswitch", image: "/assets/images/brands/uswitch.svg", description: "Uswitch is a UK-based price comparison service and switching website." },
+    { title: "William Hill", image: "/assets/images/brands/william_hill.svg", description: "William Hill is a bookmaker based in London, England." },
     // Add more companies as needed
 ];
 
 const QuoteTool: React.FC = () => {
     const [activeIndex, setActiveIndex] = useState<number>(0);
     const [activeTitle, setActiveTitle] = useState<string>(companies[0].title);
+    const [activeDescription, setActiveDescription] = useState<string>(companies[0].description);
 
     const handleNavLeft = () => {
         setActiveIndex((prevIndex) => (prevIndex > 0 ? prevIndex - 1 : companies.length - 1));
@@ -48,6 +49,11 @@ const QuoteTool: React.FC = () => {
     const handleNavRight = () => {
         setActiveIndex((prevIndex) => (prevIndex < companies.length - 1 ? prevIndex + 1 : 0));
     };
+
+    React.useEffect(() => {
+        setActiveTitle(companies[activeIndex].title);
+        setActiveDescription(companies[activeIndex].description);
+    }, [activeIndex]);
 
     return (
         <QuoteToolWrapper>
@@ -61,10 +67,7 @@ const QuoteTool: React.FC = () => {
                     </LeftColumn>
                     <RightColumn>
                         <Title>{activeTitle}</Title>
-                        <Paragraph>
-                            This is a paragraph with some content. Lorem ipsum dolor sit amet,
-                            consectetur adipiscing elit.
-                        </Paragraph>
+                        <Paragraph>{activeDescription}</Paragraph>
                         <Counter>
                             <div>1/20</div>
                             <Line />

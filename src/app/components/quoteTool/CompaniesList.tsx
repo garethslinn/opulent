@@ -49,7 +49,6 @@ const CompaniesList: React.FC<CompaniesListProps> = ({ companies, activeIndex, s
             {companies.map((company, index) => (
                 <Company key={index} active={index === activeIndex}>
                     <CompanyImage src={company.image} alt={company.title} />
-                    <CompanyTitle>{company.title}</CompanyTitle>
                 </Company>
             ))}
         </CompaniesListWrapper>
