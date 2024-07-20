@@ -41,19 +41,14 @@ export const CompaniesListWrapper = styled.div<CompaniesListWrapperProps>`
 
 export const Company = styled.div<CompanyProps>`
   flex: 0 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
   background-color: ${({ active }) => (active ? '#fff' : 'transparent')};
   border: ${({ active }) => (active ? '2px solid #333' : 'none')};
-  padding: 5px;
+  padding: 0 10px;
   border-radius: 5px;
   transition: background-color 0.3s, border 0.3s;
-  width: 100px; /* Set fixed width */
 
   @media (max-width: 900px) {
-    width: 50px; 
+    width: 75px; 
   }
 `;
 
