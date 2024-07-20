@@ -1,14 +1,10 @@
 import styled from 'styled-components';
 
 export const QuoteToolWrapper = styled.div`
-  background: #3F404B;
+  background: var(--color-counter-background);
   color: #f1f1f1;
   min-height: 600px;
   position: relative;
-
-  @media (max-width: 900px) {
-    //width: 100vw;
-  }
 `;
 
 export const ElementWrapper = styled.div`

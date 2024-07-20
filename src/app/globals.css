@@ -2,12 +2,18 @@
   /* Colors */
   --color-primary: black;
   --color-secondary: #0070f3;
-  --color-background: #ffffff;
-  --color-text: #333333;
+  --color-background: #fff;
+  --color-white: #fff;
+  --color-black: #000;
+  --color-text: #333;
+  --color-company-background: #505275;
+  --color-company-active-border: #333;
+  --color-company-active-background: #fff;
+  --color-counter-background: #3F404B;
 
   /* Font sizes */
-  --font-size-title: 1.5rem; /* equivalent to 24px */
-  --font-size-paragraph: 1rem; /* equivalent to 16px */
+  --font-size-title: 1.5rem;
+  --font-size-paragraph: 1rem;
 
   /* Spacing */
   --spacing-padding: 20px;
@@ -28,40 +34,9 @@
   --icon-large: 180px;
 
   /* Other */
-  --border-radius: 0.25rem; /* 4px */
+  --border-radius: 0.25rem;
 }
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
 
-    --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
-    --secondary-glow: linear-gradient(
-      to bottom right,
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0.3)
-    );
-
-    --tile-start-rgb: 2, 13, 46;
-    --tile-end-rgb: 2, 5, 19;
-    --tile-border: conic-gradient(
-      #ffffff80,
-      #ffffff40,
-      #ffffff30,
-      #ffffff20,
-      #ffffff10,
-      #ffffff10,
-      #ffffff80
-    );
-
-    --callout-rgb: 20, 20, 20;
-    --callout-border-rgb: 108, 108, 108;
-    --card-rgb: 100, 100, 100;
-    --card-border-rgb: 200, 200, 200;
-  }
-}
 
 * {
   box-sizing: border-box;
@@ -76,13 +51,8 @@ body {
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: rgb(var(--color-white));
+  background: rgb(var(--color-black));
 }
 
 a {
