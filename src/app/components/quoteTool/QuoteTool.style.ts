@@ -79,7 +79,7 @@ export const Title = styled.h1`
   font-size: 30px;
 
   @media (max-width: 900px) {
-    font-size: calc(var(--font-size-large) / 2);
+    font-size: calc(var(--font-size-title));
   }
 `;
 
