@@ -4,5 +4,6 @@ export const ButtonConst = {
         borderThickness: '0',
         backgroundColor: 'transparent',
         foregroundColor: 'transparent',
+        hoverBackgroundColor: "transparent"
     }
 };

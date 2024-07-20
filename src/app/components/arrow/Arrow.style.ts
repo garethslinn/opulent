@@ -6,14 +6,14 @@ interface ArrowProps {
 
 export const Arrow = styled.div<ArrowProps>`
   svg {
-    width: 25px; /* Adjust size */
-    height: auto; /* Maintain aspect ratio */
+    width: 25px; 
+    height: auto; 
     transform: ${({ rotate }) => `rotate(${rotate}deg)`};
   }
 
   path {
-    fill: #fff; /* Adjust fill color */
-    stroke: #000; /* Adjust outline color */
-    stroke-width: 2px; /* Adjust outline thickness */
+    fill: #fff; 
+    stroke: #000; 
+    stroke-width: 2px; 
   }
 `;
