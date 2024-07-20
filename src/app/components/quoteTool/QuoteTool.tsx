@@ -54,7 +54,6 @@ const QuoteTool: React.FC = ({ quoteText = "Previous places worked at" }) => {
                 setActiveTitle={setActiveTitle}
                 setActiveDescription={setActiveDescription}
             />
-            <Pointer />
             <ElementWrapper>
                 <ChildWrapper>
                     <LeftColumn>

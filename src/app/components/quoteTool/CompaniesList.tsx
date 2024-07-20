@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import {
+    CompaniesListLayout,
     CompaniesListWrapper,
     Company,
     CompanyImage,
@@ -66,22 +67,24 @@ const CompaniesList: React.FC<CompaniesListProps> = ({
     };
 
     return (
-        <CompaniesListWrapper
-            ref={containerRef}
-            activeIndex={activeIndex}
-            itemWidth={itemWidth}
-            visibleItems={visibleItems}
-        >
-            {companies.map((company, index) => (
-                <Company
-                    key={index}
-                    active={index === activeIndex}
-                    onClick={() => handleCompanyClick(index)}
-                >
-                    <CompanyImage src={company.image} alt={company.title} />
-                </Company>
-            ))}
-        </CompaniesListWrapper>
+        <CompaniesListLayout>
+            <CompaniesListWrapper
+                ref={containerRef}
+                activeIndex={activeIndex}
+                itemWidth={itemWidth}
+                visibleItems={visibleItems}
+            >
+                {companies.map((company, index) => (
+                    <Company
+                        key={index}
+                        active={index === activeIndex}
+                        onClick={() => handleCompanyClick(index)}
+                    >
+                        <CompanyImage src={company.image} alt={company.title} />
+                    </Company>
+                ))}
+            </CompaniesListWrapper>
+        </CompaniesListLayout>
     );
 };
 

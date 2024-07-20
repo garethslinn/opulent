@@ -1,24 +1,12 @@
 import styled from 'styled-components';
 
 export const QuoteToolWrapper = styled.div`
-  padding: var(--spacing-padding);
   background: #3F404B;
   color: #f1f1f1;
 
   @media (max-width: 900px) {
-    padding: var(--spacing-small);
     width: 100vw;
   }
-`;
-
-export const Pointer = styled.div`
-  width: 0;
-  height: 0;
-  border-left: var(--size-large) solid transparent;
-  border-right: var(--size-large) solid transparent;
-  border-top: var(--size-large) solid var(--color-primary);
-  margin: 0 auto;
-  transform: rotate(180deg);
 `;
 
 export const ElementWrapper = styled.div`

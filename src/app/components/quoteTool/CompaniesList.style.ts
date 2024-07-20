@@ -10,19 +10,17 @@ interface CompanyProps {
     active: boolean;
 }
 
-export const QuoteToolWrapper = styled.div`
-  padding: var(--spacing-padding);
-  background: #3F404B;
-  color: #f1f1f1;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-`;
+export const CompaniesListLayout= styled.div<CompaniesListWrapperProps>`
+  background: #505275;
+  `
+;
 
 export const CompaniesListWrapper = styled.div<CompaniesListWrapperProps>`
+  padding: var(--spacing-padding);
   display: flex;
-  gap: 10px;
+  gap: 20px;
   width: 100%;
+  background: #505275;
   transform: ${({ activeIndex, itemWidth, visibleItems }) => {
     const halfway = Math.floor(visibleItems / 2);
     const moveIndex = activeIndex >= halfway ? activeIndex - halfway : 0;
@@ -31,6 +29,7 @@ export const CompaniesListWrapper = styled.div<CompaniesListWrapperProps>`
   transition: transform 0.5s ease;
 
   @media (max-width: 900px) {
+    gap: 5px;
     transform: ${({ activeIndex, itemWidth, visibleItems }) => {
     const halfway = Math.floor(visibleItems / 2);
     const moveIndex = activeIndex >= halfway ? activeIndex - halfway : 0;
@@ -41,16 +40,12 @@ export const CompaniesListWrapper = styled.div<CompaniesListWrapperProps>`
 
 export const Company = styled.div<CompanyProps>`
   flex: 0 0 auto;
-  background-color: ${({ active }) => (active ? '#fff' : 'transparent')};
-  border: ${({ active }) => (active ? '2px solid #333' : 'none')};
+  // background-color: ${({ active }) => (active ? '#fff' : 'transparent')};
+  border: ${({ active }) => (active ? '1px solid #fff' : 'none')};
   padding: 0 10px;
   border-radius: 5px;
   transition: background-color 0.3s, border 0.3s;
-  cursor: pointer; /* Indicate the company item is clickable */
-
-  @media (max-width: 900px) {
-    width: 75px; 
-  }
+  cursor: pointer;
 `;
 
 export const CompanyImage = styled.img`
@@ -59,7 +54,7 @@ export const CompanyImage = styled.img`
   object-fit: cover;
 
   @media (max-width: 900px) {
-    height: 27.5px;
+    height: 45px;
   }
 `;
 
@@ -70,115 +65,5 @@ export const CompanyTitle = styled.div`
 
   @media (max-width: 900px) {
     font-size: 7px;
-  }
-`;
-
-export const Pointer = styled.div`
-  width: 0;
-  height: 0;
-  border-left: var(--size-large) solid transparent;
-  border-right: var(--size-large) solid transparent;
-  border-top: var(--size-large) solid var(--color-primary);
-  margin: 0 auto;
-  transform: rotate(180deg);
-`;
-
-export const ElementWrapper = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: center;
-
-  @media (max-width: 900px) {
-    width: 100%;
-  }
-`;
-
-export const ChildWrapper = styled.div`
-  width: 100%;
-  max-width: 1200px;
-  display: flex;
-
-  @media (max-width: 900px) {
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
-`;
-
-export const LeftColumn = styled.div`
-  width: 25%;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  @media (max-width: 900px) {
-    width: 100%;
-    flex-direction: row;
-    justify-content: center;
-    margin-bottom: var(--spacing-small);
-  }
-`;
-
-export const Icon = styled.img`
-  width: var(--icon-large);
-  height: var(--icon-large);
-
-  @media (max-width: 900px) {
-    width: calc(var(--icon-large) / 2);
-    height: calc(var(--icon-large) / 2);
-  }
-`;
-
-export const RightColumn = styled.div`
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-
-  @media (max-width: 900px) {
-    align-items: center;
-  }
-`;
-
-export const Title = styled.h1`
-  margin: var(--spacing-small) 0;
-  font-size: var(--font-size-large);
-
-  @media (max-width: 900px) {
-    font-size: calc(var(--font-size-large) / 2);
-  }
-`;
-
-export const Paragraph = styled.p`
-  margin: var(--spacing-small) 0;
-  font-size: var(--font-size-medium);
-
-  @media (max-width: 900px) {
-    font-size: calc(var(--font-size-medium) / 2);
-    text-align: center;
-  }
-`;
-
-export const Counter = styled.div`
-  display: flex;
-  align-items: center;
-  margin: var(--spacing-small) 0;
-
-  @media (max-width: 900px) {
-    width: 100%;
-    justify-content: space-between;
-    margin-top: var(--spacing-medium);
-  }
-`;
-
-export const Line = styled.div`
-  flex-grow: 1;
-  height: 1px;
-  background: var(--color-primary);
-  margin: 0 var(--spacing-small);
-
-  @media (max-width: 900px) {
-    display: none;
   }
 `;
