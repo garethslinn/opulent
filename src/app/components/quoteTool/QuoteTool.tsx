@@ -11,7 +11,7 @@ import {
     RightColumn,
     Title,
     Paragraph,
-    Counter,
+    Counterx,
     Line,
 } from './QuoteTool.style';
 import ArrowButton from "@/app/components/Arrow/Arrow";
@@ -21,6 +21,7 @@ import { BUTTON_CONST as BUTTON_CONSTANTS} from "@/app/components/Button/Button.
 import { companies} from "@/app/stubs/companies";
 import {SkillsWrapper} from "@/app/components/quoteTool/QuoteTool.style";
 import Item from "@/app/components/item/item";
+import Counter from "@/app/components/counter/Counter";
 
 const quotesArrowTheme = {
     fillColor: "transparent",
@@ -71,15 +72,13 @@ const QuoteTool: React.FC = ({ quoteText = "Professional Experience" }) => {
                                 <Item key={index} skill={skill} />
                             ))}
                         </SkillsWrapper>
-                        <Counter>
-                            <Button {...BUTTON_CONSTANTS.TRANSPARENT} onClick={handleNavLeft}>
-                                <ArrowButton {...quotesArrowTheme} />
-                            </Button>
-                            <div>{activeIndex + 1}/{companies.length}</div>
-                            <Button {...BUTTON_CONSTANTS.TRANSPARENT} onClick={handleNavRight}>
-                                <ArrowButton {...quotesArrowTheme} rotate={180} />
-                            </Button>
-                        </Counter>
+                        <Counter
+                            activeIndex={activeIndex}
+                            totalItems={companies.length}
+                            handleNavLeft={handleNavLeft}
+                            handleNavRight={handleNavRight}
+                            quotesArrowTheme={quotesArrowTheme}
+                        />
                     </RightColumn>
                 </ChildWrapper>
             </ElementWrapper>

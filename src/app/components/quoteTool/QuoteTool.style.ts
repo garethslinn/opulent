@@ -88,18 +88,6 @@ export const Paragraph = styled.p`
   }
 `;
 
-export const Counter = styled.div`
-  display: flex;
-  align-items: center;
-  margin: var(--spacing-small) 0;
-  
-  @media (max-width: 900px) {
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-  }
-`;
-
 export const Line = styled.div`
   flex-grow: 1;
   height: 1px;
