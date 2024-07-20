@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 export const ItemWrapper = styled.div`
-  display: inline-block;
-  padding: 5px 10px;
-  margin: 5px;
-  border: 2px solid #333;
-  border-radius: 12px;
-  background-color: transparent;
-  color: #333;
+  border: 2px solid #f1f1f1;
+  border-radius: 10px;
+  padding: 4px 10px;
+  color: #f1f1f1;
+  //background-color: #464FCA;
+  font-size: 14px;
+  white-space: nowrap;
 `;

@@ -3,9 +3,11 @@ import styled from 'styled-components';
 export const QuoteToolWrapper = styled.div`
   background: #3F404B;
   color: #f1f1f1;
+  min-height: 600px;
+  position: relative;
 
   @media (max-width: 900px) {
-    width: 100vw;
+    //width: 100vw;
   }
 `;
 
@@ -27,12 +29,10 @@ export const ChildWrapper = styled.div`
 `;
 
 export const LeftColumn = styled.div`
-  width: var(--left-column-width, 25%);
+  width: var(--left-column-width, 200px);
   text-align: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
 
   @media (max-width: 900px) {
     width: 100%;
@@ -53,10 +53,10 @@ export const Icon = styled.img`
 `;
 
 export const RightColumn = styled.div`
-  flex-grow: 1;
   display: flex;
   flex-direction: column;
-
+  padding: 0 50px;
+  
   @media (max-width: 900px) {
     align-items: stretch;
   }
@@ -71,9 +71,16 @@ export const Title = styled.h1`
   }
 `;
 
+export const SkillsWrapper = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin: var(--spacing-small) 0;
+`;
+
 export const Paragraph = styled.p`
   margin: var(--spacing-small) 0;
-  font-size: var(--font-size-medium);
+  font-size: 20px;
 
   @media (max-width: 900px) {
     font-size: calc(var(--font-size-medium) / 2);
@@ -84,9 +91,8 @@ export const Paragraph = styled.p`
 export const Counter = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
   margin: var(--spacing-small) 0;
-
+  
   @media (max-width: 900px) {
     flex-direction: row;
     justify-content: space-between;

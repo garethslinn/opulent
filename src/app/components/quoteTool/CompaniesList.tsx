@@ -23,12 +23,12 @@ interface CompaniesListProps {
 }
 
 const CompaniesList: React.FC<CompaniesListProps> = ({
-                                                         companies,
-                                                         activeIndex,
-                                                         setActiveIndex,
-                                                         setActiveTitle,
-                                                         setActiveDescription
-                                                     }) => {
+         companies,
+         activeIndex,
+         setActiveIndex,
+         setActiveTitle,
+         setActiveDescription
+     }) => {
     const containerRef = useRef<HTMLDivElement>(null);
     const [itemWidth, setItemWidth] = useState(100);
     const [visibleItems, setVisibleItems] = useState(1);

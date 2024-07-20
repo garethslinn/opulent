@@ -4,7 +4,6 @@
 import React, { useState, useEffect } from 'react';
 import {
     QuoteToolWrapper,
-    Pointer,
     ElementWrapper,
     ChildWrapper,
     LeftColumn,
@@ -20,6 +19,8 @@ import Button from "@/app/components/Button/Button";
 import CompaniesList from "@/app/components/quoteTool/CompaniesList";
 import { BUTTON_CONST as BUTTON_CONSTANTS} from "@/app/components/Button/Button.const";
 import { companies} from "@/app/stubs/companies";
+import {SkillsWrapper} from "@/app/components/quoteTool/QuoteTool.style";
+import Item from "@/app/components/item/item";
 
 const quotesArrowTheme = {
     fillColor: "transparent",
@@ -27,10 +28,11 @@ const quotesArrowTheme = {
     hoverFillColor: "#ccc",
 };
 
-const QuoteTool: React.FC = ({ quoteText = "Previous places worked at" }) => {
+const QuoteTool: React.FC = ({ quoteText = "Professional Experience" }) => {
     const [activeIndex, setActiveIndex] = useState<number>(0);
     const [activeTitle, setActiveTitle] = useState<string>(companies[0].title);
     const [activeDescription, setActiveDescription] = useState<string>(companies[0].description);
+    const [activeSkills, setActiveSkills] = useState<string[]>(companies[0].skills.split(', '));
 
     const handleNavLeft = () => {
         setActiveIndex((prevIndex) => (prevIndex > 0 ? prevIndex - 1 : companies.length - 1));
@@ -43,6 +45,7 @@ const QuoteTool: React.FC = ({ quoteText = "Previous places worked at" }) => {
     useEffect(() => {
         setActiveTitle(companies[activeIndex].title);
         setActiveDescription(companies[activeIndex].description);
+        setActiveSkills(companies[activeIndex].skills.split(', '));
     }, [activeIndex]);
 
     return (
@@ -57,12 +60,17 @@ const QuoteTool: React.FC = ({ quoteText = "Previous places worked at" }) => {
             <ElementWrapper>
                 <ChildWrapper>
                     <LeftColumn>
-                        <Icon src="/assets/images/quote.svg" alt="Icon" />
+                        <Icon src="/assets/images/experience.svg" alt="Icon" />
                         <div>{quoteText}</div>
                     </LeftColumn>
                     <RightColumn>
                         <Title>{activeTitle}</Title>
                         <Paragraph>{activeDescription}</Paragraph>
+                        <SkillsWrapper>
+                            {activeSkills.map((skill, index) => (
+                                <Item key={index} skill={skill} />
+                            ))}
+                        </SkillsWrapper>
                         <Counter>
                             <Button {...BUTTON_CONSTANTS.TRANSPARENT} onClick={handleNavLeft}>
                                 <ArrowButton {...quotesArrowTheme} />
