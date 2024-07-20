@@ -22,17 +22,23 @@ interface CompaniesListProps {
 
 const CompaniesList: React.FC<CompaniesListProps> = ({ companies, activeIndex, setActiveTitle, setActiveDescription }) => {
     const containerRef = useRef<HTMLDivElement>(null);
-    const [itemWidth, setItemWidth] = useState(0);
-    const [visibleItems, setVisibleItems] = useState(0);
+    const [itemWidth, setItemWidth] = useState(100);
 
     useEffect(() => {
-        if (containerRef.current) {
-            const firstItem = containerRef.current.children[0] as HTMLDivElement;
-            setItemWidth(firstItem.offsetWidth + 10); // Adding the gap
+        const handleResize = () => {
+            if (window.innerWidth <= 900) {
+                setItemWidth(50);
+            } else {
+                setItemWidth(100);
+            }
+        };
 
-            const containerWidth = containerRef.current.offsetWidth;
-            setVisibleItems(Math.floor(containerWidth / (firstItem.offsetWidth + 10)));
-        }
+        handleResize(); // Initial calculation
+        window.addEventListener('resize', handleResize); // Add resize listener
+
+        return () => {
+            window.removeEventListener('resize', handleResize); // Cleanup on unmount
+        };
     }, []);
 
     useEffect(() => {
@@ -45,9 +51,8 @@ const CompaniesList: React.FC<CompaniesListProps> = ({ companies, activeIndex, s
     return (
         <CompaniesListWrapper
             ref={containerRef}
-            itemWidth={itemWidth}
             activeIndex={activeIndex}
-            visibleItems={visibleItems}
+            itemWidth={itemWidth}
         >
             {companies.map((company, index) => (
                 <Company key={index} active={index === activeIndex}>
