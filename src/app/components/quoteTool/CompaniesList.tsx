@@ -16,11 +16,18 @@ interface Company {
 interface CompaniesListProps {
     companies: Company[];
     activeIndex: number;
+    setActiveIndex: (index: number) => void;
     setActiveTitle: (title: string) => void;
     setActiveDescription: (description: string) => void;
 }
 
-const CompaniesList: React.FC<CompaniesListProps> = ({ companies, activeIndex, setActiveTitle, setActiveDescription }) => {
+const CompaniesList: React.FC<CompaniesListProps> = ({
+                                                         companies,
+                                                         activeIndex,
+                                                         setActiveIndex,
+                                                         setActiveTitle,
+                                                         setActiveDescription
+                                                     }) => {
     const containerRef = useRef<HTMLDivElement>(null);
     const [itemWidth, setItemWidth] = useState(100);
     const [visibleItems, setVisibleItems] = useState(1);
@@ -54,6 +61,10 @@ const CompaniesList: React.FC<CompaniesListProps> = ({ companies, activeIndex, s
         }
     }, [activeIndex, companies, setActiveTitle, setActiveDescription]);
 
+    const handleCompanyClick = (index: number) => {
+        setActiveIndex(index);
+    };
+
     return (
         <CompaniesListWrapper
             ref={containerRef}
@@ -62,7 +73,11 @@ const CompaniesList: React.FC<CompaniesListProps> = ({ companies, activeIndex, s
             visibleItems={visibleItems}
         >
             {companies.map((company, index) => (
-                <Company key={index} active={index === activeIndex}>
+                <Company
+                    key={index}
+                    active={index === activeIndex}
+                    onClick={() => handleCompanyClick(index)}
+                >
                     <CompanyImage src={company.image} alt={company.title} />
                 </Company>
             ))}

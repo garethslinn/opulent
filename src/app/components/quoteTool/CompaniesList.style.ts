@@ -46,6 +46,7 @@ export const Company = styled.div<CompanyProps>`
   padding: 0 10px;
   border-radius: 5px;
   transition: background-color 0.3s, border 0.3s;
+  cursor: pointer; /* Indicate the company item is clickable */
 
   @media (max-width: 900px) {
     width: 75px; 

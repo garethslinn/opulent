@@ -1,4 +1,4 @@
-export const ButtonConst = {
+export const BUTTON_CONST = {
     TRANSPARENT: {
         borderColor: 'transparent',
         borderThickness: '0',
