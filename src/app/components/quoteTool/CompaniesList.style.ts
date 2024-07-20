@@ -22,7 +22,6 @@ export const QuoteToolWrapper = styled.div`
 export const CompaniesListWrapper = styled.div<CompaniesListWrapperProps>`
   display: flex;
   gap: 10px;
-  overflow: hidden;
   width: 100%;
   transform: ${({ activeIndex, itemWidth, visibleItems }) => {
     const halfway = Math.floor(visibleItems / 2);
@@ -54,13 +53,13 @@ export const Company = styled.div<CompanyProps>`
   width: 100px; /* Set fixed width */
 
   @media (max-width: 900px) {
-    width: 50px; /* Set smaller fixed width for smaller screens */
+    width: 50px; 
   }
 `;
 
 export const CompanyImage = styled.img`
   width: auto;
-  height: 55px;
+  height: 45px;
   object-fit: cover;
 
   @media (max-width: 900px) {
