@@ -2,6 +2,8 @@ import styled from 'styled-components';
 
 interface CompaniesListWrapperProps {
     activeIndex: number;
+    itemWidth: number;
+    visibleItems: number;
 }
 
 interface CompanyProps {
@@ -22,11 +24,19 @@ export const CompaniesListWrapper = styled.div<CompaniesListWrapperProps>`
   gap: 10px;
   overflow: hidden;
   width: 100%;
-  transform: ${({ activeIndex }) => `translateX(-${activeIndex * 110}px)`}; /* Adjust this to match the width of each company item + gap */
+  transform: ${({ activeIndex, itemWidth, visibleItems }) => {
+    const halfway = Math.floor(visibleItems / 2);
+    const moveIndex = activeIndex >= halfway ? activeIndex - halfway : 0;
+    return `translateX(-${moveIndex * (itemWidth + 10)}px)`;
+}};
   transition: transform 0.5s ease;
 
   @media (max-width: 900px) {
-    transform: ${({ activeIndex }) => `translateX(-${activeIndex * 55}px)`}; /* Adjust this to match the width of each company item + gap */
+    transform: ${({ activeIndex, itemWidth, visibleItems }) => {
+    const halfway = Math.floor(visibleItems / 2);
+    const moveIndex = activeIndex >= halfway ? activeIndex - halfway : 0;
+    return `translateX(-${moveIndex * (itemWidth + 10)}px)`;
+}};
   }
 `;
 

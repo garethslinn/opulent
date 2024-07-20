@@ -23,13 +23,19 @@ interface CompaniesListProps {
 const CompaniesList: React.FC<CompaniesListProps> = ({ companies, activeIndex, setActiveTitle, setActiveDescription }) => {
     const containerRef = useRef<HTMLDivElement>(null);
     const [itemWidth, setItemWidth] = useState(100);
+    const [visibleItems, setVisibleItems] = useState(1);
 
     useEffect(() => {
         const handleResize = () => {
-            if (window.innerWidth <= 900) {
-                setItemWidth(50);
-            } else {
-                setItemWidth(100);
+            if (containerRef.current) {
+                const containerWidth = containerRef.current.offsetWidth;
+                if (window.innerWidth <= 900) {
+                    setItemWidth(50);
+                    setVisibleItems(Math.floor(containerWidth / 55)); // Adjusted for item width + gap
+                } else {
+                    setItemWidth(100);
+                    setVisibleItems(Math.floor(containerWidth / 110)); // Adjusted for item width + gap
+                }
             }
         };
 
@@ -39,7 +45,7 @@ const CompaniesList: React.FC<CompaniesListProps> = ({ companies, activeIndex, s
         return () => {
             window.removeEventListener('resize', handleResize); // Cleanup on unmount
         };
-    }, []);
+    }, [companies.length]);
 
     useEffect(() => {
         if (companies.length > 0) {
@@ -53,6 +59,7 @@ const CompaniesList: React.FC<CompaniesListProps> = ({ companies, activeIndex, s
             ref={containerRef}
             activeIndex={activeIndex}
             itemWidth={itemWidth}
+            visibleItems={visibleItems}
         >
             {companies.map((company, index) => (
                 <Company key={index} active={index === activeIndex}>
