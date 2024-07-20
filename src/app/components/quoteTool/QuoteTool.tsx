@@ -1,4 +1,3 @@
-// QuoteTool.tsx
 'use client';
 
 import React, { useState, useEffect } from 'react';
@@ -11,13 +10,9 @@ import {
     RightColumn,
     Title,
     Paragraph,
-    Counterx,
     Line,
 } from './QuoteTool.style';
-import ArrowButton from "@/app/components/Arrow/Arrow";
-import Button from "@/app/components/Button/Button";
-import CompaniesList from "@/app/components/quoteTool/CompaniesList";
-import { BUTTON_CONST as BUTTON_CONSTANTS} from "@/app/components/Button/Button.const";
+import InlineList from "@/app/components/inlineList/inlineList";
 import { companies} from "@/app/stubs/companies";
 import {SkillsWrapper} from "@/app/components/quoteTool/QuoteTool.style";
 import Item from "@/app/components/item/item";
@@ -51,7 +46,7 @@ const QuoteTool: React.FC = ({ quoteText = "Professional Experience" }) => {
 
     return (
         <QuoteToolWrapper>
-            <CompaniesList
+            <InlineList
                 companies={companies}
                 activeIndex={activeIndex}
                 setActiveIndex={setActiveIndex}

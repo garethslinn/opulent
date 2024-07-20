@@ -1,7 +1,7 @@
 import React from 'react';
-import Button from "@/app/components/Button/Button";
+import Button from "@/app/components/button/Button";
 import ArrowButton from "@/app/components/Arrow/Arrow";
-import { BUTTON_CONST as BUTTON_CONSTANTS } from "@/app/components/Button/Button.const";
+import { BUTTON_CONST as BUTTON_CONSTANTS } from "@/app/components/button/Button.const";
 import { CounterStyle } from './Counter.style';
 import {companies} from "@/app/stubs/companies";
 interface CounterProps {

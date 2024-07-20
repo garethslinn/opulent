@@ -7,7 +7,7 @@ import {
     Company,
     CompanyImage,
     CompanyTitle,
-} from './CompaniesList.style';
+} from './InlineList.style';
 
 interface Company {
     title: string;
@@ -22,7 +22,7 @@ interface CompaniesListProps {
     setActiveDescription: (description: string) => void;
 }
 
-const CompaniesList: React.FC<CompaniesListProps> = ({
+const InlineList: React.FC<CompaniesListProps> = ({
          companies,
          activeIndex,
          setActiveIndex,
@@ -88,4 +88,4 @@ const CompaniesList: React.FC<CompaniesListProps> = ({
     );
 };
 
-export default CompaniesList;
+export default InlineList;
