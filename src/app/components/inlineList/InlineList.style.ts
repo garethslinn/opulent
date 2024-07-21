@@ -18,7 +18,7 @@ export const CompaniesListLayout= styled.div<CompaniesListWrapperProps>`
 export const CompaniesListWrapper = styled.div<CompaniesListWrapperProps>`
   padding: var(--spacing-padding);
   display: flex;
-  gap: 20px;
+  gap: 5px;
   width: 100%;
   background: #505275;
   transform: ${({ activeIndex, itemWidth, visibleItems }) => {
@@ -31,9 +31,9 @@ export const CompaniesListWrapper = styled.div<CompaniesListWrapperProps>`
   @media (max-width: 900px) {
     gap: 5px;
     transform: ${({ activeIndex, itemWidth, visibleItems }) => {
-    const halfway = Math.floor(visibleItems / 2);
+    const halfway = Math.floor(visibleItems / 5);
     const moveIndex = activeIndex >= halfway ? activeIndex - halfway : 0;
-    return `translateX(-${moveIndex * (itemWidth + 10)}px)`;
+    return `translateX(-${moveIndex * (itemWidth + 55)}px)`;
 }};
   }
 `;

@@ -12,6 +12,7 @@ import {
 interface Company {
     title: string;
     image: string;
+    description: string;
 }
 
 interface CompaniesListProps {
@@ -23,12 +24,12 @@ interface CompaniesListProps {
 }
 
 const InlineList: React.FC<CompaniesListProps> = ({
-         companies,
-         activeIndex,
-         setActiveIndex,
-         setActiveTitle,
-         setActiveDescription
-     }) => {
+          companies,
+          activeIndex,
+          setActiveIndex,
+          setActiveTitle,
+          setActiveDescription
+      }) => {
     const containerRef = useRef<HTMLDivElement>(null);
     const [itemWidth, setItemWidth] = useState(100);
     const [visibleItems, setVisibleItems] = useState(1);
@@ -73,6 +74,7 @@ const InlineList: React.FC<CompaniesListProps> = ({
                 activeIndex={activeIndex}
                 itemWidth={itemWidth}
                 visibleItems={visibleItems}
+                totalItems={companies.length}
             >
                 {companies.map((company, index) => (
                     <Company
