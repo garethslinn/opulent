@@ -22,9 +22,9 @@ export const CompaniesListWrapper = styled.div<CompaniesListWrapperProps>`
   width: 100%;
   background: #505275;
   transform: ${({ activeIndex, itemWidth, visibleItems }) => {
-    const halfway = Math.floor(visibleItems / 2);
+    const halfway = Math.floor(visibleItems / 3);
     const moveIndex = activeIndex >= halfway ? activeIndex - halfway : 0;
-    return `translateX(-${moveIndex * (itemWidth + 10)}px)`;
+    return `translateX(-${moveIndex * (itemWidth + 20)}px)`;
 }};
   transition: transform 0.5s ease;
 
