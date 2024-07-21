@@ -46,7 +46,7 @@ const QuoteTool: React.FC = ({ quoteText = "Professional Experience" }) => {
     }, [activeIndex]);
 
     return (
-        <QuoteToolWrapper>
+        <QuoteToolWrapper role="main">
             <InlineList
                 companies={companies}
                 activeIndex={activeIndex}

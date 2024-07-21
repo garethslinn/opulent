@@ -1,5 +1,3 @@
-'use client';
-
 import React, { useEffect, useRef, useState } from 'react';
 import {
     CompaniesListLayout,
@@ -24,12 +22,12 @@ interface CompaniesListProps {
 }
 
 const InlineList: React.FC<CompaniesListProps> = ({
-          companies,
-          activeIndex,
-          setActiveIndex,
-          setActiveTitle,
-          setActiveDescription
-      }) => {
+                                                      companies,
+                                                      activeIndex,
+                                                      setActiveIndex,
+                                                      setActiveTitle,
+                                                      setActiveDescription
+                                                  }) => {
     const containerRef = useRef<HTMLDivElement>(null);
     const [itemWidth, setItemWidth] = useState(100);
     const [visibleItems, setVisibleItems] = useState(1);
@@ -75,12 +73,17 @@ const InlineList: React.FC<CompaniesListProps> = ({
                 itemWidth={itemWidth}
                 visibleItems={visibleItems}
                 totalItems={companies.length}
+                role="list"
             >
                 {companies.map((company, index) => (
                     <Company
                         key={index}
                         active={index === activeIndex}
                         onClick={() => handleCompanyClick(index)}
+                        role="listitem"
+                        aria-current={index === activeIndex ? "true" : "false"}
+                        tabIndex={index === activeIndex ? 0 : -1}
+                        aria-label={`Company ${company.title}`}
                     >
                         <CompanyImage src={company.image} alt={company.title} />
                     </Company>

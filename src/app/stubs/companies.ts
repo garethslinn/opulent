@@ -28,7 +28,7 @@
         {
             title: "Argos",
             image: "/assets/images/brands/argos.svg",
-            description: "Built a decoupled UI service layer to replace the current site which is unstable, bloated and difficult to maintain.This web application was created using nodejs and expressjs. Much of the middleware included gulp task runner, node monitor, sass, jshint. During development we used stubs in the form of json. Modules and Views kept separated and populated using swig templates. T",
+            description: "Built a decoupled UI service layer to replace the current site which is unstable, bloated and difficult to maintain.This web application was created using nodejs and expressjs. Much of the middleware included gulp task runner, node monitor, sass, jshint. During development we used stubs in the form of json. Modules and Views kept separated and populated using swig templates.",
             skills: "css, html, javascript, nodejs, expressjs, sass, gulp",
             dateFrom: "Jul 2014",
             dateTo: "May 2015"

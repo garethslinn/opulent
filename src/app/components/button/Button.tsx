@@ -9,6 +9,7 @@ interface ButtonProps {
     backgroundColor?: string;
     foregroundColor?: string;
     hoverBackgroundColor?: string;
+    ariaLabel?: string;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -18,7 +19,8 @@ const Button: React.FC<ButtonProps> = ({
        borderThickness,
        backgroundColor,
        foregroundColor,
-       hoverBackgroundColor
+       hoverBackgroundColor,
+       ariaLabel
    }) => {
     return (
         <ButtonStyled
@@ -28,6 +30,7 @@ const Button: React.FC<ButtonProps> = ({
             backgroundColor={backgroundColor}
             foregroundColor={foregroundColor}
             hoverBackgroundColor={hoverBackgroundColor}
+            aria-label={ariaLabel}
         >
             {children}
         </ButtonStyled>

@@ -1,4 +1,3 @@
-// SkillItem.tsx
 import React from 'react';
 import styled from 'styled-components';
 import {ItemWrapper} from "@/app/components/item/item.style";
@@ -8,7 +7,7 @@ interface ItemProps {
 }
 
 const Item: React.FC<ItemProps> = ({ skill }) => (
-    <ItemWrapper>{skill}</ItemWrapper>
+    <ItemWrapper role="listitem" aria-label={`Skill: ${skill}`}>{skill}</ItemWrapper>
 );
 
 export default Item;
