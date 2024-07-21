@@ -31,10 +31,21 @@ export const LeftColumn = styled.div`
   flex-direction: column;
 
   @media (max-width: 900px) {
+    padding-left: 50px;
     width: 100%;
     flex-direction: row;
     justify-content: start;
     margin-bottom: var(--spacing-small);
+  }
+`;
+
+
+export const QuoteText = styled.div`
+  
+  @media (max-width: 900px) {
+    font-size: var(--font-size-title);
+    margin-top: 35px;
+    margin-left: var(--spacing-small);
   }
 `;
 

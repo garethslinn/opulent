@@ -6,6 +6,7 @@ import {
     ElementWrapper,
     ChildWrapper,
     LeftColumn,
+    QuoteText,
     Icon,
     RightColumn,
     Title,
@@ -57,7 +58,7 @@ const QuoteTool: React.FC = ({ quoteText = "Professional Experience" }) => {
                 <ChildWrapper>
                     <LeftColumn>
                         <Icon src="/assets/images/experience.svg" alt="Icon" />
-                        <div>{quoteText}</div>
+                        <QuoteText>{quoteText}</QuoteText>
                     </LeftColumn>
                     <RightColumn>
                         <Title>{activeTitle}</Title>
