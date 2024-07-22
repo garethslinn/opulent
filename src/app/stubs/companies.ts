@@ -27,14 +27,11 @@ export const companies = [
     {
         title: "BP",
         image: "/assets/images/brands/bp.svg",
-        description: "I worked on a small team of three on shore and five offshore developers building a client\n" +
-            "based application for BP. This was a fleet management application to use internally for BP\n" +
-            "clients. The area I worked on involved management of users and groups (of users).\n" +
-            "My role was to build fully tested features in a fast paced environment. The day to day skill\n" +
-            "involved React / Redux / Jest and Styled components with Azure for our deployments.\n" +
-            "My role was also to help get the offshore developers up to speed for an eventual handover.\n" +
-            "Code reviews were a prominent part of my role along with day to day development.",
-        skills: "TypeScript, Reactjs, Redux, React Hooks, Azure, Jest, Cypress, Enzyme, Styled Components, Node, Storybook",
+        description: "I worked on a small team with three onshore and five offshore developers to build a fleet management " +
+            "application for BP's internal use. I focused on user and group management, developing fully tested features in " +
+            "a fast-paced environment using React, Redux, Jest, Styled Components, and Azure for deployments. I also assisted " +
+            "offshore developers to prepare for an eventual handover, with code reviews being a key part of my responsibilities.",
+        skills: "TypeScript, Reactjs, Redux, Azure, Jest, Cypress, Styled Components, Storybook",
         dateFrom: "Sep 2019",
         dateTo: "Mar 2020"
     },

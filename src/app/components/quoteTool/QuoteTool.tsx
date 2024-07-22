@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import {
     QuoteToolWrapper,
     ElementWrapper,
@@ -12,10 +12,10 @@ import {
     Title,
     Paragraph,
     Line,
+    SkillsWrapper
 } from './QuoteTool.style';
 import InlineList from "@/app/components/inlineList/inlineList";
-import { companies} from "@/app/stubs/companies";
-import {SkillsWrapper} from "@/app/components/quoteTool/QuoteTool.style";
+import { companies } from "@/app/stubs/companies";
 import Item from "@/app/components/item/item";
 import Counter from "@/app/components/counter/Counter";
 
@@ -25,17 +25,21 @@ const quotesArrowTheme = {
     hoverFillColor: "#ccc",
 };
 
-const QuoteTool: React.FC = ({ quoteText = "Professional Experience" }) => {
+const QuoteTool: React.FC<{ quoteText?: string }> = ({ quoteText = "Professional Experience" }) => {
     const [activeIndex, setActiveIndex] = useState<number>(0);
     const [activeTitle, setActiveTitle] = useState<string>(companies[0].title);
     const [activeDescription, setActiveDescription] = useState<string>(companies[0].description);
     const [activeSkills, setActiveSkills] = useState<string[]>(companies[0].skills.split(', '));
+    const [isUserInteracting, setIsUserInteracting] = useState<boolean>(false);
+    const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
     const handleNavLeft = () => {
+        setIsUserInteracting(true);
         setActiveIndex((prevIndex) => (prevIndex > 0 ? prevIndex - 1 : companies.length - 1));
     };
 
     const handleNavRight = () => {
+        setIsUserInteracting(true);
         setActiveIndex((prevIndex) => (prevIndex < companies.length - 1 ? prevIndex + 1 : 0));
     };
 
@@ -44,6 +48,20 @@ const QuoteTool: React.FC = ({ quoteText = "Professional Experience" }) => {
         setActiveDescription(companies[activeIndex].description);
         setActiveSkills(companies[activeIndex].skills.split(', '));
     }, [activeIndex]);
+
+    useEffect(() => {
+        if (!isUserInteracting) {
+            intervalRef.current = setInterval(() => {
+                setActiveIndex((prevIndex) => (prevIndex < companies.length - 1 ? prevIndex + 1 : 0));
+            }, 5000);
+        }
+
+        return () => {
+            if (intervalRef.current) {
+                clearInterval(intervalRef.current);
+            }
+        };
+    }, [isUserInteracting]);
 
     return (
         <QuoteToolWrapper role="main">

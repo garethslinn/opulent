@@ -4,6 +4,7 @@ export const QuoteToolWrapper = styled.div`
   background: var(--color-counter-background);
   color: #f1f1f1;
   position: relative;
+  min-height: 600px;
 `;
 
 export const ElementWrapper = styled.div`
@@ -87,6 +88,8 @@ export const SkillsWrapper = styled.div`
 export const Paragraph = styled.p`
   margin: var(--spacing-small) 0;
   font-size: 20px;
+  
+  min-height: 300px;
 
   @media (max-width: 900px) {
     font-size: calc(var(--font-size-medium) / 2);
