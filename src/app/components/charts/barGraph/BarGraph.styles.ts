@@ -5,7 +5,7 @@ import styled from 'styled-components';
 export const GraphContainer = styled.div`
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
     width: 100%;
     padding: 20px;
 `;
@@ -20,12 +20,12 @@ export const BarContainer = styled.div`
 export const BarWrapper = styled.div`
     display: flex;
     align-items: center;
-    margin: 10px 0;
+    margin: 2px 0;
 `;
 
 export const Bar = styled.div<{ width: number }>`
     background-color: #4caf50;
-    height: 30px;
+    height: 10px;
     width: ${({ width }) => width/3}%;
     display: flex;
     align-items: center;

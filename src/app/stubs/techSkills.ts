@@ -1,4 +1,6 @@
-export const techSkills = [
+import { TechSkill } from '../components/charts/techSkills/TechSkills.types';
+
+export const techSkills: TechSkill[] = [
     {
         title: "JavaScript",
         type: 1, // 1 = core
@@ -43,7 +45,7 @@ export const techSkills = [
     },
     {
         title: "Cypress",
-        type: 2,
+        type: 1,
         image: "/assets/images/skill/cypress.svg",
         year_started: null,
         fixed_years: 5
@@ -63,7 +65,7 @@ export const techSkills = [
         fixed_years: null
     },
     {
-        title: "Styled Components",
+        title: "Styled Comp",
         type: 1,
         image: "/assets/images/skill/styled_components.svg",
         year_started: "2015",
@@ -73,19 +75,19 @@ export const techSkills = [
         title: "Bootstrap",
         type: 1,
         image: "/assets/images/skill/bootstrap.svg",
-        year_started: "2010",
+        year_started: "2012",
         fixed_years: null
     },
     {
         title: "SonarQube",
-        type: 2,
+        type: 1,
         image: "/assets/images/skill/sonarqube.svg",
         year_started: null,
         fixed_years: 1
     },
     {
         title: "NightWatch",
-        type: 2,
+        type: 1, // Complimentary
         image: "/assets/images/skill/nightwatch.svg",
         year_started: null,
         fixed_years: 1
@@ -106,7 +108,7 @@ export const techSkills = [
     },
     {
         title: "Jenkins",
-        type: 2,
+        type: 1,
         image: "/assets/images/skill/jenkins.svg",
         year_started: null,
         fixed_years: 3
@@ -119,9 +121,9 @@ export const techSkills = [
         fixed_years: 5
     },
     {
-        title: "Responsive Web",
+        title: "Responsive",
         type: 1,
-        image: "/assets/images/skill/webpack.svg",
+        image: "/assets/images/skill/responsive_web.svg",
         year_started: "2012",
         fixed_years: null
     },
@@ -146,11 +148,4 @@ export const techSkills = [
         year_started: null,
         fixed_years: 3
     },
-    {
-        title: "Vector Graphics",
-        type: 3,
-        image: "/assets/images/skill/vector.svg",
-        year_started: null,
-        fixed_years: "1990"
-    },
-]
+];
