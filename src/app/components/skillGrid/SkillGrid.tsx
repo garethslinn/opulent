@@ -3,6 +3,7 @@
 import React from 'react';
 import { TechSkillsGridProps } from './TechSkills.types';
 import {
+    FullWrapper,
     GridContainer,
     GridItem,
     SkillImage,
@@ -30,15 +31,17 @@ const TechSkillsGrid: React.FC<TechSkillsGridProps> = ({ data }) => {
         .sort((a, b) => b.years - a.years);
 
     return (
-        <GridContainer>
-            {sortedData.map((skill, index) => (
-                <GridItem key={index}>
-                    <SkillImage src={skill.image} alt={skill.title} />
-                    <SkillTitle>{skill.title}</SkillTitle>
-                    <SkillYears>{skill.years} years</SkillYears>
-                </GridItem>
-            ))}
-        </GridContainer>
+        <FullWrapper>
+            <GridContainer>
+                {sortedData.map((skill, index) => (
+                    <GridItem key={index}>
+                        <SkillImage src={skill.image} alt={skill.title} />
+                        <SkillTitle>{skill.title}</SkillTitle>
+                        <SkillYears>{skill.years} years</SkillYears>
+                    </GridItem>
+                ))}
+            </GridContainer>
+        </FullWrapper>
     );
 };
 

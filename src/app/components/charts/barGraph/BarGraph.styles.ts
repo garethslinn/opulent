@@ -2,6 +2,10 @@
 
 import styled from 'styled-components';
 
+export const FullWrapper = styled.div`
+  background: #f1f1f1;
+  width: 100%;
+`;
 export const GraphContainer = styled.div`
     display: flex;
     flex-direction: column;

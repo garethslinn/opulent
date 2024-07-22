@@ -3,6 +3,7 @@
 import React from 'react';
 import { PieChartProps } from './PieChart.types';
 import {
+    FullWrapper,
     ChartContainer,
     Svg,
     Slice,
@@ -46,26 +47,28 @@ const PieChart: React.FC<PieChartProps> = ({ data }) => {
     };
 
     return (
-        <ChartContainer>
-            <Svg viewBox="0 0 200 200">
-                {data.map((method, index) => {
-                    const sliceAngle = (method.percent / 100) * 360;
-                    const endAngle = startAngle + sliceAngle;
-                    const d = describeArc(100, 100, radius, startAngle, endAngle);
-                    const color = colors[index % colors.length];
-                    startAngle = endAngle;
-                    return <Slice key={index} d={d} color={color} />;
-                })}
-            </Svg>
-            <Legend>
-                {data.map((method, index) => (
-                    <LegendItem key={index}>
-                        <LegendColor color={colors[index % colors.length]} />
-                        <LegendLabel>{method.title}: {method.percent}%</LegendLabel>
-                    </LegendItem>
-                ))}
-            </Legend>
-        </ChartContainer>
+        <FullWrapper>
+            <ChartContainer>
+                <Svg viewBox="0 0 200 200">
+                    {data.map((method, index) => {
+                        const sliceAngle = (method.percent / 100) * 360;
+                        const endAngle = startAngle + sliceAngle;
+                        const d = describeArc(100, 100, radius, startAngle, endAngle);
+                        const color = colors[index % colors.length];
+                        startAngle = endAngle;
+                        return <Slice key={index} d={d} color={color} />;
+                    })}
+                </Svg>
+                <Legend>
+                    {data.map((method, index) => (
+                        <LegendItem key={index}>
+                            <LegendColor color={colors[index % colors.length]} />
+                            <LegendLabel>{method.title}: {method.percent}%</LegendLabel>
+                        </LegendItem>
+                    ))}
+                </Legend>
+            </ChartContainer>
+        </FullWrapper>
     );
 };
 

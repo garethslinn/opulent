@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+export const FullWrapper = styled.div`
+  background: #f1f1f1;
+  width: 100%;
+`;
 export const ChartContainer = styled.div`
     display: flex;
     flex-direction: column;
@@ -22,8 +26,6 @@ export const Slice = styled.path<{ color: string }>`
 
 export const Legend = styled.div`
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
     margin-top: 20px;
 `;
 

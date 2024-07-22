@@ -148,4 +148,25 @@ export const techSkills: TechSkill[] = [
         year_started: null,
         fixed_years: 3
     },
+    {
+        title: "Storybook",
+        type: 1,
+        image: "/assets/images/skill/storybook.svg",
+        year_started: "2017",
+        fixed_years: null
+    },
+    {
+        title: "SVG",
+        type: 1,
+        image: "/assets/images/skill/svg.svg",
+        year_started: "2006",
+        fixed_years: null
+    },
+    {
+        title: "Gulp",
+        type: 1,
+        image: "/assets/images/skill/gulp.svg",
+        year_started: null,
+        fixed_years: 5
+    },
 ];

@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const QuoteToolWrapper = styled.div`
   background: var(--color-counter-background);
   color: #f1f1f1;
-  //min-height: 600px;
   position: relative;
 `;
 

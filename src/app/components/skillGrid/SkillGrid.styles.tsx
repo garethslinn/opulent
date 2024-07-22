@@ -2,7 +2,16 @@
 
 import styled from 'styled-components';
 
+export const FullWrapper = styled.div`
+  background: var(--color-counter-background);
+  width: 100%;
+`;
+
 export const GridContainer = styled.div`
+  max-width: 1024px;
+  margin: 0 auto;
+  background: #3f404b;
+  color: #f1f1f1;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
