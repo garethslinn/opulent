@@ -1,9 +1,9 @@
-import { TechSkill } from '../components/charts/techSkills/TechSkills.types';
+import { TechSkill } from './components/techSkills/TechSkills.types';
 
 export const techSkills: TechSkill[] = [
     {
         title: "JavaScript",
-        type: 1, // 1 = core
+        type: 1,
         image: "/assets/images/skill/javascript.svg",
         year_started: "2010",
         fixed_years: null
@@ -87,7 +87,7 @@ export const techSkills: TechSkill[] = [
     },
     {
         title: "NightWatch",
-        type: 1, // Complimentary
+        type: 1,
         image: "/assets/images/skill/nightwatch.svg",
         year_started: null,
         fixed_years: 1
