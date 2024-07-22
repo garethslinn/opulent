@@ -8,13 +8,14 @@ import {
     BarWrapper,
     Bar,
     BarLabel,
+    BarTitle,
     BarImage,
     BarValue
 } from './TechSkills.styles';
 
 const colors = {
-    1: "#0070f3", // Blue color for core skills
-    2: "#2196f3"  // Slightly different blue for complimentary skills
+    1: "#0070f3", // Blue color for core skill
+    2: "#2196f3"  // Slightly different blue for complimentary skill
 };
 
 const getYearsOfExperience = (year_started: string | null, fixed_years: number | null): number => {
@@ -46,6 +47,7 @@ const TechSkillBarGraph: React.FC<TechSkillBarGraphProps> = ({ data }) => {
                     <BarWrapper key={index}>
                         <BarLabel>
                             <BarImage src={skill.image} alt={skill.title} />
+                            <BarTitle>{skill.title}</BarTitle>
                         </BarLabel>
                         <Bar width={(skill.years / maxYears) * 100} color={colors[skill.type]}>
                             <BarValue>{skill.years}</BarValue>

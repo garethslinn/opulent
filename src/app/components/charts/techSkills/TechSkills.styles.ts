@@ -47,19 +47,30 @@ export const Bar = styled.div<{ width: number; color: string }>`
 `;
 
 export const BarLabel = styled.div`
-    align-items: center;
-    margin-right: 10px;
+    align-items: flex-start;
+  position: relative;
+    //margin-right: 10px;
   font-size: 13px;
-  background: red;
-    width: 100px;
+    width: 120px;
   max-width: 200px;
     display: block;
-    white-space: nowrap;
+    //white-space: nowrap;
 `;
 
+export const BarTitle = styled.div`
+  position: relative;
+  font-size: 11px;
+  width: 100px;
+  max-width: 200px;
+  display: inline;
+  right: 5px;
+  bottom: 18px;
+`;
+
+
 export const BarImage = styled.img`
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     margin-right: 10px;
 `;
 

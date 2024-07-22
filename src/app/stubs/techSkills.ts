@@ -18,7 +18,7 @@ export const techSkills: TechSkill[] = [
     {
         title: "ReactJS",
         type: 1,
-        image: "/assets/images/skill/reactjs.svg",
+        image: "/assets/images/skill/react.svg",
         year_started: "2016",
         fixed_years: null
     },
@@ -123,7 +123,7 @@ export const techSkills: TechSkill[] = [
     {
         title: "Responsive",
         type: 1,
-        image: "/assets/images/skill/responsive_web.svg",
+        image: "/assets/images/skill/responsive.svg",
         year_started: "2012",
         fixed_years: null
     },

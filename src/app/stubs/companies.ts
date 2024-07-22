@@ -30,7 +30,7 @@ export const companies = [
         description: "I worked on a small team of three on shore and five offshore developers building a client\n" +
             "based application for BP. This was a fleet management application to use internally for BP\n" +
             "clients. The area I worked on involved management of users and groups (of users).\n" +
-            "My role was to build fully tested features in a fast paced environment. The day to day skills\n" +
+            "My role was to build fully tested features in a fast paced environment. The day to day skill\n" +
             "involved React / Redux / Jest and Styled components with Azure for our deployments.\n" +
             "My role was also to help get the offshore developers up to speed for an eventual handover.\n" +
             "Code reviews were a prominent part of my role along with day to day development.",
