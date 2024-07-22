@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div<{ backgroundColor: string }>`
   width: 100%;
   background-color: ${props => props.backgroundColor};
+  color: ${props => props.foregroundColor};
   display: flex;
   justify-content: center;
   padding: 50px 0 20px 0;
@@ -19,5 +20,5 @@ export const Wrapper = styled.div`
 export const TitleText = styled.h2`
     margin: 0;
     text-align: left;
-    font-size: 1.5em;
+    font-size: 2rem;
 `;
