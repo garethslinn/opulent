@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-import { TechSkillsGridProps } from './TechSkills.types';
+import { TechSkillsGridProps } from './SkillGrid.types';
 import {
     FullWrapper,
     GridContainer,
@@ -37,7 +37,7 @@ const TechSkillsGrid: React.FC<TechSkillsGridProps> = ({ data }) => {
                     <GridItem key={index}>
                         <SkillImage src={skill.image} alt={skill.title} />
                         <SkillTitle>{skill.title}</SkillTitle>
-                        <SkillYears>{skill.years} years</SkillYears>
+                        <SkillYears>{skill.years}</SkillYears>
                     </GridItem>
                 ))}
             </GridContainer>

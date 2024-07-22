@@ -5,7 +5,6 @@ import styled from 'styled-components';
 export const GraphContainer = styled.div`
     display: flex;
     flex-direction: column;
-    align-items: sta;
     width: 100%;
     padding: 20px;
 `;

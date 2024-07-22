@@ -18,7 +18,6 @@ const BarGraph: React.FC<BarGraphProps> = ({ data }) => {
     return (
         <FullWrapper>
             <GraphContainer>
-                <h2>No. Companies per Industry</h2>
                 <BarContainer>
                     {data.map((industry, index) => (
                         <BarWrapper key={index}>

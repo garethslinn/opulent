@@ -5,7 +5,7 @@ export const softSkills = [
     },
     {
         title: "Problem-Solving Skills",
-        description: "The capacity to analyze complex issues, identify solutions, and implement them effectively."
+        description: "The capacity to analyse complex issues, identify solutions, and implement them effectively."
     },
     {
         title: "Teamwork and Collaboration",
@@ -41,7 +41,7 @@ export const softSkills = [
     },
     {
         title: "Critical Thinking",
-        description: "Analyzing situations logically and making sound decisions based on data and experience."
+        description: "Analysing situations logically and making sound decisions based on data and experience."
     },
     {
         title: "Creativity and Innovation",

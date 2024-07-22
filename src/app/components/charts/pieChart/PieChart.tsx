@@ -14,10 +14,10 @@ import {
 } from './PieChart.style';
 
 const colors = [
-    "#4caf50",
-    "#2196f3",
-    "#ff9800",
-    "#f44336"
+    "#9FABCA",
+    "#878EA0",
+    "#505A75",
+    "#7499FF"
 ];
 
 const PieChart: React.FC<PieChartProps> = ({ data }) => {

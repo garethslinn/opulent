@@ -3,15 +3,15 @@
 import styled from 'styled-components';
 
 export const FullWrapper = styled.div`
-  background: var(--color-counter-background);
+  background: #9FABCA;
   width: 100%;
 `;
 
 export const GridContainer = styled.div`
   max-width: 1024px;
   margin: 0 auto;
-  background: #3f404b;
-  color: #f1f1f1;
+  background: #9FABCA;
+  color: #000;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -38,10 +38,10 @@ export const SkillImage = styled.img`
 
 export const SkillTitle = styled.div`
     flex: 1;
-    font-size: 14px;
-    font-weight: bold;
+    font-size: 18px;
 `;
 
 export const SkillYears = styled.div`
-    font-size: 14px;
+    font-size: 20px;
+    font-weight: bold;
 `;

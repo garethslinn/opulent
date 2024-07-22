@@ -28,8 +28,8 @@ export const BarWrapper = styled.div`
 `;
 
 export const Bar = styled.div<{ width: number }>`
-    background-color: #4caf50;
-    height: 10px;
+    background-color: #9FABCA;
+    height: 30px;
     width: ${({ width }) => width/3}%;
     display: flex;
     align-items: center;
@@ -40,8 +40,8 @@ export const Bar = styled.div<{ width: number }>`
 
 export const BarLabel = styled.span`
     margin-right: 10px;
-    font-size: 14px;
-    width: 150px;
+    font-size: 18px;
+    width: 200px;
     text-align: left;
     display: block;
     white-space: nowrap;

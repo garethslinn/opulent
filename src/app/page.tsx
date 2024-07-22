@@ -10,18 +10,29 @@ import { techSkills } from "@/app/stubs/techSkills";
 import TwoColumnContainer from "@/app/components/layout/TwoColumnContainer";
 import {softSkills} from "@/app/stubs/softSkills";
 import SkillCards from "@/app/components/skillCards/SkillCards";
+import Title from "@/app/components/title/Title";
 
 export default function Home() {
     return (
         <div>
-            <h1>Tech Skills Overview</h1>
+            <header><h1>Header</h1></header>
+            <nav>Sticky Nav</nav>
+            <p>"As a Senior Front End Developer with over 20 years of commercial
+                experience in UI development, I bring a wealth of expertise and a
+                diverse skill set. My extensive experience spans numerous big-name
+                industries, including telecommunications, e-commerce, digital
+                agencies, finance, gambling, retail, and more."</p>
+            <Title text="Tech Skills by Years Experience" />
             <SkillGrid data={techSkills} />
+            <Title text="Skill Metrics" />
             <TwoColumnContainer backgroundColor="#f1f1f1">
                 <BarGraph data={industries} />
                 <PieChart data={methodologies} />
             </TwoColumnContainer>
+            <Title text="Soft Skills" />
             <SkillCards skills={softSkills} />
             <QuoteTool />
+            <footer><h3>Footer</h3></footer>
         </div>
     );
 }
