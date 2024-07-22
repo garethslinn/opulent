@@ -7,7 +7,7 @@ export const FullWrapper = styled.div`
 `;
 
 export const Container = styled.div<{ backgroundColor: string }>`
-    max-width: 1024px;
+    max-width: 1000px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;

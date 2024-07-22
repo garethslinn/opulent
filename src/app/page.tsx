@@ -31,6 +31,7 @@ export default function Home() {
             </TwoColumnContainer>
             <Title text="Soft Skills" />
             <SkillCards skills={softSkills} />
+            <Title text="Past Contracts" />
             <QuoteTool />
             <footer><h3>Footer</h3></footer>
         </div>

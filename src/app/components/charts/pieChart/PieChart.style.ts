@@ -8,9 +8,14 @@ export const ChartContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 300px;
-    height: 300px;
+    width: auto;
+    height: auto;
+  max-height: 346px;
     position: relative;
+
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 `;
 
 export const Svg = styled.svg`

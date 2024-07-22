@@ -5,7 +5,7 @@ export const Container = styled.div<{ backgroundColor: string }>`
   background-color: ${props => props.backgroundColor};
   display: flex;
   justify-content: center;
-  padding: 20px 0;
+  padding: 50px 0 20px 0;
 `;
 
 export const Wrapper = styled.div`

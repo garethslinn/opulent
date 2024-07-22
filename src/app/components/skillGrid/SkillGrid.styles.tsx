@@ -3,14 +3,14 @@
 import styled from 'styled-components';
 
 export const FullWrapper = styled.div`
-  background: #9FABCA;
+  background: #f1f1f1;
   width: 100%;
 `;
 
 export const GridContainer = styled.div`
   max-width: 1024px;
   margin: 0 auto;
-  background: #9FABCA;
+  background: #f1f1f1;
   color: #000;
     display: flex;
     flex-wrap: wrap;
@@ -23,6 +23,11 @@ export const GridItem = styled.div`
     display: flex;
     align-items: center;
     margin: 10px 0;
+    background: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
     width: 23%; /* Approximately 4 columns */
 
     @media (max-width: 900px) {

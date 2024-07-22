@@ -12,6 +12,9 @@ export const GraphContainer = styled.div`
     align-items: start;
     width: 100%;
     padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 `;
 
 export const BarContainer = styled.div`
