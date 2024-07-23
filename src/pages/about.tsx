@@ -1,9 +1,15 @@
-"use client"
-
+// src/pages/about.tsx
 import React from 'react';
+import Head from 'next/head';
 
 const About: React.FC = () => {
-    return <div>About Page</div>;
+    return (
+
+
+            <h1>About Page</h1>
+
+
+    );
 };
 
 export default About;

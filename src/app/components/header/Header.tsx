@@ -1,5 +1,4 @@
-'use client'
-
+// src/app/components/header/Header.tsx
 import React from 'react';
 import Link from 'next/link';
 import { HeaderContainer, Nav, NavList, NavItem, NavLink } from './Header.styles';

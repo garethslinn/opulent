@@ -1,5 +1,4 @@
-// src/app/layout.tsx
-"use client";
+"use client"
 
 import React from 'react';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
@@ -19,14 +18,19 @@ const GlobalStyle = createGlobalStyle`
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
-        <html lang="en">
+        <html>
         <body>
         <ThemeProvider theme={theme}>
             <GlobalStyle />
             <Header />
-            {children}
+            <main>{children}</main>
         </ThemeProvider>
         </body>
         </html>
+        // <ThemeProvider theme={theme}>
+        //     <GlobalStyle />
+        //     <Header />
+        //     {children}
+        // </ThemeProvider>
     );
 }

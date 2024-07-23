@@ -1,9 +1,13 @@
-'use client'
-
+// src/pages/_app.tsx
 import { AppProps } from 'next/app';
+import RootLayout from '../app/layout';
 
 function MyApp({ Component, pageProps }: AppProps) {
-    return <Component {...pageProps} />;
+    return (
+        <RootLayout>
+            <Component {...pageProps} />
+        </RootLayout>
+    );
 }
 
 export default MyApp;
