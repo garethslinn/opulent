@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const RecommendationWrapper = styled.div`
   background: #f1f1f1;
-  padding: 100px 0;
 `;
 
 export const RecommendationContainer = styled.div`

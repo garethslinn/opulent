@@ -52,7 +52,7 @@ body {
 
 body {
   color: rgb(var(--color-white));
-  background: rgb(var(--color-black));
+  background: #f1f1f1;
 }
 
 a {
