@@ -5,6 +5,7 @@ import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import theme from '../theme';
 import Header from './components/header/Header';
 import '../../src/app/globals.css';
+import Footer from "@/app/components/footer/Footer";
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -24,6 +25,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <GlobalStyle />
             <Header />
             <main>{children}</main>
+            <Footer />
         </ThemeProvider>
         </body>
         </html>

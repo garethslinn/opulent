@@ -1,12 +1,15 @@
 "use client"
 
 import React from 'react';
+import Title from "@/app/components/title/Title";
 
-const About: React.FC = () => {
-    return <div>About Page</div>;
+const Experience: React.FC = () => {
+    return (
+        <Title text="Experience" />
+    )
 };
 
-export default About;
+export default Experience;
 
 // Repeat for other pages:
 // recommendations.tsx,

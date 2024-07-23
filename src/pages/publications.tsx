@@ -1,9 +1,12 @@
 "use client"
 
 import React from 'react';
+import Title from "@/app/components/title/Title";
 
 const Publications: React.FC = () => {
-    return <div>Publications Page</div>;
+    return (
+        <Title text="Publications" />
+    )
 };
 
 export default Publications;

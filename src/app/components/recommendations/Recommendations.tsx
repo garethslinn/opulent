@@ -6,7 +6,6 @@ import {RecommendationsProps} from "@/app/components/recommendations/Recommendat
 const Recommendations: React.FC<RecommendationsProps> = ({ recommendations }) => {
     return (
         <RecommendationWrapper>
-            <p>Here is a list of public recommendations extracted from my LinkedIn profile: [Gareth Slinn's LinkedIn Recommendations](https://www.linkedin.com/in/garethslinn/details/recommendations/?detailScreenTabIndex=0).</p>
             {recommendations.map((rec, index) => (
                 <RecommendationContainer key={index}>
                     <Name>{rec.Name}</Name>

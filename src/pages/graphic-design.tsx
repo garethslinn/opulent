@@ -1,9 +1,12 @@
 "use client"
 
 import React from 'react';
+import Title from "@/app/components/title/Title";
 
 const GraphicDesign: React.FC = () => {
-    return <div>Graphic Design Page</div>;
+    return (
+        <Title text="Graphic Design" />
+    )
 };
 
 export default GraphicDesign;

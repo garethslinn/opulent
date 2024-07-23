@@ -1,9 +1,12 @@
 "use client"
 
 import React from 'react';
+import Title from "@/app/components/title/Title";
 
 const Contact: React.FC = () => {
-    return <div>Contact Page</div>;
+    return (
+        <Title text="Contact" />
+    )
 };
 
 export default Contact;
