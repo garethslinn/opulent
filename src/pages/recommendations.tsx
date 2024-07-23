@@ -11,7 +11,7 @@ const Recommendations: React.FC = () => {
             <Paragraph backgroundColor="#f1f1f1" foregroundColor="">
                 Here is a list of public recommendations extracted from my
                 <a href="https://www.linkedin.com/in/garethslinn/details/recommendations/?detailScreenTabIndex=0">
-                LinkedIn profile
+                 &nbsp;LinkedIn profile
                 </a>
             </Paragraph>
             <RecommendationsComponent recommendations={recommendations} />

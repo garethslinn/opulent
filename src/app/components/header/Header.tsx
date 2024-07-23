@@ -1,13 +1,19 @@
 // src/app/components/header/Header.tsx
 import React from 'react';
 import Link from 'next/link';
-import { HeaderContainer, Nav, NavList, NavItem, NavLink } from './Header.styles';
+import Image from 'next/image';
+import {HeaderContainer, Nav, NavList, NavItem, NavLink, LogoContainer} from './Header.styles';
+import logo from '../../../../public/assets/images/gds.svg';
 
 const Header: React.FC = () => {
     return (
         <HeaderContainer>
             <Nav>
-                <div>Logo</div>
+                <LogoContainer>
+                    <Link href="/" passHref>
+                        <Image src={logo} alt="Logo" width={50} height={50} />
+                    </Link>
+                </LogoContainer>
                 <NavList>
                     <NavItem>
                         <Link href="/about" passHref>

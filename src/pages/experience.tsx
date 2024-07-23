@@ -17,6 +17,9 @@ export default function Experience() {
         <div>
             <Title text="Tech Skills by Years Experience" />
             <SkillGrid data={techSkills} />
+            <Title backgroundColor="#f1f1f1" text="Contracts" />
+            <QuoteTool />
+
             <Title text="Skill Metrics" />
             <TwoColumnContainer backgroundColor="#f1f1f1">
                 <BarGraph data={industries} />
@@ -24,8 +27,7 @@ export default function Experience() {
             </TwoColumnContainer>
             <Title text="Soft Skills" />
             <SkillCards skills={softSkills} />
-            <Title backgroundColor="#505275" foregroundColor="#f1f1f1" text="Contracts" />
-            <QuoteTool />
+
         </div>
     );
 }

@@ -1,39 +1,43 @@
-// src/app/components/header/Header.styles.ts
 import styled from 'styled-components';
 
 export const HeaderContainer = styled.header`
-  position: sticky;
-  top: 0;
-  width: 100%;
   background-color: #fff;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
+  color: #000;
+  padding: 1rem 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
 `;
 
 export const Nav = styled.nav`
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  justify-content: space-between;
+  padding: 0 1rem;
+`;
+
+export const LogoContainer = styled.div`
+  display: flex;
+  align-items: center;
 `;
 
 export const NavList = styled.ul`
-  list-style: none;
   display: flex;
-  gap: 2rem;
-  margin: 0;
+  gap: 1rem;
+  list-style: none;
   padding: 0;
+  margin: 0;
 `;
 
-export const NavItem = styled.li`
-  margin: 0;
-`;
+export const NavItem = styled.li``;
 
 export const NavLink = styled.a`
+  color: #000;
   text-decoration: none;
-  color: #333;
-  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s;
+
   &:hover {
-    color: #0070f3;
+    color: #888;
   }
 `;
