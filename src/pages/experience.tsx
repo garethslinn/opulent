@@ -19,7 +19,6 @@ export default function Experience() {
             <SkillGrid data={techSkills} />
             <Title backgroundColor="#f1f1f1" text="Contracts" />
             <QuoteTool />
-
             <Title text="Skill Metrics" />
             <TwoColumnContainer backgroundColor="#f1f1f1">
                 <BarGraph data={industries} />
