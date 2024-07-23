@@ -1,8 +1,8 @@
-// File: /Users/garethslinn/private_projects/opulent/src/app/layout.tsx
-import * as entry from '../../../app/layout.js'
+// File: /Users/garethslinn/private_projects/opulent/src/app/_app.tsx
+import * as entry from '../../../app/_app.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
-type TEntry = typeof import('../../../app/layout.js')
+type TEntry = typeof import('../../../app/_app.js')
 
 // Check that the entry is a valid entry
 checkFields<Diff<{
