@@ -1,6 +1,6 @@
-"use client"
-
 // src/app/layout.tsx
+"use client";
+
 import React from 'react';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import theme from '../theme';
@@ -17,11 +17,7 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-export default function RootLayout({
-                                       children,
-                                   }: {
-    children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
         <html lang="en">
         <body>
