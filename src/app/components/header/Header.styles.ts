@@ -1,10 +1,21 @@
+// src/app/components/header/Header.styles.ts
 import styled from 'styled-components';
 
-export const HeaderContainer = styled.header`
+interface HeaderContainerProps {
+    opacity: number;
+}
+
+export const HeaderContainer = styled.header<HeaderContainerProps>`
+  position: fixed;
+  top: 0;
+  width: 100%;
   background-color: #fff;
   color: #000;
   padding: 1rem 0;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  opacity: ${(props) => props.opacity};
+  transition: opacity 0.3s;
+  z-index: 1000;
 `;
 
 export const Nav = styled.nav`

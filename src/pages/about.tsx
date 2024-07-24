@@ -30,9 +30,9 @@ const About: React.FC = () => {
                 link="/experience"
                 imageSrc="/assets/images/backend.svg"
             >
-                My stack includes TypeScript, Express, NodeJS, and MongoDB,
-                ensuring your backend is robust and efficient.
-                I assist with Python as when needed.
+                My backend stack includes TypeScript, Express, NodeJS, and MongoDB,
+                ensuring your backend is robust and efficient. I can also assist with
+                Python as when needed.
             </Card>
 
             <Card
