@@ -20,5 +20,6 @@ export const Wrapper = styled.div`
 export const ParagraphText = styled.div`
   margin: 0;
   text-align: left;
-  font-size: 1rem;
+  font-size: 18px;
+  line-height: 30px;
 `;
