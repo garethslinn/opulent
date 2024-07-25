@@ -46,11 +46,12 @@ export const NavList = styled.ul`
 
 export const NavItem = styled.li``;
 
-export const NavLink = styled.a`
+export const NavLink = styled.a<{ isActive?: boolean }>`
   color: #000;
   text-decoration: none;
-  font-size: 1rem;
-  transition: color 0.3s;
+  font-size: 1.1rem;
+  transition: color 0.3s, border-bottom 0.3s;
+  border-bottom: ${(props) => (props.isActive ? '2px solid blue' : 'none')};
 
   &:hover {
     color: #888;
@@ -88,7 +89,7 @@ export const MobileNavList = styled.ul<{ isOpen: boolean }>`
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   overflow: hidden;
-  max-height: ${(props) => (props.isOpen ? '300px' : '0')};
+  max-height: ${(props) => (props.isOpen ? '380px' : '0')};
   transition: max-height 0.3s ease-in-out;
 
   @media (min-width: 901px) {
