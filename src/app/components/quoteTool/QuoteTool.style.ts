@@ -7,7 +7,6 @@ export const QuoteToolWrapper = styled.div`
   max-width: 1024px;
   margin: 0 auto;
   background: #fff;
-  color: #000;
 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 18px;
@@ -76,7 +75,7 @@ export const RightColumn = styled.div`
 `;
 
 export const Title = styled.h1`
-  margin: var(--spacing-small) 0;
+  margin: 10px 0 50px 0;
   font-size: 30px;
 
   @media (max-width: 1100px) {

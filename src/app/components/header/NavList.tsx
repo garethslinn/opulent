@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 import { NavListContainer, NavItem, NavLink } from './NavList.styles';
 import linkedinIcon from '../../../../public/assets/images/brands/linkedin.svg';
 import githubIcon from '../../../../public/assets/images/brands/github.svg';
@@ -11,41 +12,45 @@ interface NavListProps {
 }
 
 const NavList: React.FC<NavListProps> = ({ isMenuOpen = false, toggleMenu }) => {
+    const pathname = usePathname();
+
+    const isActive = (path: string) => pathname === path;
+
     return (
         <NavListContainer isOpen={isMenuOpen}>
             <NavItem>
                 <Link href="/" passHref>
-                    <NavLink onClick={toggleMenu}>About</NavLink>
+                    <NavLink onClick={toggleMenu} isActive={isActive('/')}>About</NavLink>
                 </Link>
             </NavItem>
             <NavItem>
                 <Link href="/experience" passHref>
-                    <NavLink onClick={toggleMenu}>Experience</NavLink>
+                    <NavLink onClick={toggleMenu} isActive={isActive('/experience')}>Experience</NavLink>
                 </Link>
             </NavItem>
             <NavItem>
                 <Link href="/recommendations" passHref>
-                    <NavLink onClick={toggleMenu}>Recommendations</NavLink>
+                    <NavLink onClick={toggleMenu} isActive={isActive('/recommendations')}>Recommendations</NavLink>
                 </Link>
             </NavItem>
             <NavItem>
                 <Link href="/open-source" passHref>
-                    <NavLink onClick={toggleMenu}>OpenSource</NavLink>
+                    <NavLink onClick={toggleMenu} isActive={isActive('/open-source')}>Open&nbsp;Source</NavLink>
                 </Link>
             </NavItem>
             <NavItem>
                 <Link href="/publications" passHref>
-                    <NavLink onClick={toggleMenu}>Publications</NavLink>
+                    <NavLink onClick={toggleMenu} isActive={isActive('/publications')}>Publications</NavLink>
                 </Link>
             </NavItem>
             <NavItem>
                 <Link href="/graphic-design" passHref>
-                    <NavLink onClick={toggleMenu}>Design</NavLink>
+                    <NavLink onClick={toggleMenu} isActive={isActive('/graphic-design')}>Design</NavLink>
                 </Link>
             </NavItem>
             <NavItem>
                 <Link href="/contact" passHref>
-                    <NavLink onClick={toggleMenu}>Contact</NavLink>
+                    <NavLink onClick={toggleMenu} isActive={isActive('/contact')}>Contact</NavLink>
                 </Link>
             </NavItem>
             <NavItem>

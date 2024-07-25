@@ -23,7 +23,6 @@ export const Nav = styled.nav`
   align-items: center;
   justify-content: space-between;
   padding: 0 1rem;
-  font-family: 'Advent Pro', sans-serif;
 `;
 
 export const LogoContainer = styled.div`
@@ -69,7 +68,6 @@ export const NavLink = styled.a<{ isActive?: boolean }>`
   &:hover {
     color: #888;
   }
-  font-family: 'Advent Pro', sans-serif;
 `;
 
 export const BurgerMenu = styled.div`

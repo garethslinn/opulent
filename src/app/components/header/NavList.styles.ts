@@ -32,7 +32,10 @@ export const NavLink = styled.a<{ isActive?: boolean }>`
   text-decoration: none;
   font-size: 1.1rem;
   transition: color 0.3s, border-bottom 0.3s;
+  margin-bottom: 4px; /* Added margin-bottom for space between name and underline */
   border-bottom: ${(props) => (props.isActive ? '2px solid blue' : 'none')};
+
+  white-space: nowrap; /* Ensure text doesn't wrap */
 
   &:hover {
     color: #888;

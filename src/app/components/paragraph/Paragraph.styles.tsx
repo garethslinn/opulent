@@ -10,7 +10,6 @@ export const Container = styled.div<{ backgroundColor: string; foregroundColor: 
 `;
 
 export const Wrapper = styled.div`
-  font-family: 'Roboto', sans-serif;
   width: 100%;
   max-width: 1024px;
   padding: 0 20px;
