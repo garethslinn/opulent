@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const QuoteToolWrapper = styled.div`
+  font-family: 'Roboto', sans-serif;
   position: relative;
   min-height: 600px;
   overflow: hidden;
@@ -14,6 +15,7 @@ export const QuoteToolWrapper = styled.div`
 `;
 
 export const ElementWrapper = styled.div`
+  padding-top: 30px;
   width: var(--width-full);
   display: flex;
   justify-content: center;
@@ -24,20 +26,20 @@ export const ChildWrapper = styled.div`
   max-width: var(--width-max);
   display: flex;
 
-  @media (max-width: 900px) {
+  @media (max-width: 1100px) {
     flex-direction: column;
     align-items: stretch;
   }
 `;
 
 export const LeftColumn = styled.div`
-  width: var(--left-column-width, 200px);
+  width: var(--left-column-width, 250px);
   text-align: center;
   display: flex;
   flex-direction: column;
-  padding-left: 20px;
+  padding-left: 40px;
 
-  @media (max-width: 900px) {
+  @media (max-width: 1100px) {
     padding-left: 50px;
     width: 100%;
     flex-direction: row;
@@ -46,10 +48,8 @@ export const LeftColumn = styled.div`
   }
 `;
 
-
 export const QuoteText = styled.div`
-  
-  @media (max-width: 900px) {
+  @media (max-width: 1100px) {
     font-size: var(--font-size-title);
     margin-top: 35px;
     margin-left: var(--spacing-small);
@@ -60,7 +60,7 @@ export const Icon = styled.img`
   width: var(--icon-large);
   height: var(--icon-large);
 
-  @media (max-width: 900px) {
+  @media (max-width: 1100px) {
     width: calc(var(--icon-large) / 2);
     height: calc(var(--icon-large) / 2);
   }
@@ -71,25 +71,26 @@ export const RightColumn = styled.div`
   flex-direction: column;
   padding: 0 50px;
   
-  @media (max-width: 900px) {
+  @media (max-width: 1100px) {
     align-items: stretch;
   }
 `;
 
 export const Title = styled.h1`
+  font-family: 'Roboto-bold', sans-serif;
   margin: var(--spacing-small) 0;
   font-size: 30px;
 
-  @media (max-width: 900px) {
+  @media (max-width: 1100px) {
     font-size: calc(var(--font-size-title));
   }
 `;
 
 export const SkillsWrapper = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
-    margin: var(--spacing-small) 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin: var(--spacing-small) 0;
 `;
 
 export const Paragraph = styled.p`
@@ -98,7 +99,7 @@ export const Paragraph = styled.p`
   
   min-height: 300px;
 
-  @media (max-width: 900px) {
+  @media (max-width: 1100px) {
     font-size: calc(var(--font-size-medium) / 2);
     text-align: start;
   }
@@ -110,8 +111,20 @@ export const Line = styled.div`
   background: #ccc;
   margin: 0 var(--spacing-small);
 
-  @media (max-width: 900px) {
+  @media (max-width: 1100px) {
     width: 100%;
     margin: var(--spacing-small) 0;
   }
+`;
+
+export const BulletList = styled.ul`
+  list-style: disc;
+  padding-left: 20px;
+  font-size: 18px;
+  min-height: 280px;
+  line-height: 2;
+`;
+
+export const BulletItem = styled.li`
+  margin-bottom: 10px;
 `;

@@ -31,12 +31,13 @@ export const SkillCard = styled.div`
 `;
 
 export const SkillTitle = styled.h3`
+    font-family: 'Roboto-bold', sans-serif;
     margin: 0 0 10px 0;
     font-size: 1.2em;
 `;
 
 export const SkillDescription = styled.p`
     margin: 0;
-    font-size: 1em;
+    font-size: 18px;
     color: #555;
 `;

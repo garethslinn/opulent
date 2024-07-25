@@ -2,8 +2,15 @@ export const companies = [
     {
         title: "NBrown",
         image: "/assets/images/brands/nbrown.svg",
-        description: "Mentored junior team members, led the team, developed new features, ensured thorough test coverage, managed defects, conducted code reviews, and oversaw deployments.\n" +
-            "Facilitated a major web release involving Next.js with extensive testing for 80% test coverage. Refactored legacy code to reduce cognitive complexity.\n",
+        description: [
+            "Mentored junior team members.",
+            "Led the team and developed new features.",
+            "Ensured thorough test coverage.",
+            "Managed defects and conducted code reviews.",
+            "Oversaw deployments.",
+            "Facilitated a major web release involving Next.js with extensive testing for 80% test coverage.",
+            "Refactored legacy code to reduce cognitive complexity."
+        ],
         skills: "TypeScript, Nextjs, React, SCSS, SonarQube, Cypress, AWS",
         dateFrom: "Oct 2023",
         dateTo: "Jul 2024"
@@ -11,7 +18,11 @@ export const companies = [
     {
         title: "Premier Foods",
         image: "/assets/images/brands/premier_foods.svg",
-        description: "Transitioned a legacy application set to a contemporary React stack. Liaised with management for new features and enhanced UX. Created a bespoke component library.",
+        description: [
+            "Transitioned a legacy application set to a contemporary React stack.",
+            "Liaised with management for new features and enhanced UX.",
+            "Created a bespoke component library."
+        ],
         skills: "TypeScript, React, React Native, Nextjs, SCSS, Cypress, AWS",
         dateFrom: "Sept 2022",
         dateTo: "Jul 2023"
@@ -19,7 +30,10 @@ export const companies = [
     {
         title: "William Hill",
         image: "/assets/images/brands/william_hill.svg",
-        description: "Quickly adapted to the betting app project, preparing for future documentation and knowledge transfer.",
+        description: [
+            "Quickly adapted to the betting app project.",
+            "Prepared for future documentation and knowledge transfer."
+        ],
         skills: "TypeScript, Styled Components, React, Redux, Nextjs, React Hooks",
         dateFrom: "Jul 2021",
         dateTo: "Sep 2021"
@@ -27,10 +41,13 @@ export const companies = [
     {
         title: "BP",
         image: "/assets/images/brands/bp.svg",
-        description: "I worked on a small team with three onshore and five offshore developers to build a fleet management " +
-            "application for BP's internal use. I focused on user and group management, developing fully tested features in " +
-            "a fast-paced environment using React, Redux, Jest, Styled Components, and Azure for deployments. I also assisted " +
-            "offshore developers to prepare for an eventual handover, with code reviews being a key part of my responsibilities.",
+        description: [
+            "Worked on a small team with three onshore and five offshore developers to build a fleet management application for BP's internal use.",
+            "Focused on user and group management.",
+            "Developed fully tested features in a fast-paced environment using React, Redux, Jest, Styled Components, and Azure for deployments.",
+            "Assisted offshore developers to prepare for an eventual handover.",
+            "Conducted code reviews."
+        ],
         skills: "TypeScript, Reactjs, Redux, Azure, Jest, Cypress, Styled Components, Storybook",
         dateFrom: "Sep 2019",
         dateTo: "Mar 2020"
@@ -38,17 +55,14 @@ export const companies = [
     {
         title: "AIG",
         image: "/assets/images/brands/aig.svg",
-        description: "American International Group, Inc., also known as AIG, is an American multinational finance\n" +
-            "and insurance corporation with operations in more than 80 countries and jurisdictions. \n" +
-            "I was in a small team consisting of two front end developers and one full stack, one tester,\n" +
-            "project manager, operations, two back end developers and access to a shared ux and\n" +
-            "design team. The team was agile scrum based on two week sprints.\n" +
-            "The role was in two parts. First part began in December 2018 to deliver new functionality to\n" +
-            "AIG’s IRM (now Sonar) project. This included adding a timeline to track news items with an\n" +
-            "intuitive tooltip that linked to a list within a sidebar. The other task during the first phase was\n" +
-            "to apply customisable filters which could be created, updated and removed via an api.\n" +
-            "The second phase I lead a project to build a component library to be used across all projects\n" +
-            "in AIG.",
+        description: [
+            "Part of a small team consisting of front end developers, full stack developers, tester, project manager, operations, and back end developers.",
+            "Agile scrum based on two-week sprints.",
+            "Delivered new functionality to AIG’s IRM (now Sonar) project.",
+            "Added a timeline to track news items with an intuitive tooltip that linked to a list within a sidebar.",
+            "Applied customizable filters which could be created, updated, and removed via an API.",
+            "Led a project to build a component library to be used across all projects in AIG."
+        ],
         skills: "TypeScript, Reactjs, Redux, AWS, Jest, SASS, Node, Storybook",
         dateFrom: "Dec 2018",
         dateTo: "Jul 2019"
@@ -56,9 +70,10 @@ export const companies = [
     {
         title: "Grant Thornton LLP",
         image: "/assets/images/brands/grant_thornton.svg",
-        description: "Grant Thornton LLP is the American member firm of Grant Thornton International, the sixth\n" +
-            "largest accounting network in the world by combined fee income. Grant Thornton LLP is the\n" +
-            "sixth largest U.S. accounting and advisory organisation\n",
+        description: [
+            "American member firm of Grant Thornton International, the sixth largest accounting network in the world by combined fee income.",
+            "Part of a team responsible for various projects."
+        ],
         skills: "css, html, javascript, typescript, reactjs, jest, highcharts, git, sass, nodejs",
         dateFrom: "Sep 2018",
         dateTo: "Nov 2018"
@@ -66,7 +81,11 @@ export const companies = [
     {
         title: "BT",
         image: "/assets/images/brands/bt.svg",
-        description: "Built static pages, demonstrated interactions, and developed an automated service for processing CSS/JS and packaging for deployment.",
+        description: [
+            "Built static pages.",
+            "Demonstrated interactions.",
+            "Developed an automated service for processing CSS/JS and packaging for deployment."
+        ],
         skills: "JavaScript, Angular, Jest, Git, SASS, Node, CSS3, HTML5",
         dateFrom: "May 2015",
         dateTo: "Sep 2015"
@@ -74,7 +93,13 @@ export const companies = [
     {
         title: "Argos",
         image: "/assets/images/brands/argos.svg",
-        description: "Built a decoupled UI service layer to replace the current site which is unstable, bloated and difficult to maintain.This web application was created using nodejs and expressjs. Much of the middleware included gulp task runner, node monitor, sass, jshint. During development we used stubs in the form of json. Modules and Views kept separated and populated using swig templates.",
+        description: [
+            "Built a decoupled UI service layer to replace the current site which is unstable, bloated and difficult to maintain.",
+            "Created a web application using Node.js and Express.js.",
+            "Used middleware including Gulp task runner, Node Monitor, SASS, JSHint.",
+            "Used stubs in the form of JSON during development.",
+            "Kept modules and views separated and populated using Swig templates."
+        ],
         skills: "css, html, javascript, nodejs, expressjs, sass, gulp",
         dateFrom: "Jul 2014",
         dateTo: "May 2015"
@@ -82,7 +107,11 @@ export const companies = [
     {
         title: "Sainsburys",
         image: "/assets/images/brands/sainsburys.svg",
-        description: "On this project I was supporting a major release, developing new controls.  Tasks included site tagging (user tracking), creating an ipad version of the site and working on mobile.  There was a lot of JavaScript support nearing the end of the project.  Typically solving long standing issues and closing down mainly backlog of defects.",
+        description: [
+            "Supported a major release and developed new controls.",
+            "Tasks included site tagging (user tracking), creating an iPad version of the site, and working on mobile.",
+            "Provided JavaScript support nearing the end of the project, solving long-standing issues and closing down backlog of defects."
+        ],
         skills: "css3, html/html5, javascript, dojo",
         dateFrom: "Jul 2012",
         dateTo: "Aug 2014"
@@ -90,7 +119,10 @@ export const companies = [
     {
         title: "Tesco",
         image: "/assets/images/brands/tesco.svg",
-        description: "Helped with Tesco Entertainment improvements and introduction of new controls, working from PSD graphic files to implementation.",
+        description: [
+            "Helped with Tesco Entertainment improvements and introduction of new controls.",
+            "Worked from PSD graphic files to implementation."
+        ],
         skills: "css, html, javascript, jquery, apis, svn, photoshop",
         dateFrom: "Mar 2010",
         dateTo: "Jun 2012"
@@ -98,7 +130,13 @@ export const companies = [
     {
         title: "Uswitch",
         image: "/assets/images/brands/uswitch.svg",
-        description: "Worked on uSwitch site rebuild.  This included Hand coded CSS and XHTML implementation. Implement cross browser compatibility and accessibility and assisting the .Net team.  I also worked along side the sales team building white label sites.",
+        description: [
+            "Worked on uSwitch site rebuild.",
+            "Hand-coded CSS and XHTML implementation.",
+            "Implemented cross-browser compatibility and accessibility.",
+            "Assisted the .Net team.",
+            "Worked alongside the sales team building white label sites."
+        ],
         skills: "css, xhtml, svn, photoshop",
         dateFrom: "Sep 2006",
         dateTo: "Sep 2007"
@@ -106,7 +144,10 @@ export const companies = [
     {
         title: "LogicaCMG",
         image: "/assets/images/brands/Logica.svg",
-        description: "Built a web application for the Medical Research Council, including implementation from PSD files and testing.",
+        description: [
+            "Built a web application for the Medical Research Council.",
+            "Implemented from PSD files and tested."
+        ],
         skills: "css, html, sourcesafe, photoshop",
         dateFrom: "Mar 2006",
         dateTo: "Jul 2006"
@@ -114,7 +155,12 @@ export const companies = [
     {
         title: "AKQA",
         image: "/assets/images/brands/akqa.svg",
-        description: "Developing and dealing with html issues making sure pages work across all main browsers.  Fixing CSS layout problems.  Projects included: Xbox, Sainsburys and Freemans of London. Building XML documents for a multilingual email form (Fifa/XBOX).",
+        description: [
+            "Developed and dealt with HTML issues making sure pages work across all main browsers.",
+            "Fixed CSS layout problems.",
+            "Projects included: Xbox, Sainsburys, and Freemans of London.",
+            "Built XML documents for a multilingual email form (Fifa/XBOX)."
+        ],
         skills: "css, html, clearcase, photoshop",
         dateFrom: "Jul 2005",
         dateTo: "Aug 2005"
@@ -122,7 +168,11 @@ export const companies = [
     {
         title: "Cisco",
         image: "/assets/images/brands/cisco.svg",
-        description: "This was a team based role, dealing with clients on a day to day basis and working to strict deadlines. General day-to-day roles include updates and the development of new sites both internal and external. This was a very demanding and highly time critical role.",
+        description: [
+            "Team-based role, dealing with clients on a day-to-day basis and working to strict deadlines.",
+            "General day-to-day roles included updates and the development of new sites both internal and external.",
+            "This was a very demanding and highly time-critical role."
+        ],
         skills: "HTML, CSS, Photoshop, Flash, Teamsite",
         dateFrom: "Feb 2004",
         dateTo: "May 2005"

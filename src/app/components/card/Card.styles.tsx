@@ -13,6 +13,7 @@ export const CardContainer = styled.div`
 `;
 
 export const Title = styled.h2`
+  font-family: 'Roboto-bold', sans-serif;
   border-bottom: 1px solid #000;
   font-size: 30px;
   padding-bottom: 20px;
@@ -20,7 +21,7 @@ export const Title = styled.h2`
 
 export const Description = styled.div`
   margin: 10px 0;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 30px;
   width: 60%;
 `;

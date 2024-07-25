@@ -12,7 +12,9 @@ import {
     Title,
     Paragraph,
     Line,
-    SkillsWrapper
+    SkillsWrapper,
+    BulletList,
+    BulletItem
 } from './QuoteTool.style';
 import InlineList from "@/app/components/inlineList/inlineList";
 import { companies } from "@/app/stubs/companies";
@@ -21,14 +23,14 @@ import Counter from "@/app/components/counter/Counter";
 
 const quotesArrowTheme = {
     fillColor: "transparent",
-    outlineColor: "#f1f1f1",
+    outlineColor: "#000",
     hoverFillColor: "#ccc",
 };
 
 const QuoteTool: React.FC<{ quoteText?: string }> = ({ quoteText = "Professional Experience" }) => {
     const [activeIndex, setActiveIndex] = useState<number>(0);
     const [activeTitle, setActiveTitle] = useState<string>(companies[0].title);
-    const [activeDescription, setActiveDescription] = useState<string>(companies[0].description);
+    const [activeDescription, setActiveDescription] = useState<string[]>(companies[0].description);
     const [activeSkills, setActiveSkills] = useState<string[]>(companies[0].skills.split(', '));
     const [isUserInteracting, setIsUserInteracting] = useState<boolean>(false);
     const intervalRef = useRef<NodeJS.Timeout | null>(null);
@@ -80,7 +82,11 @@ const QuoteTool: React.FC<{ quoteText?: string }> = ({ quoteText = "Professional
                     </LeftColumn>
                     <RightColumn>
                         <Title>{activeTitle}</Title>
-                        <Paragraph>{activeDescription}</Paragraph>
+                        <BulletList>
+                            {activeDescription.map((desc, index) => (
+                                <BulletItem key={index}>{desc}</BulletItem>
+                            ))}
+                        </BulletList>
                         <SkillsWrapper>
                             {activeSkills.map((skill, index) => (
                                 <Item key={index} skill={skill} />
