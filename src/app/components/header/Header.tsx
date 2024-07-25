@@ -1,9 +1,10 @@
-// src/app/components/header/Header.tsx
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { HeaderContainer, Nav, NavList, NavItem, NavLink, LogoContainer, BurgerMenu, MobileNavList } from './Header.styles';
 import logo from '../../../../public/assets/images/gds.svg';
+import linkedinIcon from '../../../../public/assets/images/brands/linkedin.svg';
+import githubIcon from '../../../../public/assets/images/brands/github.svg';
 
 const Header: React.FC = () => {
     const [opacity, setOpacity] = useState(1);
@@ -57,24 +58,36 @@ const Header: React.FC = () => {
                         </Link>
                     </NavItem>
                     <NavItem>
-                        <Link href="/publications" passHref>
-                            <NavLink>Publications</NavLink>
-                        </Link>
-                    </NavItem>
-                    <NavItem>
                         <Link href="/open-source" passHref>
                             <NavLink>Open Source</NavLink>
                         </Link>
                     </NavItem>
                     <NavItem>
+                        <Link href="/publications" passHref>
+                            <NavLink>Publications</NavLink>
+                        </Link>
+                    </NavItem>
+                    <NavItem>
                         <Link href="/graphic-design" passHref>
-                            <NavLink>Graphic Design</NavLink>
+                            <NavLink>Design</NavLink>
                         </Link>
                     </NavItem>
                     <NavItem>
                         <Link href="/contact" passHref>
                             <NavLink>Contact</NavLink>
                         </Link>
+                    </NavItem>
+                </NavList>
+                <NavList>
+                    <NavItem>
+                        <a href="https://www.linkedin.com/in/garethslinn/" target="_blank" rel="noopener noreferrer">
+                            <Image src={linkedinIcon} alt="LinkedIn" width={30} height={30} />
+                        </a>
+                    </NavItem>
+                    <NavItem>
+                        <a href="https://github.com/garethslinn/" target="_blank" rel="noopener noreferrer">
+                            <Image src={githubIcon} alt="GitHub" width={30} height={30} />
+                        </a>
                     </NavItem>
                 </NavList>
                 <BurgerMenu onClick={toggleMenu}>
@@ -111,7 +124,7 @@ const Header: React.FC = () => {
                 </NavItem>
                 <NavItem>
                     <Link href="/graphic-design" passHref>
-                        <NavLink onClick={toggleMenu}>Graphic Design</NavLink>
+                        <NavLink onClick={toggleMenu}>Design</NavLink>
                     </Link>
                 </NavItem>
                 <NavItem>
