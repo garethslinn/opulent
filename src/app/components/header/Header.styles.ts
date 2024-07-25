@@ -1,19 +1,18 @@
 import styled from 'styled-components';
 
 interface HeaderContainerProps {
-    opacity: number;
+    isScrolled: boolean;
 }
 
 export const HeaderContainer = styled.header<HeaderContainerProps>`
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #fff;
+  background-color: ${(props) => (props.isScrolled ? '#fff' : 'transparent')};
   color: #000;
   padding: 1rem 0;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  opacity: ${(props) => props.opacity};
-  transition: opacity 0.3s;
+  box-shadow: ${(props) => (props.isScrolled ? '0 4px 6px rgba(0, 0, 0, 0.1)' : 'none')};
+  transition: background-color 0.3s, box-shadow 0.3s;
   z-index: 1000;
 `;
 

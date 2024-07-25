@@ -7,19 +7,12 @@ import linkedinIcon from '../../../../public/assets/images/brands/linkedin.svg';
 import githubIcon from '../../../../public/assets/images/brands/github.svg';
 
 const Header: React.FC = () => {
-    const [opacity, setOpacity] = useState(1);
+    const [isScrolled, setIsScrolled] = useState(false);
     const [isMenuOpen, setMenuOpen] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
-            const scrollY = window.scrollY;
-            if (scrollY >= 300) {
-                setOpacity(0);
-            } else if (scrollY >= 270) {
-                setOpacity(1 - (scrollY - 270) / 20);
-            } else {
-                setOpacity(1);
-            }
+            setIsScrolled(window.scrollY > 0);
         };
 
         window.addEventListener('scroll', handleScroll);
@@ -34,7 +27,7 @@ const Header: React.FC = () => {
     };
 
     return (
-        <HeaderContainer opacity={opacity}>
+        <HeaderContainer isScrolled={isScrolled}>
             <Nav>
                 <LogoContainer>
                     <Link href="/" passHref>
