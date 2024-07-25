@@ -30,7 +30,7 @@ const NavList: React.FC<NavListProps> = ({ isMenuOpen = false, toggleMenu }) => 
             </NavItem>
             <NavItem>
                 <Link href="/open-source" passHref>
-                    <NavLink onClick={toggleMenu}>Open Source</NavLink>
+                    <NavLink onClick={toggleMenu}>OpenSource</NavLink>
                 </Link>
             </NavItem>
             <NavItem>

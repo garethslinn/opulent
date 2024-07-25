@@ -39,7 +39,7 @@ export const NavListContainer = styled.ul<{ isOpen?: boolean }>`
   padding: 0;
   margin: 0;
 
-  @media (max-width: 900px) {
+  @media (max-width: 1100px) {
     display: ${(props) => (props.isOpen ? 'flex' : 'none')};
     flex-direction: column;
     background-color: #fff;
@@ -79,7 +79,7 @@ export const BurgerMenu = styled.div`
   flex-direction: column;
   cursor: pointer;
 
-  @media (max-width: 900px) {
+  @media (max-width: 1150px) {
     display: flex;
   }
 

@@ -5,6 +5,9 @@ export const QuoteToolWrapper = styled.div`
   color: #f1f1f1;
   position: relative;
   min-height: 600px;
+  overflow: hidden;
+  max-width: 1024px;
+  margin: 0 auto;
 `;
 
 export const ElementWrapper = styled.div`
