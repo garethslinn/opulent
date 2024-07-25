@@ -3,8 +3,9 @@ import styled from 'styled-components';
 
 export const CardContainer = styled.div`
   background: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 18px;
 
   max-width: 1024px;

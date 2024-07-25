@@ -1,13 +1,16 @@
 import styled from 'styled-components';
 
 export const QuoteToolWrapper = styled.div`
-  background: var(--color-counter-background);
-  color: #f1f1f1;
   position: relative;
   min-height: 600px;
   overflow: hidden;
   max-width: 1024px;
   margin: 0 auto;
+  background: #fff;
+  color: #000;
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 18px;
 `;
 
 export const ElementWrapper = styled.div`
@@ -32,6 +35,7 @@ export const LeftColumn = styled.div`
   text-align: center;
   display: flex;
   flex-direction: column;
+  padding-left: 20px;
 
   @media (max-width: 900px) {
     padding-left: 50px;
