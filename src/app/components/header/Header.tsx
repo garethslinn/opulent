@@ -77,8 +77,6 @@ const Header: React.FC = () => {
                             <NavLink>Contact</NavLink>
                         </Link>
                     </NavItem>
-                </NavList>
-                <NavList>
                     <NavItem>
                         <a href="https://www.linkedin.com/in/garethslinn/" target="_blank" rel="noopener noreferrer">
                             <Image src={linkedinIcon} alt="LinkedIn" width={30} height={30} />
@@ -131,6 +129,15 @@ const Header: React.FC = () => {
                     <Link href="/contact" passHref>
                         <NavLink onClick={toggleMenu}>Contact</NavLink>
                     </Link>
+                </NavItem>
+                <NavItem>
+                    <a href="https://www.linkedin.com/in/garethslinn/" target="_blank" rel="noopener noreferrer" onClick={toggleMenu}>
+                        <Image src={linkedinIcon} alt="LinkedIn" width={30} height={30} />
+                    </a>
+                    &nbsp;
+                    <a href="https://github.com/garethslinn/" target="_blank" rel="noopener noreferrer" onClick={toggleMenu}>
+                        <Image src={githubIcon} alt="GitHub" width={30} height={30} />
+                    </a>
                 </NavItem>
             </MobileNavList>
         </HeaderContainer>

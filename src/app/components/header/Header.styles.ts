@@ -1,4 +1,3 @@
-// src/app/components/header/Header.styles.ts
 import styled from 'styled-components';
 
 interface HeaderContainerProps {
@@ -89,7 +88,7 @@ export const MobileNavList = styled.ul<{ isOpen: boolean }>`
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   overflow: hidden;
-  max-height: ${(props) => (props.isOpen ? '380px' : '0')};
+  max-height: ${(props) => (props.isOpen ? '680px' : '0')};
   transition: max-height 0.3s ease-in-out;
 
   @media (min-width: 901px) {

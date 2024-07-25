@@ -29,10 +29,5 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </ThemeProvider>
         </body>
         </html>
-        // <ThemeProvider theme={theme}>
-        //     <GlobalStyle />
-        //     <Header />
-        //     {children}
-        // </ThemeProvider>
     );
 }
