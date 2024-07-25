@@ -1,13 +1,13 @@
 import React from 'react';
-import styled from 'styled-components';
-import {ItemWrapper} from "@/app/components/item/item.style";
+import { ItemWrapper } from './item.style';
 
 interface ItemProps {
     skill: string;
+    type: number;
 }
 
-const Item: React.FC<ItemProps> = ({ skill }) => (
-    <ItemWrapper role="listitem" aria-label={`Skill: ${skill}`}>{skill}</ItemWrapper>
+const Item: React.FC<ItemProps> = ({ skill, type }) => (
+    <ItemWrapper role="listitem" aria-label={`Skill: ${skill}`} type={type}>{skill}</ItemWrapper>
 );
 
 export default Item;

@@ -38,77 +38,77 @@ export const techSkills: TechSkill[] = [
     },
     {
         title: "Jest",
-        type: 1,
+        type: 3,
         image: "/assets/images/skill/jest.svg",
         year_started: "2015",
         fixed_years: null
     },
     {
         title: "Cypress",
-        type: 1,
+        type: 3,
         image: "/assets/images/skill/cypress.svg",
         year_started: null,
         fixed_years: 5
     },
     {
         title: "CSS",
-        type: 1,
+        type: 2,
         image: "/assets/images/skill/css.svg",
         year_started: "2004",
         fixed_years: null
     },
     {
         title: "SCSS",
-        type: 1,
+        type: 2,
         image: "/assets/images/skill/scss.svg",
         year_started: "2015",
         fixed_years: null
     },
     {
         title: "Styled Comp",
-        type: 1,
+        type: 2,
         image: "/assets/images/skill/styled_components.svg",
         year_started: "2015",
         fixed_years: null
     },
     {
         title: "Bootstrap",
-        type: 1,
+        type: 2,
         image: "/assets/images/skill/bootstrap.svg",
         year_started: "2012",
         fixed_years: null
     },
     {
         title: "SonarQube",
-        type: 1,
+        type: 3,
         image: "/assets/images/skill/sonarqube.svg",
         year_started: null,
         fixed_years: 1
     },
     {
         title: "NightWatch",
-        type: 1,
+        type: 3,
         image: "/assets/images/skill/nightwatch.svg",
         year_started: null,
         fixed_years: 1
     },
     {
         title: "AWS",
-        type: 1,
+        type: 4,
         image: "/assets/images/skill/aws.svg",
         year_started: "2018",
         fixed_years: null
     },
     {
         title: "Azure",
-        type: 1,
+        type: 4,
         image: "/assets/images/skill/azure.svg",
         year_started: null,
         fixed_years: 3
     },
     {
         title: "Jenkins",
-        type: 1,
+        type: 4,
         image: "/assets/images/skill/jenkins.svg",
         year_started: null,
         fixed_years: 3
@@ -122,7 +122,7 @@ export const techSkills: TechSkill[] = [
     },
     {
         title: "Responsive",
-        type: 1,
+        type: 2,
         image: "/assets/images/skill/responsive.svg",
         year_started: "2012",
         fixed_years: null
@@ -136,14 +136,14 @@ export const techSkills: TechSkill[] = [
     },
     {
         title: "Express",
-        type: 1,
+        type: 4,
         image: "/assets/images/skill/express.svg",
         year_started: null,
         fixed_years: 5
     },
     {
         title: "MongoDB",
-        type: 1,
+        type: 4,
         image: "/assets/images/skill/mongodb.svg",
         year_started: null,
         fixed_years: 3

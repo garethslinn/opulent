@@ -18,6 +18,7 @@ import {
 } from './QuoteTool.style';
 import InlineList from "@/app/components/inlineList/inlineList";
 import { companies } from "@/app/stubs/companies";
+import { techSkills } from "@/app/stubs/techSkills";
 import Item from "@/app/components/item/item";
 import Counter from "@/app/components/counter/Counter";
 
@@ -88,9 +89,12 @@ const QuoteTool: React.FC<{ quoteText?: string }> = ({ quoteText = "Professional
                             ))}
                         </BulletList>
                         <SkillsWrapper>
-                            {activeSkills.map((skill, index) => (
-                                <Item key={index} skill={skill} />
-                            ))}
+                            {activeSkills.map((skill, index) => {
+                                const techSkill = techSkills.find(ts => ts.title === skill);
+                                return (
+                                    <Item key={index} skill={skill} type={techSkill ? techSkill.type : 1} />
+                                );
+                            })}
                         </SkillsWrapper>
                         <Counter
                             activeIndex={activeIndex}

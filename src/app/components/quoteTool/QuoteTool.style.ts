@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const QuoteToolWrapper = styled.div`
-  font-family: 'Roboto', sans-serif;
   position: relative;
   min-height: 600px;
   overflow: hidden;
@@ -77,7 +76,6 @@ export const RightColumn = styled.div`
 `;
 
 export const Title = styled.h1`
-  font-family: 'Roboto-bold', sans-serif;
   margin: var(--spacing-small) 0;
   font-size: 30px;
 
@@ -120,9 +118,6 @@ export const Line = styled.div`
 export const BulletList = styled.ul`
   list-style: disc;
   padding-left: 20px;
-  font-size: 18px;
-  min-height: 280px;
-  line-height: 2;
 `;
 
 export const BulletItem = styled.li`
