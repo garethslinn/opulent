@@ -4,6 +4,11 @@ import React from 'react';
 import Title from "@/app/components/title/Title";
 import Paragraph from "@/app/components/paragraph/Paragraph";
 import Card from "@/app/components/card/Card";
+import BarGraph from "@/app/components/charts/barGraph/BarGraph";
+import {industries} from "@/app/stubs/industries";
+import PieChart from "@/app/components/charts/pieChart/PieChart";
+import {methodologies} from "@/app/stubs/methodologies";
+import TwoColumnContainer from "@/app/components/layout/TwoColumnContainer";
 
 const About: React.FC = () => {
     return (
@@ -37,27 +42,31 @@ const About: React.FC = () => {
                 Python as when needed.
             </Card>
 
-            <Card
-                title="Performance Optimisation"
-                link="/experience"
-                imageSrc="/assets/images/optimisation.svg"
-            >
-                Scalability problems can be a good sign of growth, but they
-                can also be painful. I analyse potential bottlenecks in your
-                code and infrastructure, propose a prioritized backlog of improvements,
-                and bring them to life. I will prepare your product for user surges,
-                making it reliable, resource-efficient, and scalable.
-            </Card>
+            <TwoColumnContainer backgroundColor="#f1f1f1">
 
-            <Card
-                title="Product Design"
-                link="/experience"
-                imageSrc="/assets/images/design.svg"
-            >
-                Whether you have just the hint of an idea or are further along in
-                product development, I dive in to produce interfaces where beauty
-                and functionality combine to provide users with an exceptional experience.
-            </Card>
+                <Card
+                    title="Performance Optimisation"
+                    link="/experience"
+                    imageSrc="/assets/images/optimisation.svg"
+                >
+                    Scalability problems can be a good sign of growth, but they
+                    can also be painful. I analyse potential bottlenecks in your
+                    code and infrastructure, propose a prioritized backlog of improvements,
+                    and bring them to life. I will prepare your product for user surges,
+                    making it reliable, resource-efficient, and scalable.
+                </Card>
+
+                <Card
+                    title="Product Design"
+                    link="/experience"
+                    imageSrc="/assets/images/design.svg"
+                >
+                    Whether you have just the hint of an idea or are further along in
+                    product development, I dive in to produce interfaces where beauty
+                    and functionality combine to provide users with an exceptional experience.
+                </Card>
+
+            </TwoColumnContainer>
 
 
         </>

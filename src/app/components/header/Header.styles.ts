@@ -91,7 +91,7 @@ export const MobileNavList = styled.ul<{ isOpen: boolean }>`
   max-height: ${(props) => (props.isOpen ? '680px' : '0')};
   transition: max-height 0.3s ease-in-out;
 
-  @media (min-width: 901px) {
+  @media (min-width: 850px) {
     display: none;
   }
 
