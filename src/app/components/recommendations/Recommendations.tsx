@@ -24,11 +24,11 @@ const Recommendations: React.FC<RecommendationsProps> = ({ recommendations }) =>
                             viewBox="0 0 50 41"
                             xmlns="http://www.w3.org/2000/svg"
                         >
-                            <g style={{ stroke: '#f1f1f1' }}>
+                            <g style={{ stroke: '#989cf5' }}>
                                 <path
                                     style={{
                                         fill: 'none',
-                                        stroke: '#000',
+                                        stroke: '#989cf5',
                                         strokeWidth: '.7',
                                         strokeLinecap: 'round',
                                         strokeLinejoin: 'round'
@@ -49,11 +49,11 @@ const Recommendations: React.FC<RecommendationsProps> = ({ recommendations }) =>
                             viewBox="0 0 50 41"
                             xmlns="http://www.w3.org/2000/svg"
                         >
-                            <g style={{ stroke: '#f1f1f1' }}>
+                            <g style={{ stroke: '#989cf5' }}>
                                 <path
                                     style={{
                                         fill: 'none',
-                                        stroke: '#000',
+                                        stroke: '#989cf5',
                                         strokeWidth: '.7',
                                         strokeLinecap: 'round',
                                         strokeLinejoin: 'round'

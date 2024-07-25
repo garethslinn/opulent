@@ -77,7 +77,6 @@ export const BarValue = styled.span`
     margin-left: 10px;
     font-size: 12px;
     font-weight: bold;
-    color: #333;
     background: #fff;
     padding: 2px 5px;
     border-radius: 4px;

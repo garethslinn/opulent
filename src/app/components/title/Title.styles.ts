@@ -1,7 +1,6 @@
 // src/app/components/title/Title.styles.ts
 import styled from "styled-components";
 
-
 export const Container = styled.div<{ first?: boolean }>`
   font-family: 'Roboto-bold', sans-serif;
   width: 100%;

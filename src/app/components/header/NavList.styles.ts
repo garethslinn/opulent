@@ -29,7 +29,6 @@ export const NavItem = styled.li`
 `;
 
 export const NavLink = styled.a<{ isActive?: boolean }>`
-  color: #000;
   text-decoration: none;
   font-size: 1.1rem;
   transition: color 0.3s, border-bottom 0.3s;

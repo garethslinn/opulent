@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const FooterWrapper = styled.footer`
   background-color: #f1f1f1;
-  color: #000;
   padding: 2rem 1rem;
   text-align: center;
 `;
@@ -22,7 +21,6 @@ export const FooterLinks = styled.div`
 `;
 
 export const FooterLink = styled.a`
-  color: #000;
   text-decoration: none;
   transition: color 0.3s;
 

@@ -10,10 +10,12 @@ import {
     Icon,
     RightColumn,
     Title,
-    BulletList,
-    BulletItem,
     SkillsWrapper
 } from './QuoteTool.style';
+import {
+    BulletList,
+    BulletItem
+} from '../../components/bulletList/BulletList.styles'
 import InlineList from "@/app/components/inlineList/inlineList";
 import { companies } from "@/app/stubs/companies";
 import { techSkills } from "@/app/stubs/techSkills";

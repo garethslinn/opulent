@@ -50,5 +50,4 @@ export const LegendColor = styled.span<{ color: string }>`
 
 export const LegendLabel = styled.span`
     font-size: 14px;
-    color: #333;
 `;

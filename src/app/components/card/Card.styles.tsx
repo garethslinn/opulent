@@ -9,7 +9,7 @@ export const CardContainer = styled.div`
   border-radius: 18px;
 
   max-width: 1024px;
-  margin: 10px auto;
+  margin: 20px auto;
 `;
 
 export const Title = styled.h2`

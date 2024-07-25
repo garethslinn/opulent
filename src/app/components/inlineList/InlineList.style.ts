@@ -61,7 +61,6 @@ export const CompanyImage = styled.img`
 export const CompanyTitle = styled.div`
   margin-top: 5px;
   font-size: 14px;
-  color: #333;
 
   @media (max-width: 900px) {
     font-size: 7px;

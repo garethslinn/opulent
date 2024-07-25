@@ -9,7 +9,6 @@ export const HeaderContainer = styled.header<HeaderContainerProps>`
   top: 0;
   width: 100%;
   background-color: ${(props) => (props.isScrolled ? '#fff' : 'transparent')};
-  color: #000;
   padding: 1rem 0;
   box-shadow: ${(props) => (props.isScrolled ? '0 4px 6px rgba(0, 0, 0, 0.1)' : 'none')};
   transition: background-color 0.3s, box-shadow 0.3s;
@@ -62,7 +61,6 @@ export const NavItem = styled.li`
 `;
 
 export const NavLink = styled.a<{ isActive?: boolean }>`
-  color: #000;
   text-decoration: none;
   font-size: 1.1rem;
   transition: color 0.3s, border-bottom 0.3s;
@@ -86,7 +84,7 @@ export const BurgerMenu = styled.div`
   div {
     width: 25px;
     height: 3px;
-    background-color: #000;
+    background-color: #505275;
     margin: 4px 0;
     transition: 0.4s;
   }

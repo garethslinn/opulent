@@ -30,7 +30,7 @@ const Header: React.FC = () => {
             <Nav>
                 <LogoContainer>
                     <Link href="/" passHref>
-                        <Image src={logo} alt="Logo" width={70} height={70} />
+                        <Image src={logo} alt="Logo" width={100} height={100} />
                     </Link>
                 </LogoContainer>
                 <NavList isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />

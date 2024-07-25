@@ -1,13 +1,7 @@
 import styled from 'styled-components';
 
-
-export const FullWrapper = styled.div`
-  background: #f1f1f1;
-  width: 100%;
-`;
-
 export const Container = styled.div<{ backgroundColor: string }>`
-    max-width: 1000px;
+    max-width: 1024px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
@@ -16,11 +10,25 @@ export const Container = styled.div<{ backgroundColor: string }>`
     @media (max-width: 900px) {
         .column {
             flex: 100%;
+            margin: 0; 
         }
     }
 `;
 
 export const Column = styled.div`
     flex: 1;
-    padding: 10px;
+
+    &:first-child {
+        margin-right: 10px;
+        margin-left: 0; 
+    }
+
+    &:last-child {
+        margin-left: 10px;
+        margin-right: 0; 
+    }
+
+    @media (max-width: 900px) {
+        margin: 0; 
+    }
 `;

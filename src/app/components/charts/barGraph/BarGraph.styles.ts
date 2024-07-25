@@ -31,7 +31,7 @@ export const BarWrapper = styled.div`
 `;
 
 export const Bar = styled.div<{ width: number }>`
-    background-color: #9FABCA;
+    background-color: #989cf5;
     height: 30px;
     width: ${({ width }) => width/3}%;
     display: flex;
@@ -54,7 +54,6 @@ export const BarValue = styled.span`
     margin-left: 10px;
     font-size: 14px;
     font-weight: bold;
-    color: #333;
     background: #fff;
     padding: 2px 5px;
     border-radius: 4px;
