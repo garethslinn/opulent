@@ -15,6 +15,9 @@ const GlobalStyle = createGlobalStyle`
     background-color: "#f1f1f1";
     color: ${theme.colors.text};
   }
+  main {
+    padding: 0 50px;
+  }
 `;
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
