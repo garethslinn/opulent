@@ -14,6 +14,7 @@ export const HeaderContainer = styled.header<HeaderContainerProps>`
   box-shadow: ${(props) => (props.isScrolled ? '0 4px 6px rgba(0, 0, 0, 0.1)' : 'none')};
   transition: background-color 0.3s, box-shadow 0.3s;
   z-index: 1000;
+  font-family: 'Advent Pro', sans-serif;
 `;
 
 export const Nav = styled.nav`
@@ -23,11 +24,54 @@ export const Nav = styled.nav`
   align-items: center;
   justify-content: space-between;
   padding: 0 1rem;
+  font-family: 'Advent Pro', sans-serif;
 `;
 
 export const LogoContainer = styled.div`
   display: flex;
   align-items: center;
+`;
+
+export const NavListContainer = styled.ul<{ isOpen?: boolean }>`
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  @media (max-width: 900px) {
+    display: ${(props) => (props.isOpen ? 'flex' : 'none')};
+    flex-direction: column;
+    background-color: #fff;
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+`;
+
+export const NavItem = styled.li`
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+
+  &:last-child {
+    border-bottom: none;
+  }
+`;
+
+export const NavLink = styled.a<{ isActive?: boolean }>`
+  color: #000;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s, border-bottom 0.3s;
+  border-bottom: ${(props) => (props.isActive ? '2px solid blue' : 'none')};
+
+  &:hover {
+    color: #888;
+  }
+  font-family: 'Advent Pro', sans-serif;
 `;
 
 export const BurgerMenu = styled.div`
