@@ -14,7 +14,7 @@ export const HeaderContainer = styled.header<HeaderContainerProps>`
   box-shadow: ${(props) => (props.isScrolled ? '0 4px 6px rgba(0, 0, 0, 0.1)' : 'none')};
   transition: background-color 0.3s, box-shadow 0.3s;
   z-index: 1000;
-  font-family: 'Advent Pro', sans-serif;
+  font-family: 'Roboto', sans-serif;
 `;
 
 export const Nav = styled.nav`

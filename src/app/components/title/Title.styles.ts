@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 
 export const Container = styled.div<{ first?: boolean }>`
+  font-family: 'Roboto-bold', sans-serif;
   width: 100%;
   background-color: ${props => props.backgroundColor};
   color: ${props => props.foregroundColor};
