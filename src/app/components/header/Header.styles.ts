@@ -30,32 +30,6 @@ export const LogoContainer = styled.div`
   align-items: center;
 `;
 
-export const NavList = styled.ul`
-  display: flex;
-  gap: 1rem;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-
-  @media (max-width: 900px) {
-    display: none;
-  }
-`;
-
-export const NavItem = styled.li``;
-
-export const NavLink = styled.a<{ isActive?: boolean }>`
-  color: #000;
-  text-decoration: none;
-  font-size: 1.1rem;
-  transition: color 0.3s, border-bottom 0.3s;
-  border-bottom: ${(props) => (props.isActive ? '2px solid blue' : 'none')};
-
-  &:hover {
-    color: #888;
-  }
-`;
-
 export const BurgerMenu = styled.div`
   display: none;
   flex-direction: column;
@@ -71,35 +45,5 @@ export const BurgerMenu = styled.div`
     background-color: #000;
     margin: 4px 0;
     transition: 0.4s;
-  }
-`;
-
-export const MobileNavList = styled.ul<{ isOpen: boolean }>`
-  display: flex;
-  flex-direction: column;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  background-color: #fff;
-  position: absolute;
-  top: 70px;
-  right: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  overflow: hidden;
-  max-height: ${(props) => (props.isOpen ? '680px' : '0')};
-  transition: max-height 0.3s ease-in-out;
-
-  @media (min-width: 850px) {
-    display: none;
-  }
-
-  li {
-    padding: 1rem;
-    border-bottom: 1px solid #ddd;
-  }
-
-  li:last-child {
-    border-bottom: none;
   }
 `;

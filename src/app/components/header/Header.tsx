@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { HeaderContainer, Nav, NavList, NavItem, NavLink, LogoContainer, BurgerMenu, MobileNavList } from './Header.styles';
+import { HeaderContainer, Nav, LogoContainer, BurgerMenu } from './Header.styles';
 import logo from '../../../../public/assets/images/gds.svg';
-import linkedinIcon from '../../../../public/assets/images/brands/linkedin.svg';
-import githubIcon from '../../../../public/assets/images/brands/github.svg';
+import NavList from './NavList';
 
 const Header: React.FC = () => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -34,105 +33,13 @@ const Header: React.FC = () => {
                         <Image src={logo} alt="Logo" width={70} height={70} />
                     </Link>
                 </LogoContainer>
-                <NavList>
-                    <NavItem>
-                        <Link href="/" passHref>
-                            <NavLink>About</NavLink>
-                        </Link>
-                    </NavItem>
-                    <NavItem>
-                        <Link href="/experience" passHref>
-                            <NavLink>Experience</NavLink>
-                        </Link>
-                    </NavItem>
-                    <NavItem>
-                        <Link href="/recommendations" passHref>
-                            <NavLink>Recommendations</NavLink>
-                        </Link>
-                    </NavItem>
-                    <NavItem>
-                        <Link href="/open-source" passHref>
-                            <NavLink>Open Source</NavLink>
-                        </Link>
-                    </NavItem>
-                    <NavItem>
-                        <Link href="/publications" passHref>
-                            <NavLink>Publications</NavLink>
-                        </Link>
-                    </NavItem>
-                    <NavItem>
-                        <Link href="/graphic-design" passHref>
-                            <NavLink>Design</NavLink>
-                        </Link>
-                    </NavItem>
-                    <NavItem>
-                        <Link href="/contact" passHref>
-                            <NavLink>Contact</NavLink>
-                        </Link>
-                    </NavItem>
-                    <NavItem>
-                        <a href="https://www.linkedin.com/in/garethslinn/" target="_blank" rel="noopener noreferrer">
-                            <Image src={linkedinIcon} alt="LinkedIn" width={30} height={30} />
-                        </a>
-                    </NavItem>
-                    <NavItem>
-                        <a href="https://github.com/garethslinn/" target="_blank" rel="noopener noreferrer">
-                            <Image src={githubIcon} alt="GitHub" width={30} height={30} />
-                        </a>
-                    </NavItem>
-                </NavList>
+                <NavList isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
                 <BurgerMenu onClick={toggleMenu}>
                     <div></div>
                     <div></div>
                     <div></div>
                 </BurgerMenu>
             </Nav>
-            <MobileNavList isOpen={isMenuOpen}>
-                <NavItem>
-                    <Link href="/about" passHref>
-                        <NavLink onClick={toggleMenu}>About</NavLink>
-                    </Link>
-                </NavItem>
-                <NavItem>
-                    <Link href="/experience" passHref>
-                        <NavLink onClick={toggleMenu}>Experience</NavLink>
-                    </Link>
-                </NavItem>
-                <NavItem>
-                    <Link href="/recommendations" passHref>
-                        <NavLink onClick={toggleMenu}>Recommendations</NavLink>
-                    </Link>
-                </NavItem>
-                <NavItem>
-                    <Link href="/publications" passHref>
-                        <NavLink onClick={toggleMenu}>Publications</NavLink>
-                    </Link>
-                </NavItem>
-                <NavItem>
-                    <Link href="/open-source" passHref>
-                        <NavLink onClick={toggleMenu}>Open Source</NavLink>
-                    </Link>
-                </NavItem>
-                <NavItem>
-                    <Link href="/graphic-design" passHref>
-                        <NavLink onClick={toggleMenu}>Design</NavLink>
-                    </Link>
-                </NavItem>
-                <NavItem>
-                    <Link href="/contact" passHref>
-                        <NavLink onClick={toggleMenu}>Contact</NavLink>
-                    </Link>
-                </NavItem>
-                <NavItem>
-                    <a href="https://www.linkedin.com/in/garethslinn/" target="_blank" rel="noopener noreferrer" onClick={toggleMenu}>
-                        <Image src={linkedinIcon} alt="LinkedIn" width={30} height={30} />
-                    </a>
-                    &nbsp;
-                    <a href="https://github.com/garethslinn/" target="_blank" rel="noopener noreferrer" onClick={toggleMenu}>
-                        <Image src={githubIcon} alt="GitHub" width={30} height={30} />
-                    </a>
-                </NavItem>
-            </MobileNavList>
         </HeaderContainer>
     );
 };
