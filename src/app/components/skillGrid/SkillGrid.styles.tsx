@@ -8,10 +8,10 @@ export const FullWrapper = styled.div`
 `;
 
 export const GridContainer = styled.div`
-  max-width: 1024px;
-  margin: 0 auto;
-  background: #f1f1f1;
-  color: #000;
+    max-width: 1024px;
+    margin: 0 auto;
+    background: #f1f1f1;
+    color: #000;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;

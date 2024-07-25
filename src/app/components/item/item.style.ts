@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 
 const backgroundColors: { [key: number]: string } = {
-    1: '#1C9BFC',  // Example color for type 1
-    2: '#7D6666',  // Example color for type 2
-    3: '#FA9600',  // Example color for type 3
-    4: '#9BA4AB',  // Example color for type 4
+    1: '#4F6FFA',
+    2: '#7D6666',
+    3: '#FA9600',
+    4: '#9BA4AB',
+    5: '#1C9BFC',
 };
 
 interface ItemWrapperProps {
@@ -12,7 +13,6 @@ interface ItemWrapperProps {
 }
 
 export const ItemWrapper = styled.div<ItemWrapperProps>`
-  //border: 2px solid #000;
   border-radius: 10px;
   padding: 4px 10px;
   color: #fff;

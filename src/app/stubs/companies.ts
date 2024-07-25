@@ -11,7 +11,7 @@ export const companies = [
             "Facilitated a major web release involving Next.js with extensive testing for 80% test coverage.",
             "Refactored legacy code to reduce cognitive complexity."
         ],
-        skills: "TypeScript, Nextjs, React, SCSS, SonarQube, Cypress, AWS",
+        skills: "typescript, nextjs, React, scss, sonarqube, cypress, aws",
         dateFrom: "Oct 2023",
         dateTo: "Jul 2024"
     },
@@ -23,7 +23,7 @@ export const companies = [
             "Liaised with management for new features and enhanced UX.",
             "Created a bespoke component library."
         ],
-        skills: "TypeScript, React, React Native, Nextjs, SCSS, Cypress, AWS",
+        skills: "typescript, reactjs, react native, nextjs, scss, cypress, aws",
         dateFrom: "Sept 2022",
         dateTo: "Jul 2023"
     },
@@ -34,7 +34,7 @@ export const companies = [
             "Quickly adapted to the betting app project.",
             "Prepared for future documentation and knowledge transfer."
         ],
-        skills: "TypeScript, Styled Components, React, Redux, Nextjs, React Hooks",
+        skills: "typescript, styled components, reactjs, redux, nextjs",
         dateFrom: "Jul 2021",
         dateTo: "Sep 2021"
     },
@@ -48,7 +48,7 @@ export const companies = [
             "Assisted offshore developers to prepare for an eventual handover.",
             "Conducted code reviews."
         ],
-        skills: "TypeScript, Reactjs, Redux, Azure, Jest, Cypress, Styled Components, Storybook",
+        skills: "typescript, reactjs, redux, azure, jest, cypress, styled components, storybook",
         dateFrom: "Sep 2019",
         dateTo: "Mar 2020"
     },
@@ -63,7 +63,7 @@ export const companies = [
             "Applied customizable filters which could be created, updated, and removed via an API.",
             "Led a project to build a component library to be used across all projects in AIG."
         ],
-        skills: "TypeScript, Reactjs, Redux, AWS, Jest, SASS, Node, Storybook",
+        skills: "typescript, reactjs, redux, aws, jest, sass, nodejs, storybook",
         dateFrom: "Dec 2018",
         dateTo: "Jul 2019"
     },
@@ -86,7 +86,7 @@ export const companies = [
             "Demonstrated interactions.",
             "Developed an automated service for processing CSS/JS and packaging for deployment."
         ],
-        skills: "JavaScript, Angular, Jest, Git, SASS, Node, CSS3, HTML5",
+        skills: "javascript, angular, jest, git, sass, nodejs, css, html",
         dateFrom: "May 2015",
         dateTo: "Sep 2015"
     },
@@ -112,7 +112,7 @@ export const companies = [
             "Tasks included site tagging (user tracking), creating an iPad version of the site, and working on mobile.",
             "Provided JavaScript support nearing the end of the project, solving long-standing issues and closing down backlog of defects."
         ],
-        skills: "css3, html/html5, javascript, dojo",
+        skills: "css, html, javascript, dojo",
         dateFrom: "Jul 2012",
         dateTo: "Aug 2014"
     },
@@ -137,7 +137,7 @@ export const companies = [
             "Assisted the .Net team.",
             "Worked alongside the sales team building white label sites."
         ],
-        skills: "css, xhtml, svn, photoshop",
+        skills: "css, html, svn, photoshop",
         dateFrom: "Sep 2006",
         dateTo: "Sep 2007"
     },
@@ -173,7 +173,7 @@ export const companies = [
             "General day-to-day roles included updates and the development of new sites both internal and external.",
             "This was a very demanding and highly time-critical role."
         ],
-        skills: "HTML, CSS, Photoshop, Flash, Teamsite",
+        skills: "html, css, photoshop, flash, Teamsite",
         dateFrom: "Feb 2004",
         dateTo: "May 2005"
     }

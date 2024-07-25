@@ -157,7 +157,7 @@ export const techSkills: TechSkill[] = [
     },
     {
         title: "SVG",
-        type: 1,
+        type: 5,
         image: "/assets/images/skill/svg.svg",
         year_started: "2006",
         fixed_years: null

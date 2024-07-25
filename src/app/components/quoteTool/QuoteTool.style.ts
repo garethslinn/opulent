@@ -117,6 +117,7 @@ export const Line = styled.div`
 
 export const BulletList = styled.ul`
   list-style: disc;
+  font-size: 18px;
   padding-left: 20px;
 `;
 
