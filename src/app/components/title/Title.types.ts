@@ -1,5 +1,7 @@
+// src/app/components/title/Title.types.ts
 export interface TitleProps {
     backgroundColor?: string;
-    foregroundColor?: string;
     text: string;
+    foregroundColor?: string;
+    first?: boolean;
 }

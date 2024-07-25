@@ -11,13 +11,24 @@ import TwoColumnContainer from "@/app/components/layout/TwoColumnContainer";
 import {softSkills} from "@/app/stubs/softSkills";
 import SkillCards from "@/app/components/skillCards/SkillCards";
 import Title from "@/app/components/title/Title";
+import Paragraph from "@/app/components/paragraph/Paragraph";
+import React from "react";
 
 export default function Experience() {
     return (
         <div>
+            <Title first text="Experience is one thing you cannot learn" />
+            <Paragraph first backgroundColor="#f1f1f1" foregroundColor="">
+                As a seasoned developer with over 20 years of commercial experience,
+                I have had the privilege of working across a myriad of industries
+                including telecommunications, e-commerce, digital agencies, finance,
+                gambling, retail, and many more. My journey is marked by a continuous
+                commitment to learning and adapting, allowing me to stay at the
+                forefront of technological advancements and industry best practices.
+            </Paragraph>
             <Title text="Tech Skills by Years Experience" />
             <SkillGrid data={techSkills} />
-            <Title backgroundColor="#f1f1f1" text="Contracts" />
+            <Title backgroundColor="#f1f1f1" text="Clients" />
             <QuoteTool />
             <Title text="Skill Metrics" />
             <TwoColumnContainer backgroundColor="#f1f1f1">
@@ -26,7 +37,6 @@ export default function Experience() {
             </TwoColumnContainer>
             <Title text="Soft Skills" />
             <SkillCards skills={softSkills} />
-
         </div>
     );
 }

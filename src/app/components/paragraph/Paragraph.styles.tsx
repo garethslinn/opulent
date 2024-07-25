@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
-export const Container = styled.div<{ backgroundColor: string; foregroundColor: string }>`
+export const Container = styled.div<{ backgroundColor: string; foregroundColor: string; first?: boolean }>`
   width: 100%;
   background-color: ${props => props.backgroundColor};
   color: ${props => props.foregroundColor};
   display: flex;
   justify-content: center;
-  padding: 20px 0;
+  padding: ${props => (props.first ? '20px 0 20px 0' : '20px 0')}; 
 `;
 
 export const Wrapper = styled.div`
@@ -17,9 +17,9 @@ export const Wrapper = styled.div`
   align-items: center;
 `;
 
-export const ParagraphText = styled.div`
+export const ParagraphText = styled.div<{ first?: boolean }>`
   margin: 0;
   text-align: left;
-  font-size: 18px;
-  line-height: 30px;
+  font-size: ${props => (props.first ? '24px' : '18px')}; 
+  line-height: ${props => (props.first ? '46px' : '30px')}; 
 `;

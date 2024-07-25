@@ -1,12 +1,14 @@
+// src/app/components/title/Title.styles.ts
 import styled from "styled-components";
 
-export const Container = styled.div<{ backgroundColor: string }>`
+
+export const Container = styled.div<{ first?: boolean }>`
   width: 100%;
   background-color: ${props => props.backgroundColor};
   color: ${props => props.foregroundColor};
   display: flex;
   justify-content: center;
-  padding: 50px 0 20px 0;
+  padding: ${props => (props.first ? '150px 0 20px 0' : '50px 0 20px 0')};
 `;
 
 export const Wrapper = styled.div`
@@ -17,8 +19,9 @@ export const Wrapper = styled.div`
     align-items: center;
 `;
 
-export const TitleText = styled.h2`
+export const TitleText = styled.h2<{ first?: boolean }>`
     margin: 0;
     text-align: left;
-    font-size: 2rem;
+    font-size: ${props => (props.first ? '45px': '30px')};
+    line-height: ${props => (props.first ? '1.4': '1')};
 `;

@@ -42,7 +42,7 @@ const Header: React.FC = () => {
                 </LogoContainer>
                 <NavList>
                     <NavItem>
-                        <Link href="/about" passHref>
+                        <Link href="/" passHref>
                             <NavLink>About</NavLink>
                         </Link>
                     </NavItem>
