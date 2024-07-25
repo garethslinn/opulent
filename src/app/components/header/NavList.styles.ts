@@ -22,7 +22,6 @@ export const NavListContainer = styled.ul<{ isOpen?: boolean }>`
 
 export const NavItem = styled.li`
   padding: 1rem;
-  border-bottom: 1px solid #ddd;
 
   &:last-child {
     border-bottom: none;
