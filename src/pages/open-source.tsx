@@ -18,10 +18,9 @@ const OpenSource: React.FC = () => {
                 solutions that are both easy to use and highly effective.
                 <br /><br />
 
-                <a href="https://github.com/garethslinn">
-
+                <a href="https://github.com/garethslinn" target="_blank" rel="noopener noreferrer">
                     <Image className="img" src='/assets/images/brands/github.svg' alt='GitHub Link' width={30} height={30} />
-                    &nbsp;Visit my GitHub
+                    &nbsp;<span>Visit my GitHub</span>
                 </a>
 
             </Paragraph>

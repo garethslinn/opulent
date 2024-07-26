@@ -13,6 +13,9 @@ export const Container = styled.div<{ backgroundColor: string; foregroundColor: 
       position: relative;
       top: 6px;
     }
+    span {
+      text-decoration: underline;
+    }
   }
 `;
 

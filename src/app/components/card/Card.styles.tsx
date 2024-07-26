@@ -20,7 +20,7 @@ export const Title = styled.h2`
 `;
 
 export const Description = styled.div`
-  margin: 10px 0;
+  margin: 0;
   font-size: 20px;
   line-height: 30px;
   width: 60%;
@@ -38,7 +38,7 @@ export const Description = styled.div`
 export const ImageWrapper = styled.div`
   width: 40%;
   display: flex;
-  justify-content: center;
+      justify-content: center;
   align-items: center;
   @media (max-width: 900px) {
     display: none;
@@ -48,6 +48,7 @@ export const ImageWrapper = styled.div`
 export const ContentWrapper = styled.div`
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: start;
   justify-content: space-between;
+  margin-top: 40px;
 `;
