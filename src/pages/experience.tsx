@@ -30,8 +30,8 @@ export default function Experience() {
             <SkillGrid data={techSkills} />
             <Title text="Skill Metrics" />
             <TwoColumnContainer backgroundColor="#f1f1f1">
-                <BarGraph data={industries} />
-                <PieChart data={methodologies} />
+                <BarGraph data={industries} subtext='Number of Contracts by Industry'/>
+                <PieChart data={methodologies} subtext='Methodologies used the most' />
             </TwoColumnContainer>
             <Title text="Soft Skills" />
             <SkillCards skills={softSkills} />

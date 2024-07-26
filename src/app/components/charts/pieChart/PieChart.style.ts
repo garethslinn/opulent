@@ -3,19 +3,35 @@ import styled from 'styled-components';
 export const FullWrapper = styled.div`
   background: #f1f1f1;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 `;
+
 export const ChartContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: auto;
-    height: auto;
-  max-height: 346px;
-    position: relative;
-
+    width: 100%;
+    max-width: 800px;
+    min-height: 388px;
     background: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+`;
+
+export const ChartContent = styled.div`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+`;
+
+export const SvgContainer = styled.div`
+    width: 200px;
+    height: 200px;
 `;
 
 export const Svg = styled.svg`
@@ -29,9 +45,11 @@ export const Slice = styled.path<{ color: string }>`
     stroke-width: 2px;
 `;
 
-export const Legend = styled.div`
+export const LegendContainer = styled.div`
     display: flex;
-    margin-top: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 20px;
 `;
 
 export const LegendItem = styled.div`
@@ -50,4 +68,14 @@ export const LegendColor = styled.span<{ color: string }>`
 
 export const LegendLabel = styled.span`
     font-size: 14px;
+`;
+
+export const Subtext = styled.h2`
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: normal;
+    color: #333;
+    width: 100%;
+    text-align: center;
+    font-variant-caps: all-petite-caps;
 `;

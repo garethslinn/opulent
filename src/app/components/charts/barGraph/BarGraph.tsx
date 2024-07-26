@@ -9,15 +9,17 @@ import {
     BarWrapper,
     Bar,
     BarLabel,
-    BarValue
+    BarValue,
+    Subtext
 } from './BarGraph.styles';
 
-const BarGraph: React.FC<BarGraphProps> = ({ data }) => {
+const BarGraph: React.FC<BarGraphProps> = ({ data, subtext }) => {
     const maxCompanies = Math.max(...data.map(industry => industry.companies.length));
 
     return (
         <FullWrapper>
             <GraphContainer>
+                <Subtext>{subtext}</Subtext>
                 <BarContainer>
                     {data.map((industry, index) => (
                         <BarWrapper key={index}>

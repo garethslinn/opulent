@@ -5,12 +5,15 @@ import { PieChartProps } from './PieChart.types';
 import {
     FullWrapper,
     ChartContainer,
+    ChartContent,
+    SvgContainer,
     Svg,
     Slice,
-    Legend,
+    LegendContainer,
     LegendItem,
     LegendColor,
-    LegendLabel
+    LegendLabel,
+    Subtext
 } from './PieChart.style';
 
 const colors = [
@@ -20,9 +23,8 @@ const colors = [
     "#9FABCA"
 ];
 
-const PieChart: React.FC<PieChartProps> = ({ data }) => {
+const PieChart: React.FC<PieChartProps> = ({ data, subtext }) => {
     const radius = 100;
-    const circumference = 2 * Math.PI * radius;
     let startAngle = 0;
 
     const polarToCartesian = (centerX: number, centerY: number, radius: number, angleInDegrees: number) => {
@@ -49,24 +51,29 @@ const PieChart: React.FC<PieChartProps> = ({ data }) => {
     return (
         <FullWrapper>
             <ChartContainer>
-                <Svg viewBox="0 0 200 200">
-                    {data.map((method, index) => {
-                        const sliceAngle = (method.percent / 100) * 360;
-                        const endAngle = startAngle + sliceAngle;
-                        const d = describeArc(100, 100, radius, startAngle, endAngle);
-                        const color = colors[index % colors.length];
-                        startAngle = endAngle;
-                        return <Slice key={index} d={d} color={color} />;
-                    })}
-                </Svg>
-                <Legend>
-                    {data.map((method, index) => (
-                        <LegendItem key={index}>
-                            <LegendColor color={colors[index % colors.length]} />
-                            <LegendLabel>{method.title}: {method.percent}%</LegendLabel>
-                        </LegendItem>
-                    ))}
-                </Legend>
+                <Subtext>{subtext}</Subtext>
+                <ChartContent>
+                    <SvgContainer>
+                        <Svg viewBox="0 0 200 200">
+                            {data.map((method, index) => {
+                                const sliceAngle = (method.percent / 100) * 360;
+                                const endAngle = startAngle + sliceAngle;
+                                const d = describeArc(100, 100, radius, startAngle, endAngle);
+                                const color = colors[index % colors.length];
+                                startAngle = endAngle;
+                                return <Slice key={index} d={d} color={color} />;
+                            })}
+                        </Svg>
+                    </SvgContainer>
+                    <LegendContainer>
+                        {data.map((method, index) => (
+                            <LegendItem key={index}>
+                                <LegendColor color={colors[index % colors.length]} />
+                                <LegendLabel>{method.title}: {method.percent}%</LegendLabel>
+                            </LegendItem>
+                        ))}
+                    </LegendContainer>
+                </ChartContent>
             </ChartContainer>
         </FullWrapper>
     );
