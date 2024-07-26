@@ -24,6 +24,10 @@ export const Description = styled.div`
   font-size: 20px;
   line-height: 30px;
   width: 60%;
+  .ul, li {
+    margin-left: 40px;
+    margin-bottom: 10px;
+  }
 `;
 
 export const ImageWrapper = styled.div`
