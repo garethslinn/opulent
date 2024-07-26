@@ -39,8 +39,8 @@ const NavList: React.FC<NavListProps> = ({ isMenuOpen = false, toggleMenu }) => 
                 </Link>
             </NavItem>
             <NavItem>
-                <Link href="/case-study" passHref>
-                    <NavLink onClick={toggleMenu} isActive={isActive('/case-study')}>Case&nbsp;Study</NavLink>
+                <Link href="/case-studies" passHref>
+                    <NavLink onClick={toggleMenu} isActive={isActive('/case-studies')}>Case&nbsp;Studies</NavLink>
                 </Link>
             </NavItem>
             <NavItem>
