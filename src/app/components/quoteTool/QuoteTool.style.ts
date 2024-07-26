@@ -2,12 +2,12 @@ import styled from 'styled-components';
 
 export const QuoteToolWrapper = styled.div`
   position: relative;
-  min-height: 600px;
   overflow: hidden;
   max-width: 1024px;
   margin: 0 auto;
   background: #fff;
-
+  padding-bottom: 20px;
+  
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 18px;
 `;
@@ -74,7 +74,7 @@ export const RightColumn = styled.div`
   }
 `;
 
-export const Title = styled.h1`
+export const Title = styled.h3`
   margin: 10px 0 50px 0;
   font-size: 30px;
 
@@ -93,8 +93,6 @@ export const SkillsWrapper = styled.div`
 export const Paragraph = styled.p`
   margin: var(--spacing-small) 0;
   font-size: 20px;
-  
-  min-height: 300px;
 
   @media (max-width: 1100px) {
     font-size: calc(var(--font-size-medium) / 2);

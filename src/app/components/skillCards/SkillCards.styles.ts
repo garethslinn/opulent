@@ -1,17 +1,12 @@
 import styled from 'styled-components';
 
-export const FullWrapper = styled.div`
-  background: #f1f1f1;
-  width: 100%;
-`;
-
 export const GridContainer = styled.div`
     max-width: 1024px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    padding: 20px 0 100px 0;
+    padding: 20px 0 2px 0;
 
     @media (max-width: 900px) {
         grid-template-columns: repeat(2, 1fr);

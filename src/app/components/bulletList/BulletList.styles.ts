@@ -4,7 +4,6 @@ export const BulletList = styled.ul`
   list-style: none; 
   font-size: 20px;
   padding-left: 20px;
-  min-height: 380px;
 `;
 
 export const BulletItem = styled.li`

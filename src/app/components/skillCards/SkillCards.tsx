@@ -12,16 +12,14 @@ import {Skill, SkillCardsProps} from "@/app/components/skillCards/SkillCards.typ
 
 const SkillCards: React.FC<SkillCardsProps> = ({ skills }) => {
     return (
-        <FullWrapper>
-            <GridContainer>
-                {skills.map((skill, index) => (
-                    <SkillCard key={index}>
-                        <SkillTitle>{skill.title}</SkillTitle>
-                        <SkillDescription>{skill.description}</SkillDescription>
-                    </SkillCard>
-                ))}
-            </GridContainer>
-        </FullWrapper>
+        <GridContainer>
+            {skills.map((skill, index) => (
+                <SkillCard key={index}>
+                    <SkillTitle>{skill.title}</SkillTitle>
+                    <SkillDescription>{skill.description}</SkillDescription>
+                </SkillCard>
+            ))}
+        </GridContainer>
     );
 };
 

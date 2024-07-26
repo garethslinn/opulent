@@ -83,6 +83,13 @@ const QuoteTool: React.FC<{ quoteText?: string }> = ({ quoteText = "Professional
                         <QuoteText>{quoteText}</QuoteText>
                     </LeftColumn>
                     <RightColumn>
+                        <Counter
+                            activeIndex={activeIndex}
+                            totalItems={companies.length}
+                            handleNavLeft={handleNavLeft}
+                            handleNavRight={handleNavRight}
+                            quotesArrowTheme={quotesArrowTheme}
+                        />
                         <Title>{activeTitle}</Title>
                         <BulletList>
                             {activeDescription.map((desc, index) => (
@@ -97,13 +104,6 @@ const QuoteTool: React.FC<{ quoteText?: string }> = ({ quoteText = "Professional
                                 );
                             })}
                         </SkillsWrapper>
-                        <Counter
-                            activeIndex={activeIndex}
-                            totalItems={companies.length}
-                            handleNavLeft={handleNavLeft}
-                            handleNavRight={handleNavRight}
-                            quotesArrowTheme={quotesArrowTheme}
-                        />
                     </RightColumn>
                 </ChildWrapper>
             </ElementWrapper>
