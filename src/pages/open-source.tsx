@@ -45,6 +45,26 @@ const OpenSource: React.FC = () => {
                 designed to enhance the security of web applications. It includes methods for preventing
                 common web vulnerabilities such as XSS, CSRF, SQL Injection, LDAP Injection, HTTP Parameter
                 Pollution, and more.
+
+                <br/><br/>
+                <h3>Features:</h3>
+                <br/>
+                <ul>
+                    <li>XSS Prevention: Escape and sanitise HTML input.</li>
+                    <li>CSRF Prevention: Generate and set CSRF tokens.</li>
+                    <li>HTTPS Enforcement: Ensure HTTPS protocol usage.</li>
+                    <li>SSL/TLS Validation: Validate SSL/TLS configurations.</li>
+                    <li>CSP Setting: Set Content-Security-Policy meta tags.</li>
+                    <li>Command Injection Prevention: Validate allowed commands.</li>
+                    <li>SQL Injection Prevention: Escape SQL special characters.</li>
+                    <li>LDAP Injection Prevention: Escape LDAP special characters.</li>
+                    <li>HTTP Verb Tampering Prevention: Validate HTTP methods.</li>
+                    <li>Header Injection Prevention: sanitise headers.</li>
+                    <li>XML Injection Prevention: sanitise XML input.</li>
+                    <li>SRI for CDN: Add Subresource Integrity (SRI) to CDN scripts.</li>
+                    <li>HTTP Parameter Pollution Prevention: sanitise URL parameters.</li>
+                    <li>Input Validation: Validate and sanitise user inputs.</li>
+                </ul>
             </Card>
 
             <Card
