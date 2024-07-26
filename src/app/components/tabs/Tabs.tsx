@@ -20,7 +20,7 @@ const Tabs: React.FC<TabsProps> = ({ tabs }) => {
                         isActive={activeTabIndex === index}
                     >
                         <TabImage src={tab.imageSrc} alt={tab.label} />
-                        {tab.label}
+
                     </TabButton>
                 ))}
             </TabButtons>

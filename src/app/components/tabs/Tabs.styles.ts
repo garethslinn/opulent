@@ -10,7 +10,7 @@ export const TabButtons = styled.div`
 export const TabButton = styled.button<{ isActive: boolean }>`
   padding: 10px 20px;
   margin-right: 10px;
-  background-color: ${(props) => (props.isActive ? '#007bff' : '#f0f0f0')};
+  background-color: ${(props) => (props.isActive ? '#505275' : '#f1f1f1')};
   color: ${(props) => (props.isActive ? '#fff' : '#000')};
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -21,8 +21,8 @@ export const TabButton = styled.button<{ isActive: boolean }>`
 `;
 
 export const TabImage = styled.img`
-  width: 20px;
-  height: 20px;
+  width: 100%;
+  height: 50px;
 `;
 
 export const TabContent = styled.div`

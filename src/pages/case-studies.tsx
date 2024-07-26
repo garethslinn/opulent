@@ -1,17 +1,21 @@
-"use client"
+"use client";
 
 import React from 'react';
 import Title from "@/app/components/title/Title";
 import Paragraph from "@/app/components/paragraph/Paragraph";
 import Tabs from "@/app/components/tabs/Tabs";
+import CaseStudyArgos from "@/app/stubs/casestudies/argos";
+import CaseStudyAIG from "@/app/stubs/casestudies/aig";
+import CaseStudyDugout from "@/app/stubs/casestudies/dugout";
+import CaseStudyBT from "@/app/stubs/casestudies/bt";
 
 const CaseStudies: React.FC = () => {
 
     const tabs = [
-        { label: 'Argos', content: <div>Content of Tab Argos</div>, imageSrc: '/assets/images/brands/argos.svg' },
-        { label: 'AIG', content: <div>Content of Tab AIG</div>, imageSrc: '/assets/images/brands/aig.svg' },
-        { label: 'Dugout', content: <div>Content of Tab Dugout</div>, imageSrc: '' },
-        { label: 'BT', content: <div>Content of Tab BT</div>, imageSrc: '/assets/images/brands/bt.svg' }
+        { label: 'Argos', content: <CaseStudyArgos />, imageSrc: '/assets/images/brands/argos.svg' },
+        { label: 'AIG', content: <CaseStudyAIG />, imageSrc: '/assets/images/brands/aig.svg' },
+        { label: 'Dugout', content: <CaseStudyDugout />, imageSrc: '' },
+        { label: 'BT', content: <CaseStudyBT />, imageSrc: '/assets/images/brands/bt.svg' }
     ];
 
     return (
