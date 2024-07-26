@@ -14,7 +14,7 @@ const CaseStudies: React.FC = () => {
     const tabs = [
         { label: 'Argos', content: <CaseStudyArgos />, imageSrc: '/assets/images/brands/argos.svg' },
         { label: 'AIG', content: <CaseStudyAIG />, imageSrc: '/assets/images/brands/aig.svg' },
-        { label: 'Dugout', content: <CaseStudyDugout />, imageSrc: '' },
+        { label: 'Dugout', content: <CaseStudyDugout />, imageSrc: '/assets/images/brands/dugout.svg' },
         { label: 'BT', content: <CaseStudyBT />, imageSrc: '/assets/images/brands/bt.svg' }
     ];
 

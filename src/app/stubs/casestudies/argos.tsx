@@ -65,7 +65,7 @@ const CaseStudyArgos = () => {
             </List>
             <Subtitle>Outcomes</Subtitle>
             <List>
-                <ListItem>Enhanced Performance: Page load times were reduced by approximately 50%, improving user experience and reducing bounce rates.</ListItem>
+                <ListItem>Enhanced Performance: Page load times were reduced by approximately 80%, improving user experience and reducing bounce rates.</ListItem>
                 <ListItem>Improved Analytics: Customer retention increased as the site became more responsive and user-friendly. Significant reduction in the number of defects and bugs, resulting in fewer customer complaints and support tickets.</ListItem>
             </List>
             <Paragraph>
