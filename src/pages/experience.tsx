@@ -17,7 +17,7 @@ import React from "react";
 export default function Experience() {
     return (
         <>
-            <Title first text="Experience is one thing you cannot learn" />
+            <Title first text="Experience cannot be learned" />
             <Paragraph first backgroundColor="#f1f1f1" foregroundColor="">
                 As a seasoned developer with over 20 years of commercial experience,
                 I have had the privilege of working across a myriad of industries
