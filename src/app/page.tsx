@@ -42,32 +42,27 @@ const About: React.FC = () => {
                 Python as when needed.
             </Card>
 
-            <TwoColumnContainer backgroundColor="#f1f1f1">
+            <Card
+                title="Performance Optimisation"
+                link="/experience"
+                imageSrc="/assets/images/optimisation.svg"
+            >
+                Scalability problems can be a good sign of growth, but they
+                can also be painful. I analyse potential bottlenecks in your
+                code and infrastructure, propose a prioritized backlog of improvements,
+                and bring them to life. I will prepare your product for user surges,
+                making it reliable, resource-efficient, and scalable.
+            </Card>
 
-                <Card
-                    title="Performance Optimisation"
-                    link="/experience"
-                    imageSrc="/assets/images/optimisation.svg"
-                >
-                    Scalability problems can be a good sign of growth, but they
-                    can also be painful. I analyse potential bottlenecks in your
-                    code and infrastructure, propose a prioritized backlog of improvements,
-                    and bring them to life. I will prepare your product for user surges,
-                    making it reliable, resource-efficient, and scalable.
-                </Card>
-
-                <Card
-                    title="Product Design"
-                    link="/experience"
-                    imageSrc="/assets/images/design.svg"
-                >
-                    Whether you have just the hint of an idea or are further along in
-                    product development, I dive in to produce interfaces where beauty
-                    and functionality combine to provide users with an exceptional experience.
-                </Card>
-
-            </TwoColumnContainer>
-
+            <Card
+                title="Product Design"
+                link="/experience"
+                imageSrc="/assets/images/design.svg"
+            >
+                Whether you have just the hint of an idea or are further along in
+                product development, I dive in to produce interfaces where beauty
+                and functionality combine to provide users with an exceptional experience.
+            </Card>
 
         </>
     );
