@@ -51,14 +51,14 @@ export const BarLabel = styled.span`
 
 export const BarValue = styled.span`
     margin-left: 10px;
-    font-size: 14px;
+    font-size: 17px;
     font-weight: bold;
     background: #000;
     color: #fff;
     padding: 2px 5px;
     border-radius: 4px;
     position: absolute;
-    right: -40px;
+    right: -30px;
 `;
 
 export const Subtext = styled.h2`

@@ -6,7 +6,10 @@ export const FullWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-
+  padding: 0;
+  @media (max-width: 900px) {
+    padding: 20px;
+  }
 `;
 
 export const ChartContainer = styled.div`
@@ -20,18 +23,29 @@ export const ChartContainer = styled.div`
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
+
+    @media (max-width: 900px) {
+        transform: scale(1.1);
+        width: 97%;
+    }
 `;
 
 export const ChartContent = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
     width: 100%;
 `;
 
 export const SvgContainer = styled.div`
     width: 200px;
     height: 200px;
+
+    @media (max-width: 900px) {
+        width: 220px;
+        height: 220px;
+    }
 `;
 
 export const Svg = styled.svg`
@@ -50,6 +64,10 @@ export const LegendContainer = styled.div`
     flex-direction: column;
     align-items: flex-start;
     margin-left: 20px;
+
+    @media (max-width: 900px) {
+        margin-left: 22px;
+    }
 `;
 
 export const LegendItem = styled.div`
@@ -64,10 +82,19 @@ export const LegendColor = styled.span<{ color: string }>`
     background-color: ${({ color }) => color};
     margin-right: 8px;
     display: inline-block;
+
+    @media (max-width: 900px) {
+        width: 17px;
+        height: 17px;
+    }
 `;
 
 export const LegendLabel = styled.span`
     font-size: 14px;
+
+    @media (max-width: 900px) {
+        font-size: 15px;
+    }
 `;
 
 export const Subtext = styled.h2`
