@@ -44,7 +44,7 @@ const About: React.FC = () => {
 
             <Card
                 title="Performance Optimisation"
-                link="/experience"
+                link="/case-studies"
                 imageSrc="/assets/images/optimisation.svg"
             >
                 Scalability problems can be a good sign of growth, but they
@@ -56,7 +56,7 @@ const About: React.FC = () => {
 
             <Card
                 title="Product Design"
-                link="/experience"
+                link="/graphic-design"
                 imageSrc="/assets/images/design.svg"
             >
                 Whether you have just the hint of an idea or are further along in
