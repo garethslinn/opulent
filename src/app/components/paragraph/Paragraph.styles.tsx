@@ -6,7 +6,14 @@ export const Container = styled.div<{ backgroundColor: string; foregroundColor: 
   color: ${props => props.foregroundColor};
   display: flex;
   justify-content: center;
-  padding: ${props => (props.first ? '20px 0 20px 0' : '20px 0')}; 
+  padding: ${props => (props.first ? '20px 0 20px 0' : '20px 0')};
+
+  a {
+    .img {
+      position: relative;
+      top: 6px;
+    }
+  }
 `;
 
 export const Wrapper = styled.div`

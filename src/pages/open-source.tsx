@@ -4,6 +4,7 @@ import React from 'react';
 import Title from "@/app/components/title/Title";
 import Paragraph from "@/app/components/paragraph/Paragraph";
 import Card from "@/app/components/card/Card";
+import Image from "next/image";
 
 const OpenSource: React.FC = () => {
     return (
@@ -15,6 +16,14 @@ const OpenSource: React.FC = () => {
                 have you covered. From HelpRJS, a comprehensive toolkit for object and array manipulation,
                 to other essential packages designed to streamline your coding experience, you will find
                 solutions that are both easy to use and highly effective.
+                <br /><br />
+
+                <a href="https://github.com/garethslinn">
+
+                    <Image className="img" src='/assets/images/brands/github.svg' alt='GitHub Link' width={30} height={30} />
+                    &nbsp;Visit my GitHub
+                </a>
+
             </Paragraph>
             <Card
                 title="HelprJS"

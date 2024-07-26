@@ -24,6 +24,11 @@ export const Description = styled.div`
   font-size: 20px;
   line-height: 30px;
   width: 60%;
+
+  @media (max-width: 900px) {
+    width: 100%;
+  }
+  
   .ul, li {
     margin-left: 40px;
     margin-bottom: 10px;
@@ -35,6 +40,9 @@ export const ImageWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  @media (max-width: 900px) {
+    display: none;
+  }
 `;
 
 export const ContentWrapper = styled.div`
