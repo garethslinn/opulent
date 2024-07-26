@@ -29,6 +29,12 @@ export const Column = styled.div`
     }
 
     @media (max-width: 900px) {
-        margin: 0; 
+      &:first-child {
+        margin: 0 0 20px 0;
+      }
+
+      &:last-child {
+        margin: 0;
+      }
     }
 `;
