@@ -16,7 +16,6 @@ export const GridContainer = styled.div`
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
-    padding: 20px;
 `;
 
 export const GridItem = styled.div`

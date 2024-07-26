@@ -16,7 +16,7 @@ import React from "react";
 
 export default function Experience() {
     return (
-        <div>
+        <>
             <Title first text="Experience is one thing you cannot learn" />
             <Paragraph first backgroundColor="#f1f1f1" foregroundColor="">
                 As a seasoned developer with over 20 years of commercial experience,
@@ -37,6 +37,6 @@ export default function Experience() {
             </TwoColumnContainer>
             <Title text="Soft Skills" />
             <SkillCards skills={softSkills} />
-        </div>
+        </>
     );
 }
