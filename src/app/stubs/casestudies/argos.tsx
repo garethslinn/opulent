@@ -18,7 +18,7 @@ const CaseStudyArgos = () => {
             <Title>Case Study: Argos</Title>
             <Subtitle>Background</Subtitle>
             <Paragraph>
-                Before the days of useful libraries like React, Argos's online website was heavily backend-driven, serving up pages via Java and JSPs. The core issue wasn't maintenance, which was relatively easy, but two significant challenges:
+                In 2014, before the days of useful libraries like React, Argos's online website was heavily backend-driven, serving up pages via Java and JSPs. The core issue wasn't maintenance, which was relatively easy, but two significant challenges:
             </Paragraph>
             <Subtitle as="h3">1. Legacy Code Bloat</Subtitle>
             <List>

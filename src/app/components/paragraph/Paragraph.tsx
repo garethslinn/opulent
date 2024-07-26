@@ -1,4 +1,4 @@
-// src/app/components/paragraph/Paragraph.tsx
+
 import React from 'react';
 import { ParagraphProps } from './Paragraph.types';
 import { Container, ParagraphText, Wrapper } from './Paragraph.styles';

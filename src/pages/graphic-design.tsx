@@ -13,14 +13,76 @@ import PieChart from "@/app/components/charts/pieChart/PieChart";
 import {methodologies} from "@/app/stubs/methodologies";
 import SkillCards from "@/app/components/skillCards/SkillCards";
 import {softSkills} from "@/app/stubs/softSkills";
+import ImageDisplay from "@/app/components/imageDisplay/ImageDisplay";
 
 const GraphicDesign: React.FC = () => {
     return (
         <>
             <Title first text="Graphic Design" />
             <Paragraph first backgroundColor="#f1f1f1" foregroundColor="">
-               Some placeholder text...
+                Though my commercial expertise is in development, I have always had a natural
+                talent for design and art. Drawing has been a part of my life since childhood,
+                and my early days as a print designer taught me the importance of precise color
+                codes in CMYK.
+                <br /><br />
+                While the industry has evolved, my design skills have seamlessly integrated
+                into my front-end development work, particularly in layout and aesthetics. I
+                can create icons and graphic layouts, leveraging my artistic background.
+                <br /><br />
+                Instead of mundane graphics, here is a brief exhibition of my more elaborate
+                designs for you to enjoy.
+
             </Paragraph>
+
+            <ImageDisplay
+                title="A Matter Of Perspective"
+                image="/assets/images/design/perspective.png"
+            >
+                <p>The first image showcases my process of setting up the perspective
+                    like a wireframe before drawing the actual image. In this example,
+                    I am drawing a sitting room, a challenging task because the human
+                    eye can easily detect even the slightest perspective errors. This
+                    is why such drawings, though they may appear simple, require
+                    meticulous planning and time.</p>
+            </ImageDisplay>
+
+            <ImageDisplay
+                title="A Coffee Shop Scene"
+                image="/assets/images/design/coffee.png"
+                imageRight
+            >
+                <p>The next image is a drawing of a coffee shop rendered in perspective
+                    and filled in using vector-based graphics. Here, I apply color theory
+                    to choose harmonious colors, enhancing the overall visual appeal. I
+                    particularly enjoy adding clouds with a clean cut-off at the bottom.
+                    Additionally, I include minute details like irregular brickwork and a
+                    few blades of grass to add depth without overwhelming the image. It is
+                    all about finding the right balance.</p>
+            </ImageDisplay>
+
+            <ImageDisplay
+                title="An Impossible Cafe"
+                image="/assets/images/design/cafe.png"
+            >
+                <p>A great design should look simple, and the cartoon perspective effect,
+                    though time-consuming to master, yields impressive outcomes, especially
+                    for logos and eye-catching adverts. This technique is used in popular
+                    cartoon shows like The Simpsons, Rick & Morty, and Family Guy. While it
+                    defies real-world possibilities, it cleverly tricks the eye into
+                    believing it is plausible.</p>
+            </ImageDisplay>
+
+            <ImageDisplay
+                title="The power of Logos"
+                image="/assets/images/design/slinns-gym-final.png"
+                imageRight
+            >
+                <p>The final piece is a logo I designed for my home gym. This logo was printed
+                    on 2cm shiny vinyl, allowing me to hang it as a plaque in my gym. It is the
+                    result of several iterations, experimenting with various colors from reds
+                    to blues, before arriving at this final design. A good logo should speak for
+                    itself without the need for the designer to explain their subjective perspective.</p>
+            </ImageDisplay>
         </>
     )
 };

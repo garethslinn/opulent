@@ -10,7 +10,7 @@ export const TabButtons = styled.div`
 export const TabButton = styled.button<{ isActive: boolean }>`
   padding: 10px 20px;
   margin-right: 10px;
-  background-color: ${(props) => (props.isActive ? '#505275' : '#f1f1f1')};
+  background-color: ${(props) => (props.isActive ? '#505275' : '#fff')};
   color: ${(props) => (props.isActive ? '#fff' : '#000')};
   border: 1px solid #ccc;
   border-radius: 4px;
