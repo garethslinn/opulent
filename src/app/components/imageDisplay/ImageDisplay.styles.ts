@@ -1,3 +1,4 @@
+// ImageDisplay.styles.ts
 import styled from 'styled-components';
 
 export const ImageDisplayContainer = styled.div<{ imageRight: boolean }>`
@@ -11,6 +12,10 @@ export const ImageDisplayContainer = styled.div<{ imageRight: boolean }>`
     background: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 18px;
+
+    @media (max-width: 900px) {
+        flex-direction: column;
+    }
 `;
 
 export const ImageWrapper = styled.div`
@@ -22,11 +27,22 @@ export const ImageWrapper = styled.div`
     img {
         border-radius: 12px;
     }
+
+    @media (max-width: 1000px) {
+        width: 100%;
+    }
+
+    @media (max-width: 661px) {
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
 `;
 
 export const ContentWrapper = styled.div`
     width: 50%;
-    padding: 20px;
+    padding: 20px 40px;
 
     h2 {
         font-family: 'Roboto-bold', sans-serif;
@@ -37,5 +53,10 @@ export const ContentWrapper = styled.div`
     div {
         font-size: 20px;
         line-height: 2;
+    }
+
+    @media (max-width: 1000px) {
+        width: 100%;
+        padding: 20px;
     }
 `;
