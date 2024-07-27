@@ -18,11 +18,20 @@ export const TabButton = styled.button<{ isActive: boolean }>`
   display: flex;
   align-items: center;
   gap: 10px;
+
+  @media (max-width: 550px) {
+    width: 70px;
+    padding: 0;
+  }
 `;
 
 export const TabImage = styled.img`
   width: 100%;
   height: 50px;
+
+  @media (max-width: 550px) {
+    width: 70px;
+  }
 `;
 
 export const TabContent = styled.div`
