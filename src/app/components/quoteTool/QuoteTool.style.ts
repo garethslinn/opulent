@@ -100,7 +100,9 @@ export const Title = styled.h3`
 
   @media (max-width: 450px) {
     text-align: center;
+    margin: 10px 0 10px 0;
   };
+  
   
 `;
 

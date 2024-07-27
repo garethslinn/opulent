@@ -22,6 +22,7 @@ import { techSkills } from "@/app/stubs/techSkills";
 import { items } from "@/app/stubs/items";
 import Item from "@/app/components/item/item";
 import Counter from "@/app/components/counter/Counter";
+import useDeviceType from "@/app/utils/useDeviceType";
 
 const quotesArrowTheme = {
     fillColor: "transparent",
@@ -36,6 +37,8 @@ const QuoteTool: React.FC<{ quoteText?: string }> = ({ quoteText = "Professional
     const [activeSkills, setActiveSkills] = useState<string[]>(companies[0].skills.split(', '));
     const [isUserInteracting, setIsUserInteracting] = useState<boolean>(false);
     const intervalRef = useRef<NodeJS.Timeout | null>(null);
+
+    const deviceType = useDeviceType();
 
     const handleNavLeft = () => {
         setIsUserInteracting(true);
@@ -83,6 +86,7 @@ const QuoteTool: React.FC<{ quoteText?: string }> = ({ quoteText = "Professional
                         <QuoteText>{quoteText}</QuoteText>
                     </LeftColumn>
                     <RightColumn>
+                        {deviceType === 'mobile' && <Title>{activeTitle}</Title> }
                         <Counter
                             activeIndex={activeIndex}
                             totalItems={companies.length}
@@ -90,7 +94,7 @@ const QuoteTool: React.FC<{ quoteText?: string }> = ({ quoteText = "Professional
                             handleNavRight={handleNavRight}
                             quotesArrowTheme={quotesArrowTheme}
                         />
-                        <Title>{activeTitle}</Title>
+                        {deviceType !== 'mobile' && <Title>{activeTitle}</Title> }
                         <BulletList>
                             {activeDescription.map((desc, index) => (
                                 <BulletItem key={index}>{desc}</BulletItem>
