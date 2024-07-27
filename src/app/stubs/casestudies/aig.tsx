@@ -24,7 +24,7 @@ const CaseStudyAIG = () => {
             <List>
                 <ListItem>Develop a robust and scalable component library using React and TypeScript.</ListItem>
                 <ListItem>Ensure the library is easy to use, well-documented, and maintainable.</ListItem>
-                <ListItem>Create a standardized approach to building user interfaces across AIG's applications.</ListItem>
+                <ListItem>Create a standardized approach to building user interfaces across AIG&apos;s applications.</ListItem>
             </List>
             <Subtitle>Strategy and Execution</Subtitle>
             <Subtitle as="h3">1. Initial Assessment</Subtitle>
@@ -33,7 +33,7 @@ const CaseStudyAIG = () => {
             </Paragraph>
             <Subtitle as="h3">2. Component Design</Subtitle>
             <Paragraph>
-                Designed reusable and scalable components, ensuring they met AIG's design guidelines and accessibility standards. Focused on creating a flexible architecture that allowed for easy customization and extension.
+                Designed reusable and scalable components, ensuring they met AIG&apos;s design guidelines and accessibility standards. Focused on creating a flexible architecture that allowed for easy customization and extension.
             </Paragraph>
             <Subtitle as="h3">3. Development with React and TypeScript</Subtitle>
             <Paragraph>
@@ -60,7 +60,7 @@ const CaseStudyAIG = () => {
                 <ListItem>Ongoing Use and Recognition: The library has continued to be a vital tool for AIG, recognized for its robustness and effectiveness in streamlining frontend development.</ListItem>
             </List>
             <Paragraph>
-                By spearheading the development of this component library, I played a key role in transforming AIG's frontend development practices. The success of this project highlights the importance of standardization, scalability, and type safety in modern web development.
+                By spearheading the development of this component library, I played a key role in transforming AIG&apos;s frontend development practices. The success of this project highlights the importance of standardization, scalability, and type safety in modern web development.
             </Paragraph>
         </Container>
     );

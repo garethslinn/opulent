@@ -57,7 +57,7 @@ const CaseStudyBT = () => {
                 <ListItem>Enhanced Collaboration: Improved communication and collaboration between the Cardiff and offshore teams resulted in a more harmonious working environment.</ListItem>
             </List>
             <Paragraph>
-                By addressing these challenges head-on, I played a key role in transforming BT's workflow and team dynamics. The success of this project highlights the importance of structured project management, cohesive team dynamics, and the adoption of Agile practices.
+                By addressing these challenges head-on, I played a key role in transforming BT&apos;s workflow and team dynamics. The success of this project highlights the importance of structured project management, cohesive team dynamics, and the adoption of Agile practices.
             </Paragraph>
         </Container>
     );

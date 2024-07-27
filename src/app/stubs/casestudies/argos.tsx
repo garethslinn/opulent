@@ -18,7 +18,7 @@ const CaseStudyArgos = () => {
             <Title>Case Study: Argos</Title>
             <Subtitle>Background</Subtitle>
             <Paragraph>
-                In 2014, before the days of useful libraries like React, Argos's online website was heavily backend-driven, serving up pages via Java and JSPs. The core issue wasn't maintenance, which was relatively easy, but two significant challenges:
+                In 2014, before the days of useful libraries like React, Argos&apos;s online website was heavily backend-driven, serving up pages via Java and JSPs. The core issue wasn&apos;t maintenance, which was relatively easy, but two significant challenges:
             </Paragraph>
             <Subtitle as="h3">1. Legacy Code Bloat</Subtitle>
             <List>
@@ -36,7 +36,7 @@ const CaseStudyArgos = () => {
             <Subtitle as="h3">2. Performance Issues</Subtitle>
             <List>
                 <ListItem>Page load times were excessively long.</ListItem>
-                <ListItem>Argos's analytics showed that these delays were causing significant customer loss.</ListItem>
+                <ListItem>Argos&apos;s analytics showed that these delays were causing significant customer loss.</ListItem>
             </List>
             <Subtitle>Objectives</Subtitle>
             <List>
@@ -69,11 +69,10 @@ const CaseStudyArgos = () => {
                 <ListItem>Improved Analytics: Customer retention increased as the site became more responsive and user-friendly. Significant reduction in the number of defects and bugs, resulting in fewer customer complaints and support tickets.</ListItem>
             </List>
             <Paragraph>
-                By addressing these challenges, my team and I not only modernized Argos's online presence but also ensured that it was scalable and maintainable for future developments. This project demonstrated the importance of clean, efficient code and the impact of performance on customer satisfaction and retention.
+                By addressing these challenges, my team and I not only modernized Argos&apos;s online presence but also ensured that it was scalable and maintainable for future developments. This project demonstrated the importance of clean, efficient code and the impact of performance on customer satisfaction and retention.
             </Paragraph>
         </Container>
     );
 };
 
 export default CaseStudyArgos;
-;

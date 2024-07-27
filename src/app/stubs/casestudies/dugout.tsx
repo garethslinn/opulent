@@ -18,7 +18,7 @@ const CaseStudyDugout = () => {
             <Title>Case Study: Dugout.com</Title>
             <Subtitle>Background</Subtitle>
             <Paragraph>
-                Dugout.com is a premier football website offering behind-the-scenes video on demand for football fans. Owned by ten of the world’s leading football teams, it provides up-to-the-minute videos from a unique perspective. Initially, the development of the site was outsourced to an offshore company. However, after 10 months, almost all of the work remained incomplete with no hope of hitting the deadline, which was just over two months away.
+                Dugout.com is a premier football website offering behind-the-scenes video on demand for football fans. Owned by ten of the world&apos;s leading football teams, it provides up-to-the-minute videos from a unique perspective. Initially, the development of the site was outsourced to an offshore company. However, after 10 months, almost all of the work remained incomplete with no hope of hitting the deadline, which was just over two months away.
             </Paragraph>
             <Subtitle>Objectives</Subtitle>
             <List>
@@ -58,7 +58,7 @@ const CaseStudyDugout = () => {
                 <ListItem>Successful Launch: Despite the initial setbacks, the site was successfully launched within the 9-week deadline.</ListItem>
                 <ListItem>User Engagement: Enhanced user experience led to increased engagement and satisfaction among football fans.</ListItem>
                 <ListItem>Revenue Growth: Continuous development of new features and improvements contributed to increased revenue.</ListItem>
-                <ListItem>Team Morale: Although the project required significant overtime, the team's dedication and hard work resulted in a massive success.</ListItem>
+                <ListItem>Team Morale: Although the project required significant overtime, the team&apos;s dedication and hard work resulted in a massive success.</ListItem>
             </List>
             <Paragraph>
                 By addressing these challenges head-on, my team and I not only rescued the Dugout.com project but also ensured its long-term success and scalability. This project demonstrated the importance of a strong foundation, agile development, and relentless dedication to meet ambitious deadlines and achieve outstanding results.

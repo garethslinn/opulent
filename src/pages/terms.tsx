@@ -4,7 +4,7 @@ import React from 'react';
 import Title from "@/app/components/title/Title";
 import Paragraph from "@/app/components/paragraph/Paragraph";
 
-const Contact: React.FC = () => {
+const Terms: React.FC = () => {
     return (
         <>
             <Title first text="Terms and Conditions" />
@@ -12,12 +12,12 @@ const Contact: React.FC = () => {
 
                 <h2>1. Introduction</h2>
                 <p>
-                    These terms and conditions outline the rules and regulations for the use of GDS Consulting Ltd's Website and Services.
+                    These terms and conditions outline the rules and regulations for the use of GDS Consulting Ltd&apos;s Website and Services.
                 </p>
 
                 <h2>2. Acceptance of Terms</h2>
                 <p>
-                    By accessing this website and/or using our services, you accept these terms and conditions in full. Do not continue to use GDS Consulting Ltd's website or services if you do not accept all of the terms and conditions stated on this page.
+                    By accessing this website and/or using our services, you accept these terms and conditions in full. Do not continue to use GDS Consulting Ltd&apos;s website or services if you do not accept all of the terms and conditions stated on this page.
                 </p>
 
                 <h2>3. Services</h2>
@@ -42,7 +42,7 @@ const Contact: React.FC = () => {
 
                 <h2>7. Indemnification</h2>
                 <p>
-                    You hereby indemnify to the fullest extent GDS Consulting Ltd from and against any and all liabilities, costs, demands, causes of action, damages, and expenses (including reasonable attorney's fees) arising out of or in any way related to your breach of any of the provisions of these terms.
+                    You hereby indemnify to the fullest extent GDS Consulting Ltd from and against any and all liabilities, costs, demands, causes of action, damages, and expenses (including reasonable attorney&apos;s fees) arising out of or in any way related to your breach of any of the provisions of these terms.
                 </p>
 
                 <h2>8. Termination</h2>
@@ -65,4 +65,4 @@ const Contact: React.FC = () => {
     )
 };
 
-export default Contact;
+export default Terms;

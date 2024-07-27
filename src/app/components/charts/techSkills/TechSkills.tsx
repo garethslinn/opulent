@@ -14,8 +14,8 @@ import {
 } from './TechSkills.styles';
 
 const colors = {
-    1: "#0070f3", // Blue color for core skill
-    2: "#2196f3"  // Slightly different blue for complimentary skill
+    1: "#0070f3",
+    2: "#2196f3"
 };
 
 const getYearsOfExperience = (year_started: string | null, fixed_years: number | null): number => {
@@ -44,7 +44,7 @@ const TechSkillBarGraph: React.FC<TechSkillBarGraphProps> = ({ data }) => {
             <h2>Tech Skills</h2>
             <BarContainer>
                 {sortedData.map((skill, index) => (
-                    <BarWrapper key={index}>
+                    <BarWrapper key={'bar' + index}>
                         <BarLabel>
                             <BarImage src={skill.image} alt={skill.title} />
                             <BarTitle>{skill.title}</BarTitle>
