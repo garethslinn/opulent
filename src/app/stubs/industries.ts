@@ -32,7 +32,7 @@ export const industries = [
         companies: ["Dugout"]
     },
     {
-        industry: "Telecommunications",
+        industry: "Telecoms",
         companies: ["BT", "Cisco"]
     }
 ];
