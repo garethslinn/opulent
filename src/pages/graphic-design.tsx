@@ -74,11 +74,22 @@ const GraphicDesign: React.FC = () => {
             </ImageDisplay>
 
             <ImageDisplay
-                title="The power of Logos"
-                image="/assets/images/design/slinns-gym-final.png"
-                imageRight // Add imageRight prop
+                title="Logo design"
+                image="/assets/images/logo.svg"
+                imageRight
             >
-                <p>The final piece is a logo I designed for my home gym. This logo was printed
+                <p>Transforming the letter "G" into a logo involves using vibrant colors,
+                    fill techniques, and ornate curves. These elements elevate the letter
+                    from simple to sophisticated. Bright colors attract attention, fill adds
+                    depth, and curves introduce elegance. Together, these design choices turn
+                    the "G" into a memorable and impactful pictographic logo.</p>
+            </ImageDisplay>
+
+            <ImageDisplay
+                title="Every plaque has its place"
+                image="/assets/images/design/slinns-gym-final.png"
+            >
+                <p>The final piece is a plaque I designed for my home gym. This logo was printed
                     on 2cm shiny vinyl, allowing me to hang it as a plaque in my gym. It is the
                     result of several iterations, experimenting with various colors from reds
                     to blues, before arriving at this final design. A good logo should speak for
