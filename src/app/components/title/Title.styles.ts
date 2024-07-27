@@ -1,7 +1,12 @@
-// src/app/components/title/Title.styles.ts
-import styled from "styled-components";
+import styled from 'styled-components';
 
-export const Container = styled.div<{ first?: boolean }>`
+interface ContainerProps {
+    backgroundColor?: string;
+    foregroundColor?: string;
+    first?: boolean;
+}
+
+export const Container = styled.div<ContainerProps>`
   font-family: 'Roboto-bold', sans-serif;
   width: 100%;
   background-color: ${props => props.backgroundColor};
@@ -12,15 +17,19 @@ export const Container = styled.div<{ first?: boolean }>`
 `;
 
 export const Wrapper = styled.div`
-    width: 100%;
-    max-width: 1024px;
-    display: flex;
-    align-items: center;
+  width: 100%;
+  max-width: 1024px;
+  display: flex;
+  align-items: center;
 `;
 
-export const TitleText = styled.h2<{ first?: boolean }>`
-    margin: 0;
-    text-align: left;
-    font-size: ${props => (props.first ? '45px': '30px')};
-    line-height: ${props => (props.first ? '1.4': '1')};
+interface TitleTextProps {
+    first?: boolean;
+}
+
+export const TitleText = styled.h2<TitleTextProps>`
+  margin: 0;
+  text-align: left;
+  font-size: ${props => (props.first ? '45px' : '30px')};
+  line-height: ${props => (props.first ? '1.4' : '1')};
 `;

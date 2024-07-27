@@ -4,8 +4,7 @@ import {
     GridContainer,
     SkillTitle,
     SkillCard,
-    SkillDescription,
-    FullWrapper
+    SkillDescription
 } from "@/app/components/skillCards/SkillCards.styles";
 import {Skill, SkillCardsProps} from "@/app/components/skillCards/SkillCards.types";
 

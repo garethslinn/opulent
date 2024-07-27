@@ -1,4 +1,3 @@
-// src/app/components/title/Title.tsx
 import React from 'react';
 import { TitleProps } from "@/app/components/title/Title.types";
 import { Container, TitleText, Wrapper } from "@/app/components/title/Title.styles";

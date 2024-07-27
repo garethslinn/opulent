@@ -1,4 +1,4 @@
-import { TechSkill } from './components/techSkills/TechSkills.types';
+import { TechSkill} from "@/app/components/skillGrid/SkillGrid.types";
 
 export const techSkills: TechSkill[] = [
     {
