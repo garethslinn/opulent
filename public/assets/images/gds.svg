@@ -1,1 +1,76 @@
-<svg width="409.115" height="217.27" viewBox="0 0 108.245 57.486" xmlns="http://www.w3.org/2000/svg"><path style="opacity:1;fill:#474747;fill-opacity:1;stroke:none;stroke-width:7.88447;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none" d="M37.362.005h34.139v57.579H37.362zM.32.005h34.139v57.579H.32z"/><text xml:space="preserve" style="font-weight:700;font-size:55.4529px;font-family:'Arial Narrow';-inkscape-font-specification:'Arial Narrow Bold';fill:#fff;fill-opacity:1;stroke:#ffe680;stroke-width:0;stroke-linecap:round;stroke-linejoin:round" x="6.05" y="49.526" transform="scale(1.04756 .9546)"><tspan style="font-style:normal;font-variant:normal;font-weight:700;font-stretch:normal;font-family:'Bebas Neue';-inkscape-font-specification:'Bebas Neue Bold';fill:#fff;fill-opacity:1;stroke-width:0" x="6.05" y="49.526">G</tspan></text><text xml:space="preserve" style="font-weight:700;font-size:55.4529px;font-family:'Arial Narrow';-inkscape-font-specification:'Arial Narrow Bold';fill:#fff;fill-opacity:1;stroke:#ffe680;stroke-width:0;stroke-linecap:round;stroke-linejoin:round" x="40.538" y="49.526" transform="scale(1.04756 .9546)"><tspan style="font-style:normal;font-variant:normal;font-weight:700;font-stretch:normal;font-family:'Bebas Neue';-inkscape-font-specification:'Bebas Neue Bold';fill:#fff;fill-opacity:1;stroke-width:0" x="40.538" y="49.526">D</tspan></text><path style="opacity:1;fill:#474747;fill-opacity:1;stroke:none;stroke-width:7.88447;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none" d="M74.404.005h34.139v57.579H74.404z"/><text xml:space="preserve" style="font-weight:700;font-size:55.4529px;font-family:'Arial Narrow';-inkscape-font-specification:'Arial Narrow Bold';fill:#fff;fill-opacity:1;stroke:#ffe680;stroke-width:0;stroke-linecap:round;stroke-linejoin:round" x="77.053" y="49.526" transform="scale(1.04756 .9546)"><tspan style="font-style:normal;font-variant:normal;font-weight:700;font-stretch:normal;font-family:'Bebas Neue';-inkscape-font-specification:'Bebas Neue Bold';fill:#fff;fill-opacity:1;stroke-width:0" x="77.053" y="49.526">S</tspan></text></svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="409.115"
+   height="217.27"
+   viewBox="0 0 108.245 57.486"
+   version="1.1"
+   id="svg1687"
+   sodipodi:docname="gds.svg"
+   inkscape:version="1.2.1 (9c6d41e4, 2022-07-14)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1691" />
+  <sodipodi:namedview
+     id="namedview1689"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="1.0862061"
+     inkscape:cx="207.60333"
+     inkscape:cy="216.80969"
+     inkscape:window-width="1418"
+     inkscape:window-height="803"
+     inkscape:window-x="0"
+     inkscape:window-y="38"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg1687" />
+  <path
+     style="opacity:1;fill:#474747;fill-opacity:1;stroke:none;stroke-width:7.88447;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+     d="M37.362.005h34.139v57.579H37.362zM.32.005h34.139v57.579H.32z"
+     id="path1671" />
+  <text
+     xml:space="preserve"
+     style="font-weight:700;font-size:55.4529px;font-family:'Arial Narrow';-inkscape-font-specification:'Arial Narrow Bold';fill:#fff;fill-opacity:1;stroke:#ffe680;stroke-width:0;stroke-linecap:round;stroke-linejoin:round"
+     x="6.05"
+     y="49.526"
+     transform="scale(1.04756 .9546)"
+     id="text1675"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:700;font-stretch:normal;font-family:'Bebas Neue';-inkscape-font-specification:'Bebas Neue Bold';fill:#fff;fill-opacity:1;stroke-width:0"
+       x="6.05"
+       y="49.526"
+       id="tspan1673">G</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-weight:700;font-size:55.4529px;font-family:'Arial Narrow';-inkscape-font-specification:'Arial Narrow Bold';fill:#fff;fill-opacity:1;stroke:#ffe680;stroke-width:0;stroke-linecap:round;stroke-linejoin:round"
+     x="40.538"
+     y="49.526"
+     transform="scale(1.04756 .9546)"
+     id="text1679"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:700;font-stretch:normal;font-family:'Bebas Neue';-inkscape-font-specification:'Bebas Neue Bold';fill:#fff;fill-opacity:1;stroke-width:0"
+       x="40.538"
+       y="49.526"
+       id="tspan1677">D</tspan></text>
+  <path
+     style="opacity:1;fill:#474747;fill-opacity:1;stroke:none;stroke-width:7.88447;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+     d="M74.404.005h34.139v57.579H74.404z"
+     id="path1681" />
+  <text
+     xml:space="preserve"
+     style="font-weight:700;font-size:55.4529px;font-family:'Arial Narrow';-inkscape-font-specification:'Arial Narrow Bold';fill:#fff;fill-opacity:1;stroke:#ffe680;stroke-width:0;stroke-linecap:round;stroke-linejoin:round"
+     x="77.053"
+     y="49.526"
+     transform="scale(1.04756 .9546)"
+     id="text1685"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:700;font-stretch:normal;font-family:'Bebas Neue';-inkscape-font-specification:'Bebas Neue Bold';fill:#fff;fill-opacity:1;stroke-width:0"
+       x="77.053"
+       y="49.526"
+       id="tspan1683">S</tspan></text>
+</svg>

@@ -2,6 +2,9 @@ import styled from 'styled-components';
 
 interface ArrowProps {
     rotate: number;
+    fillColor: string;
+    outlineColor: string;
+    hoverFillColor: string;
 }
 
 export const Arrow = styled.div<ArrowProps>`
@@ -12,8 +15,12 @@ export const Arrow = styled.div<ArrowProps>`
   }
 
   path {
-    fill: #fff; 
-    stroke: #000; 
-    stroke-width: 2px; 
+    fill: ${({ fillColor }) => fillColor}; 
+    stroke: ${({ outlineColor }) => outlineColor}; 
+    stroke-width: 2px;
+
+    &:hover {
+        fill: ${({ hoverFillColor }) => hoverFillColor};
+    }
   }
 `;
