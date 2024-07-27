@@ -32,6 +32,10 @@ export const GridItem = styled.div`
     @media (max-width: 900px) {
         width: 48%; /* Approximately 2 columns */
     }
+
+  @media (max-width: 450px) {
+    width: 100%;
+  }
 `;
 
 export const SkillImage = styled.img`

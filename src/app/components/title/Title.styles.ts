@@ -39,7 +39,7 @@ export const TitleText = styled.h2<TitleTextProps>`
   line-height: ${props => (props.first ? '1.4' : '1')};
   
   @media (max-width: 640px) {
-    font-size: ${props => (props.first ? '30px' : '15px')};
+    font-size: ${props => (props.first ? '30px' : '30px')};
     line-height: ${props => (props.first ? '1.4' : '1')};
   }
   
