@@ -10,10 +10,9 @@ interface CompanyProps {
     active: boolean;
 }
 
-export const CompaniesListLayout= styled.div<CompaniesListWrapperProps>`
+export const CompaniesListLayout = styled.div`
   background: #505275;
-  `
-;
+`;
 
 export const CompaniesListWrapper = styled.div<CompaniesListWrapperProps>`
   padding: var(--spacing-padding);
@@ -40,7 +39,6 @@ export const CompaniesListWrapper = styled.div<CompaniesListWrapperProps>`
 
 export const Company = styled.div<CompanyProps>`
   flex: 0 0 auto;
-  // background-color: ${({ active }) => (active ? '#fff' : 'transparent')};
   border: ${({ active }) => (active ? '1px solid #fff' : 'none')};
   padding: 0 10px;
   border-radius: 5px;

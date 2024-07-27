@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-import { TechSkillBarGraphProps } from './TechSkills.types';
+import { TechSkillBarGraphProps, TechSkillType } from './TechSkills.types';
 import {
     GraphContainer,
     BarContainer,
@@ -13,7 +13,7 @@ import {
     BarValue
 } from './TechSkills.styles';
 
-const colors = {
+const colors: { [key in TechSkillType]: string } = {
     1: "#0070f3",
     2: "#2196f3"
 };

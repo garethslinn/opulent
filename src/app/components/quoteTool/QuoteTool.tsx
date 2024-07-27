@@ -15,8 +15,8 @@ import {
 import {
     BulletList,
     BulletItem
-} from '../../components/bulletList/BulletList.styles'
-import InlineList from "@/app/components/inlineList/inlineList";
+} from '../../components/bulletList/BulletList.styles';
+import InlineList from "@/app/components/inlineList/InlineList"; // Ensure correct casing
 import { companies } from "@/app/stubs/companies";
 import { techSkills } from "@/app/stubs/techSkills";
 import { items } from "@/app/stubs/items";
@@ -32,7 +32,7 @@ const quotesArrowTheme = {
 const QuoteTool: React.FC<{ quoteText?: string }> = ({ quoteText = "Professional Experience" }) => {
     const [activeIndex, setActiveIndex] = useState<number>(0);
     const [activeTitle, setActiveTitle] = useState<string>(companies[0].title);
-    const [activeDescription, setActiveDescription] = useState<string[]>(companies[0].description);
+    const [activeDescription, setActiveDescription] = useState<string[]>(companies[0].description); // Updated to string[]
     const [activeSkills, setActiveSkills] = useState<string[]>(companies[0].skills.split(', '));
     const [isUserInteracting, setIsUserInteracting] = useState<boolean>(false);
     const intervalRef = useRef<NodeJS.Timeout | null>(null);
@@ -49,7 +49,7 @@ const QuoteTool: React.FC<{ quoteText?: string }> = ({ quoteText = "Professional
 
     useEffect(() => {
         setActiveTitle(companies[activeIndex].title);
-        setActiveDescription(companies[activeIndex].description);
+        setActiveDescription(companies[activeIndex].description); // Updated to string[]
         setActiveSkills(companies[activeIndex].skills.split(', '));
     }, [activeIndex]);
 
@@ -74,7 +74,7 @@ const QuoteTool: React.FC<{ quoteText?: string }> = ({ quoteText = "Professional
                 activeIndex={activeIndex}
                 setActiveIndex={setActiveIndex}
                 setActiveTitle={setActiveTitle}
-                setActiveDescription={setActiveDescription}
+                setActiveDescription={setActiveDescription} // Updated to string[]
             />
             <ElementWrapper>
                 <ChildWrapper>

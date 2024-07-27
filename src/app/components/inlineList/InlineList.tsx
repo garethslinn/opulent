@@ -10,7 +10,10 @@ import {
 interface Company {
     title: string;
     image: string;
-    description: string;
+    description: string[]; // Updated to string[]
+    skills: string;
+    dateFrom: string;
+    dateTo: string;
 }
 
 interface CompaniesListProps {
@@ -18,16 +21,16 @@ interface CompaniesListProps {
     activeIndex: number;
     setActiveIndex: (index: number) => void;
     setActiveTitle: (title: string) => void;
-    setActiveDescription: (description: string) => void;
+    setActiveDescription: (description: string[]) => void; // Updated to string[]
 }
 
 const InlineList: React.FC<CompaniesListProps> = ({
-          companies,
-          activeIndex,
-          setActiveIndex,
-          setActiveTitle,
-          setActiveDescription
-      }) => {
+                                                      companies,
+                                                      activeIndex,
+                                                      setActiveIndex,
+                                                      setActiveTitle,
+                                                      setActiveDescription
+                                                  }) => {
     const containerRef = useRef<HTMLDivElement>(null);
     const [itemWidth, setItemWidth] = useState(100);
     const [visibleItems, setVisibleItems] = useState(1);
@@ -57,7 +60,7 @@ const InlineList: React.FC<CompaniesListProps> = ({
     useEffect(() => {
         if (companies.length > 0) {
             setActiveTitle(companies[activeIndex].title);
-            setActiveDescription(companies[activeIndex].description);
+            setActiveDescription(companies[activeIndex].description); // Updated to string[]
         }
     }, [activeIndex, companies, setActiveTitle, setActiveDescription]);
 
@@ -72,7 +75,6 @@ const InlineList: React.FC<CompaniesListProps> = ({
                 activeIndex={activeIndex}
                 itemWidth={itemWidth}
                 visibleItems={visibleItems}
-                totalItems={companies.length}
                 role="list"
             >
                 {companies.map((company, index) => (
@@ -86,6 +88,7 @@ const InlineList: React.FC<CompaniesListProps> = ({
                         aria-label={`Company ${company.title}`}
                     >
                         <CompanyImage src={company.image} alt={company.title} />
+                        <CompanyTitle>{company.title}</CompanyTitle>
                     </Company>
                 ))}
             </CompaniesListWrapper>
