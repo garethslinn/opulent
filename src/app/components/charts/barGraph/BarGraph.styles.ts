@@ -47,6 +47,11 @@ export const BarLabel = styled.span`
     text-align: left;
     display: block;
     white-space: nowrap;
+
+  @media (max-width: 450px) {
+    font-size: 15px;
+    width: 140px;
+  };
 `;
 
 export const BarValue = styled.span`

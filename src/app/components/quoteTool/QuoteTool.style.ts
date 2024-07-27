@@ -102,8 +102,6 @@ export const Title = styled.h3`
     text-align: center;
     margin: 10px 0 10px 0;
   };
-  
-  
 `;
 
 export const SkillsWrapper = styled.div`

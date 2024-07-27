@@ -27,6 +27,7 @@ export const ChartContainer = styled.div`
     @media (max-width: 900px) {
         transform: scale(1.1);
         width: 97%;
+        min-height: unset;
     }
 `;
 
@@ -46,11 +47,21 @@ export const SvgContainer = styled.div`
         width: 220px;
         height: 220px;
     }
+
+  @media (max-width: 900px) {
+    width: 125px;
+    height: 125px;
+  }
 `;
 
 export const Svg = styled.svg`
     width: 100%;
     height: 100%;
+
+  @media (max-width: 450px) {
+    width: 70%;
+    height: 70%;
+  };
 `;
 
 export const Slice = styled.path<{ color: string }>`
