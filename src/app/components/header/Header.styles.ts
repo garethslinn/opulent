@@ -14,6 +14,10 @@ export const HeaderContainer = styled.header<HeaderContainerProps>`
   transition: background-color 0.3s, box-shadow 0.3s;
   z-index: 1000;
   font-family: 'Roboto', sans-serif;
+
+  @media (max-width: 640px) {
+    padding: 0;
+  }
   
 `;
 

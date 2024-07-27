@@ -33,7 +33,7 @@ export const ParagraphText = styled.div<{ first?: boolean }>`
   line-height: ${props => (props.first ? '46px' : '30px')};
 
   @media (max-width: 640px) {
-    font-size: ${props => (props.first ? '18px' : '14px')};
+    font-size: ${props => (props.first ? '20px' : '18px')};
     line-height: ${props => (props.first ? 1.6 : 1.6)};
   }
 `;
