@@ -36,7 +36,7 @@ const GraphicDesign: React.FC = () => {
             <ImageDisplay
                 title="A Matter Of Perspective"
                 image="/assets/images/design/perspective.png"
-                imageRight={false} // Add imageRight prop
+                imageRight={false}
             >
                 <p>The first image showcases my process of setting up the perspective
                     like a wireframe before drawing the actual image. In this example,
@@ -49,7 +49,7 @@ const GraphicDesign: React.FC = () => {
             <ImageDisplay
                 title="A Coffee Shop Scene"
                 image="/assets/images/design/coffee.png"
-                imageRight // Add imageRight prop
+                imageRight
             >
                 <p>The next image is a drawing of a coffee shop rendered in perspective
                     and filled in using vector-based graphics. Here, I apply color theory
@@ -63,7 +63,7 @@ const GraphicDesign: React.FC = () => {
             <ImageDisplay
                 title="An Impossible Cafe"
                 image="/assets/images/design/cafe.png"
-                imageRight={false} // Add imageRight prop
+                imageRight={false}
             >
                 <p>A great design should look simple, and the cartoon perspective effect,
                     though time-consuming to master, yields impressive outcomes, especially
