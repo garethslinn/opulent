@@ -27,13 +27,18 @@ export const CompaniesListWrapper = styled.div<CompaniesListWrapperProps>`
 }};
   transition: transform 0.5s ease;
 
-  @media (max-width: 900px) {
+@media (max-width: 900px) {
     gap: 5px;
     transform: ${({ activeIndex, itemWidth, visibleItems }) => {
     const halfway = Math.floor(visibleItems / 5);
     const moveIndex = activeIndex >= halfway ? activeIndex - halfway : 0;
     return `translateX(-${moveIndex * (itemWidth + 55)}px)`;
 }};
+  
+@media (max-width: 450px) {
+ display: none;
+}};
+
   }
 `;
 

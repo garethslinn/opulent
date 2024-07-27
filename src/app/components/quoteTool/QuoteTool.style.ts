@@ -10,6 +10,10 @@ export const QuoteToolWrapper = styled.div`
   
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 18px;
+
+  @media (max-width: 640px) {
+    margin-top: 20px;
+  };
 `;
 
 export const ElementWrapper = styled.div`
@@ -17,6 +21,10 @@ export const ElementWrapper = styled.div`
   width: var(--width-full);
   display: flex;
   justify-content: center;
+
+  @media (max-width: 450px) {
+    padding-top: 20px;
+  }
 `;
 
 export const ChildWrapper = styled.div`
@@ -44,6 +52,9 @@ export const LeftColumn = styled.div`
     justify-content: start;
     margin-bottom: var(--spacing-small);
   }
+  @media (max-width: 450px) {
+    display: none;
+  }};
 `;
 
 export const QuoteText = styled.div`
@@ -67,11 +78,16 @@ export const Icon = styled.img`
 export const RightColumn = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 0 50px;
+  padding: 0 30px;
   
   @media (max-width: 1100px) {
     align-items: stretch;
   }
+  
+  @media (max-width: 450px) {
+    padding: 0 20px;
+  };
+
 `;
 
 export const Title = styled.h3`
@@ -81,6 +97,11 @@ export const Title = styled.h3`
   @media (max-width: 1100px) {
     font-size: calc(var(--font-size-title));
   }
+
+  @media (max-width: 450px) {
+    text-align: center;
+  };
+  
 `;
 
 export const SkillsWrapper = styled.div`
