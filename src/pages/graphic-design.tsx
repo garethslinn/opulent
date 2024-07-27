@@ -78,11 +78,11 @@ const GraphicDesign: React.FC = () => {
                 image="/assets/images/logo.svg"
                 imageRight
             >
-                <p>Transforming the letter "G" into a logo involves using vibrant colors,
+                <p>Transforming the letter &quot;G&quot; into a logo involves using vibrant colors,
                     fill techniques, and ornate curves. These elements elevate the letter
                     from simple to sophisticated. Bright colors attract attention, fill adds
                     depth, and curves introduce elegance. Together, these design choices turn
-                    the "G" into a memorable and impactful pictographic logo.</p>
+                    the &quot;G&quot; into a memorable and impactful pictographic logo.</p>
             </ImageDisplay>
 
             <ImageDisplay
