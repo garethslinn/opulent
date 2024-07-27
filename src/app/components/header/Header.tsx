@@ -14,7 +14,7 @@ const Header: React.FC = () => {
     const [width, setWidth] = useState<number>(100);
 
     useEffect(() => {
-        const wd = deviceType === 'mobile' || deviceType === 'tablet-sm' ? 50 : 100;
+        const wd = deviceType === 'mobile' ? 50 : 100;
         setWidth(wd);
     }, [deviceType]);
 

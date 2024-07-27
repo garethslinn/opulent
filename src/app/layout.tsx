@@ -17,6 +17,11 @@ const GlobalStyle = createGlobalStyle`
   }
   main {
     padding: 0 50px;
+    
+    @media (max-width: 640px) {
+      padding: 0 10px;
+    }
+    
   }
 `;
 

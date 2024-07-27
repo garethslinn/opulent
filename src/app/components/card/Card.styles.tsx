@@ -17,6 +17,11 @@ export const Title = styled.h2`
   border-bottom: 1px solid #000;
   font-size: 30px;
   padding-bottom: 20px;
+  
+  @media (max-width: 640px) {
+    font-size: 26px;
+  }
+  
 `;
 
 export const Description = styled.div`
@@ -51,4 +56,8 @@ export const ContentWrapper = styled.div`
   align-items: start;
   justify-content: space-between;
   margin-top: 40px;
+
+  @media (max-width: 640px) {
+    margin-top: 20px;
+  }
 `;

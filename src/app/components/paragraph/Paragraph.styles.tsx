@@ -30,5 +30,10 @@ export const ParagraphText = styled.div<{ first?: boolean }>`
   margin: 0;
   text-align: left;
   font-size: ${props => (props.first ? '24px' : '18px')}; 
-  line-height: ${props => (props.first ? '46px' : '30px')}; 
+  line-height: ${props => (props.first ? '46px' : '30px')};
+
+  @media (max-width: 640px) {
+    font-size: ${props => (props.first ? '18px' : '14px')};
+    line-height: ${props => (props.first ? 1.6 : 1.6)};
+  }
 `;
