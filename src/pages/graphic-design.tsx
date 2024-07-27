@@ -88,6 +88,7 @@ const GraphicDesign: React.FC = () => {
             <ImageDisplay
                 title="Every plaque has its place"
                 image="/assets/images/design/slinns-gym-final.png"
+                imageRight={false}
             >
                 <p>The final piece is a plaque I designed for my home gym. This logo was printed
                     on 2cm shiny vinyl, allowing me to hang it as a plaque in my gym. It is the
