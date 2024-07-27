@@ -1,18 +1,18 @@
-"use client"
+"use client";
 
 import React from 'react';
 import Title from "@/app/components/title/Title";
 import Paragraph from "@/app/components/paragraph/Paragraph";
 import SkillGrid from "@/app/components/skillGrid/SkillGrid";
-import {techSkills} from "@/app/stubs/techSkills";
+import { techSkills } from "@/app/stubs/techSkills";
 import QuoteTool from "../app/components/quoteTool/QuoteTool";
 import TwoColumnContainer from "@/app/components/layout/TwoColumnContainer";
 import BarGraph from "@/app/components/charts/barGraph/BarGraph";
-import {industries} from "@/app/stubs/industries";
+import { industries } from "@/app/stubs/industries";
 import PieChart from "@/app/components/charts/pieChart/PieChart";
-import {methodologies} from "@/app/stubs/methodologies";
+import { methodologies } from "@/app/stubs/methodologies";
 import SkillCards from "@/app/components/skillCards/SkillCards";
-import {softSkills} from "@/app/stubs/softSkills";
+import { softSkills } from "@/app/stubs/softSkills";
 import ImageDisplay from "@/app/components/imageDisplay/ImageDisplay";
 
 const GraphicDesign: React.FC = () => {
@@ -31,12 +31,12 @@ const GraphicDesign: React.FC = () => {
                 <br /><br />
                 Instead of mundane graphics, here is a brief exhibition of my more elaborate
                 designs for you to enjoy.
-
             </Paragraph>
 
             <ImageDisplay
                 title="A Matter Of Perspective"
                 image="/assets/images/design/perspective.png"
+                imageRight={false} // Add imageRight prop
             >
                 <p>The first image showcases my process of setting up the perspective
                     like a wireframe before drawing the actual image. In this example,
@@ -49,7 +49,7 @@ const GraphicDesign: React.FC = () => {
             <ImageDisplay
                 title="A Coffee Shop Scene"
                 image="/assets/images/design/coffee.png"
-                imageRight
+                imageRight // Add imageRight prop
             >
                 <p>The next image is a drawing of a coffee shop rendered in perspective
                     and filled in using vector-based graphics. Here, I apply color theory
@@ -63,6 +63,7 @@ const GraphicDesign: React.FC = () => {
             <ImageDisplay
                 title="An Impossible Cafe"
                 image="/assets/images/design/cafe.png"
+                imageRight={false} // Add imageRight prop
             >
                 <p>A great design should look simple, and the cartoon perspective effect,
                     though time-consuming to master, yields impressive outcomes, especially
@@ -75,7 +76,7 @@ const GraphicDesign: React.FC = () => {
             <ImageDisplay
                 title="The power of Logos"
                 image="/assets/images/design/slinns-gym-final.png"
-                imageRight
+                imageRight // Add imageRight prop
             >
                 <p>The final piece is a logo I designed for my home gym. This logo was printed
                     on 2cm shiny vinyl, allowing me to hang it as a plaque in my gym. It is the
@@ -84,8 +85,7 @@ const GraphicDesign: React.FC = () => {
                     itself without the need for the designer to explain their subjective perspective.</p>
             </ImageDisplay>
         </>
-    )
+    );
 };
 
 export default GraphicDesign;
-
