@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const RecommendationWrapper = styled.div`
   background: #f1f1f1;
-  padding-bottom: 20px; /* Add padding to the bottom */
+  padding-bottom: 20px; 
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -15,7 +15,6 @@ export const RecommendationWrapper = styled.div`
     justify-content: space-between;
   }
 `;
-
 export const RecommendationContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -68,7 +67,6 @@ export const Name = styled.h2`
 
 export const Position = styled.h4`
   margin: 5px 0;
-  font-family: 'Roboto-bold';
 `;
 
 export const Description = styled.p`
