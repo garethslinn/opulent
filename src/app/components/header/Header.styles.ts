@@ -15,7 +15,7 @@ export const HeaderContainer = styled.header<HeaderContainerProps>`
   z-index: 1000;
   font-family: 'Roboto', sans-serif;
 
-  @media (max-width: 640px) {
+  @media (max-width: 900px) {
     padding: 0;
   }
   
