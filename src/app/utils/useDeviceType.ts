@@ -23,9 +23,14 @@ const getDeviceType = (width: number): 'mobile' | 'tablet-sm' | 'tablet-lg' | 'd
 
 // Custom hook to use the device type in a component
 const useDeviceType = (): 'mobile' | 'tablet-sm' | 'tablet-lg' | 'desktop' => {
-    const [deviceType, setDeviceType] = useState<'mobile' | 'tablet-sm' | 'tablet-lg' | 'desktop'>(getDeviceType(window.innerWidth));
+    // Initialize state with undefined to avoid SSR issues
+    const [deviceType, setDeviceType] = useState<'mobile' | 'tablet-sm' | 'tablet-lg' | 'desktop'>(
+        typeof window !== 'undefined' ? getDeviceType(window.innerWidth) : 'desktop'
+    );
 
     useEffect(() => {
+        if (typeof window === 'undefined') return; // Avoid running in SSR
+
         const handleResize = () => {
             setDeviceType(getDeviceType(window.innerWidth));
         };
