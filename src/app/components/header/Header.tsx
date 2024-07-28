@@ -31,7 +31,7 @@ const Header: React.FC = () => {
     }, []);
 
     const toggleMenu = () => {
-        setMenuOpen(!isMenuOpen);
+        {width < 1150 && setMenuOpen(!isMenuOpen);}
     };
 
 
