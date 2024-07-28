@@ -18,7 +18,7 @@ const About: React.FC = () => {
 
             <Title first text="Developing Custom Solutions Tailored to Your Needs" />
             <Paragraph first backgroundColor="#f1f1f1" foregroundColor="">
-                At GDS Consulting Ltd, I offer elegant, custom-built solutions from
+                GDS Consulting offers elegant, custom-built solutions from
                 start to finish, addressing the significant challenges you face. I
                 build entire products while also tackling your immediate development
                 and optimisation needs.
