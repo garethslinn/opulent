@@ -55,7 +55,7 @@ const CaseStudyArgos = () => {
             </Paragraph>
             <Subtitle as="h3">3. API Development</Subtitle>
             <Paragraph>
-                Created a new set of APIs to handle data exchange between the frontend and backend. Utilized Express for routing, which provided faster and more efficient data handling.
+                Created a new set of APIs to handle data exchange between the frontend and backend. Utilised Express for routing, which provided faster and more efficient data handling.
             </Paragraph>
             <Subtitle>Performance Improvements</Subtitle>
             <List>
@@ -69,7 +69,7 @@ const CaseStudyArgos = () => {
                 <ListItem>Improved Analytics: Customer retention increased as the site became more responsive and user-friendly. Significant reduction in the number of defects and bugs, resulting in fewer customer complaints and support tickets.</ListItem>
             </List>
             <Paragraph>
-                By addressing these challenges, my team and I not only modernized Argos&apos;s online presence but also ensured that it was scalable and maintainable for future developments. This project demonstrated the importance of clean, efficient code and the impact of performance on customer satisfaction and retention.
+                By addressing these challenges, my team and I not only modernised Argos&apos;s online presence but also ensured that it was scalable and maintainable for future developments. This project demonstrated the importance of clean, efficient code and the impact of performance on customer satisfaction and retention.
             </Paragraph>
         </Container>
     );

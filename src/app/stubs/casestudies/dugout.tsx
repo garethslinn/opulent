@@ -37,7 +37,7 @@ const CaseStudyDugout = () => {
             </Paragraph>
             <Subtitle as="h3">3. Agile Development</Subtitle>
             <Paragraph>
-                Adopted agile methodologies to ensure rapid development and frequent iterations. Prioritized key features and functionalities to meet the tight deadline.
+                Adopted agile methodologies to ensure rapid development and frequent iterations. Prioritied key features and functionalities to meet the tight deadline.
             </Paragraph>
             <Subtitle as="h3">4. Intensive Development Cycle</Subtitle>
             <Paragraph>

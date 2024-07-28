@@ -18,22 +18,24 @@ const CaseStudyAIG = () => {
             <Title>Case Study: AIG</Title>
             <Subtitle>Background</Subtitle>
             <Paragraph>
-                In 2019, I was instrumental in establishing a world-recognized component library for AIG, written in React and TypeScript. This library has become a cornerstone of their frontend development, still in use today, providing a standardized and efficient way to build user interfaces across various applications within the organization.
+                In 2019, I was instrumental in establishing a world-recognised component library for AIG, written in React and TypeScript. This library has become a cornerstone of their frontend development, still in use today, providing a
+                standardised and efficient way to build user interfaces across various applications within the organisation.
             </Paragraph>
             <Subtitle>Objectives</Subtitle>
             <List>
                 <ListItem>Develop a robust and scalable component library using React and TypeScript.</ListItem>
                 <ListItem>Ensure the library is easy to use, well-documented, and maintainable.</ListItem>
-                <ListItem>Create a standardized approach to building user interfaces across AIG&apos;s applications.</ListItem>
+                <ListItem>Create a standardised approach to building user interfaces across AIG&apos;s applications.</ListItem>
             </List>
             <Subtitle>Strategy and Execution</Subtitle>
             <Subtitle as="h3">1. Initial Assessment</Subtitle>
             <Paragraph>
-                Analyzed existing UI components and identified the need for a standardized library. Collaborated with stakeholders to gather requirements and set clear goals for the library.
+                Analysed existing UI components and identified the need for a standardised library. Collaborated with stakeholders to gather requirements and set clear goals for the library.
             </Paragraph>
             <Subtitle as="h3">2. Component Design</Subtitle>
             <Paragraph>
-                Designed reusable and scalable components, ensuring they met AIG&apos;s design guidelines and accessibility standards. Focused on creating a flexible architecture that allowed for easy customization and extension.
+                Designed reusable and scalable components, ensuring they met AIG&apos;s design guidelines and accessibility standards. Focused on creating a flexible architecture that allowed for easy
+                customisation and extension.
             </Paragraph>
             <Subtitle as="h3">3. Development with React and TypeScript</Subtitle>
             <Paragraph>
@@ -49,18 +51,19 @@ const CaseStudyAIG = () => {
             </Paragraph>
             <Subtitle>Performance Improvements</Subtitle>
             <List>
-                <ListItem>Standardization: Established a consistent approach to UI development, reducing development time and improving the user experience.</ListItem>
+                <ListItem>Standardisation: Established a consistent approach to UI development, reducing development time and improving the user experience.</ListItem>
                 <ListItem>Scalability: Designed the library to be easily extendable, allowing for the addition of new components and features.</ListItem>
                 <ListItem>Type Safety: Leveraged TypeScript to catch errors early in the development process, reducing bugs and improving code quality.</ListItem>
             </List>
             <Subtitle>Outcomes</Subtitle>
             <List>
                 <ListItem>Widespread Adoption: The component library was quickly adopted across various teams within AIG, becoming a critical part of their development workflow.</ListItem>
-                <ListItem>Improved Efficiency: Development teams could build applications faster and more efficiently, thanks to the reusable components and standardized approach.</ListItem>
-                <ListItem>Ongoing Use and Recognition: The library has continued to be a vital tool for AIG, recognized for its robustness and effectiveness in streamlining frontend development.</ListItem>
+                <ListItem>Improved Efficiency: Development teams could build applications faster and more efficiently, thanks to the reusable components and standardised approach.</ListItem>
+                <ListItem>Ongoing Use and Recognition: The library has continued to be a vital tool for AIG, recognised for its robustness and effectiveness in streamlining frontend development.</ListItem>
             </List>
             <Paragraph>
-                By spearheading the development of this component library, I played a key role in transforming AIG&apos;s frontend development practices. The success of this project highlights the importance of standardization, scalability, and type safety in modern web development.
+                By spearheading the development of this component library, I played a key role in transforming AIG&apos;s frontend development practices. The success of this project highlights the importance of
+                standardisation, scalability, and type safety in modern web development.
             </Paragraph>
         </Container>
     );

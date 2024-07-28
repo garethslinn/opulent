@@ -16,7 +16,8 @@ const CaseStudyBT = () => {
             <Title>Case Study: BT</Title>
             <Subtitle>Background</Subtitle>
             <Paragraph>
-                In 2015, I joined BT as a senior developer. It quickly became apparent that there were several significant challenges that needed to be addressed. These challenges revolved around a lack of cohesion within the team, friction between backend developers in Cardiff, and issues with the offshore team due to the absence of a work tracking system. Recognizing the need for a structured approach, I stepped up as a temporary project manager while continuing my role as a senior frontend developer.
+                In 2015, I joined BT as a senior developer. It quickly became apparent that there were several significant challenges that needed to be addressed. These challenges revolved around a lack of cohesion within the team, friction between backend developers in Cardiff, and issues with the offshore team due to the absence of a work tracking system.
+                Recognising the need for a structured approach, I stepped up as a temporary project manager while continuing my role as a senior frontend developer.
             </Paragraph>
             <Subtitle>Objectives</Subtitle>
             <List>
@@ -53,7 +54,7 @@ const CaseStudyBT = () => {
             <List>
                 <ListItem>Timely Delivery: Projects and tasks were delivered on time, thanks to improved tracking, planning, and team cohesion.</ListItem>
                 <ListItem>Increased Efficiency: Automated processes and a well-documented system contributed to increased efficiency and reduced errors.</ListItem>
-                <ListItem>Agile Transformation: The team successfully adopted Agile practices, leading to more organized and efficient workflows.</ListItem>
+                <ListItem>Agile Transformation: The team successfully adopted Agile practices, leading to more organised and efficient workflows.</ListItem>
                 <ListItem>Enhanced Collaboration: Improved communication and collaboration between the Cardiff and offshore teams resulted in a more harmonious working environment.</ListItem>
             </List>
             <Paragraph>
