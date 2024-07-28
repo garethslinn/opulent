@@ -21,7 +21,7 @@ export const Column = styled.div`
   position: relative;
   padding-bottom: 60px; /* Add padding to accommodate the link */
 
-  @media (max-width: 900px) {
+  @media (max-width: 1100px) {
     flex: 1 1 45%; /* 2 columns */
     max-width: 45%;
   }
@@ -57,5 +57,6 @@ export const LearnMoreLink = styled.a`
   bottom: 20px; /* Adjust to ensure the link is within the column */
   left: 20px;
   right: 20px;
-  text-align: center;
+  text-align: left;
+  width: 122px;
 `;

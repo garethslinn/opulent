@@ -16,7 +16,7 @@ export const intro = [
     },
     {
         logo: '/assets/images/brands/bt.svg',
-        description: '"Strong leadership skills saving project at significant risk..."',
+        description: '"Strong leadership skills saving project significant risk of failure..."',
         link: '/case-studies'
     },
 ];
