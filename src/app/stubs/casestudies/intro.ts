@@ -6,7 +6,7 @@ export const intro = [
     },
     {
         logo: '/assets/images/brands/aig.svg',
-        description: '"Established a world recognised component library for AIG..."',
+        description: '"Established a world recognised component library.."',
         link: '/case-studies'
     },
     {
