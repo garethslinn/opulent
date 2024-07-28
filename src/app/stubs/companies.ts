@@ -60,7 +60,7 @@ export const companies = [
             "Agile scrum based on two-week sprints.",
             "Delivered new functionality to AIG’s IRM (now Sonar) project.",
             "Added a timeline to track news items with an intuitive tooltip that linked to a list within a sidebar.",
-            "Applied customizable filters which could be created, updated, and removed via an API.",
+            "Applied customisable filters which could be created, updated, and removed via an API.",
             "Led a project to build a component library to be used across all projects in AIG."
         ],
         skills: "typescript, reactjs, redux, aws, jest, sass, nodejs, storybook",

@@ -54,7 +54,7 @@ const About: React.FC = () => {
             >
                 Scalability problems can be a good sign of growth, but they
                 can also be painful. I analyse potential bottlenecks in your
-                code and infrastructure, propose a prioritized backlog of improvements,
+                code and infrastructure, propose a prioritised backlog of improvements,
                 and bring them to life. I will prepare your product for user surges,
                 making it reliable, resource-efficient, and scalable.
             </Card>
