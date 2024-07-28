@@ -38,7 +38,7 @@ const QuoteTool: React.FC<{ quoteText?: string }> = ({ quoteText = "Professional
     const [isUserInteracting, setIsUserInteracting] = useState<boolean>(false);
     const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
-    const deviceType = useDeviceType();
+    const [deviceType, width] = useDeviceType();
 
     const handleNavLeft = () => {
         setIsUserInteracting(true);

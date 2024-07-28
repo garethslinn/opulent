@@ -11,19 +11,21 @@ export const NavListContainer = styled.ul<{ isOpen?: boolean }>`
     display: ${(props) => (props.isOpen ? 'flex' : 'none')};
     flex-direction: column;
     background-color: #fff;
-    position: absolute;
+    position: fixed;
     top: 60px;
     right: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     overflow: hidden;
+    z-index: 1001; /* Ensure it is above the overlay */
   }
 `;
 
 export const CloseButton = styled.img`
-    position: absolute;
-    top: 10px;
-    right: 10px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
 `;
 
 export const NavItem = styled.li`
@@ -49,4 +51,16 @@ export const NavLink = styled.a<{ isActive?: boolean }>`
   &:hover {
     color: #888;
   }
+`;
+
+export const BackgroundOverlay = styled.div<{ isOpen?: boolean }>`
+  display: ${(props) => (props.isOpen ? 'block' : 'none')};
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Faded dark background */
+  z-index: 1000; /* Ensure it is behind the menu */
+  overflow: hidden;
 `;
