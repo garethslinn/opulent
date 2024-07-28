@@ -141,17 +141,17 @@ export const companies = [
         dateFrom: "Sep 2006",
         dateTo: "Sep 2007"
     },
-    {
-        title: "LogicaCMG",
-        image: "/assets/images/brands/Logica.svg",
-        description: [
-            "Built a web application for the Medical Research Council.",
-            "Implemented from PSD files and tested."
-        ],
-        skills: "css, html, sourcesafe, photoshop",
-        dateFrom: "Mar 2006",
-        dateTo: "Jul 2006"
-    },
+    // {
+    //     title: "LogicaCMG",
+    //     image: "/assets/images/brands/Logica.svg",
+    //     description: [
+    //         "Built a web application for the Medical Research Council.",
+    //         "Implemented from PSD files and tested."
+    //     ],
+    //     skills: "css, html, sourcesafe, photoshop",
+    //     dateFrom: "Mar 2006",
+    //     dateTo: "Jul 2006"
+    // },
     {
         title: "AKQA",
         image: "/assets/images/brands/akqa.svg",
