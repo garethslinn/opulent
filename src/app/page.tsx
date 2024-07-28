@@ -9,10 +9,13 @@ import {industries} from "@/app/stubs/industries";
 import PieChart from "@/app/components/charts/pieChart/PieChart";
 import {methodologies} from "@/app/stubs/methodologies";
 import TwoColumnContainer from "@/app/components/layout/TwoColumnContainer";
+import ResponsiveColumns from "@/app/components/responsiveColumns/ResponsiveColumns";
+import {intro} from "@/app/stubs/casestudies/intro";
 
 const About: React.FC = () => {
     return (
         <>
+
             <Title first text="Developing Custom Solutions Tailored to Your Needs" />
             <Paragraph first backgroundColor="#f1f1f1" foregroundColor="">
                 At GDS Consulting Ltd, I offer elegant, custom-built solutions from
@@ -20,6 +23,8 @@ const About: React.FC = () => {
                 build entire products while also tackling your immediate development
                 and optimisation needs.
             </Paragraph>
+
+            <ResponsiveColumns columns={intro} />
 
             <Card
                 title="Frontend Development"
