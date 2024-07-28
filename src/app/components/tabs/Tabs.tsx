@@ -1,10 +1,20 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
-import {TabsProps} from "@/app/components/tabs/Tabs.types";
-import {TabButton, TabButtons, TabContent, TabImage} from "@/app/components/tabs/Tabs.styles";
+import React, { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
+import { TabsProps } from "@/app/components/tabs/Tabs.types";
+import { TabButton, TabButtons, TabContent, TabImage } from "@/app/components/tabs/Tabs.styles";
 
 const Tabs: React.FC<TabsProps> = ({ tabs }) => {
+    const router = useRouter();
     const [activeTabIndex, setActiveTabIndex] = useState(0);
+
+    useEffect(() => {
+        if (router.query.tab) {
+            const tabIndex = tabs.findIndex(tab => tab.label === router.query.tab);
+            if (tabIndex !== -1) {
+                setActiveTabIndex(tabIndex);
+            }
+        }
+    }, [router.query.tab, tabs]);
 
     const handleTabClick = (index: number) => {
         setActiveTabIndex(index);
@@ -20,7 +30,6 @@ const Tabs: React.FC<TabsProps> = ({ tabs }) => {
                         isActive={activeTabIndex === index}
                     >
                         <TabImage src={tab.imageSrc} alt={tab.label} />
-
                     </TabButton>
                 ))}
             </TabButtons>
