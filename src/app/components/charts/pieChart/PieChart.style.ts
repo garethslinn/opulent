@@ -8,7 +8,7 @@ export const FullWrapper = styled.div`
   align-items: center;
   padding: 0;
   @media (max-width: 900px) {
-    padding: 20px;
+    padding: 5px 5%;
   }
 `;
 
@@ -26,9 +26,17 @@ export const ChartContainer = styled.div`
 
     @media (max-width: 900px) {
         transform: scale(1.1);
-        width: 97%;
+        padding: 20px 0;
         min-height: unset;
     }
+
+  @media (max-width: 650px) {
+    //width: 98%;
+  }
+
+  @media (max-width: 450px) {
+    //width: 100%;
+  }
 `;
 
 export const ChartContent = styled.div`
@@ -42,11 +50,6 @@ export const ChartContent = styled.div`
 export const SvgContainer = styled.div`
     width: 200px;
     height: 200px;
-
-    @media (max-width: 900px) {
-        width: 220px;
-        height: 220px;
-    }
 
   @media (max-width: 900px) {
     width: 125px;
@@ -110,7 +113,7 @@ export const LegendLabel = styled.span`
 
 export const Subtext = styled.h2`
     margin-bottom: 20px;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: normal;
     color: #333;
     width: 100%;
