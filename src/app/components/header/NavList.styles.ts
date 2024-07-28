@@ -12,7 +12,7 @@ export const NavListContainer = styled.ul<{ isOpen?: boolean }>`
     flex-direction: column;
     background-color: #fff;
     position: absolute;
-    top: 70px;
+    top: 60px;
     right: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
@@ -21,7 +21,7 @@ export const NavListContainer = styled.ul<{ isOpen?: boolean }>`
 `;
 
 export const NavItem = styled.li`
-  padding: 1rem;
+  padding: 10px 55px 10px 15px;
 
   &:last-child {
     border-bottom: none;
@@ -30,7 +30,7 @@ export const NavItem = styled.li`
 
 export const NavLink = styled.a<{ isActive?: boolean }>`
   text-decoration: none;
-  font-size: 1.1rem;
+  font-size: 18px;
   transition: color 0.3s, border-bottom 0.3s;
   margin-bottom: 4px; /* Added margin-bottom for space between name and underline */
   border-bottom: ${(props) => (props.isActive ? '2px solid blue' : 'none')};

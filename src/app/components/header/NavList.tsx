@@ -52,8 +52,7 @@ const NavList: React.FC<NavListProps> = ({ isMenuOpen = false, toggleMenu }) => 
                 <a href="https://www.linkedin.com/in/garethslinn/" target="_blank" rel="noopener noreferrer" onClick={toggleMenu}>
                     <Image src={linkedinIcon} alt="LinkedIn" width={30} height={30} />
                 </a>
-            </NavItem>
-            <NavItem>
+                &nbsp;&nbsp;
                 <a href="https://github.com/garethslinn/" target="_blank" rel="noopener noreferrer" onClick={toggleMenu}>
                     <Image src={githubIcon} alt="GitHub" width={30} height={30} />
                 </a>
