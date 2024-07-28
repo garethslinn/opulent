@@ -10,6 +10,13 @@ export const CardContainer = styled.div`
 
   max-width: 1024px;
   margin: 20px auto;
+  
+  a {
+    padding: 5px 20px;
+    margin-left: 20px;
+    color: #fff;
+    background: #505275;
+  }
 `;
 
 export const Title = styled.h2`
