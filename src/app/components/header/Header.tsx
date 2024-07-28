@@ -7,15 +7,14 @@ import NavList from './NavList';
 import useDeviceType from '@/app/utils/useDeviceType';
 
 const Header: React.FC = () => {
-    const deviceType = useDeviceType();
+    const [deviceType, width] = useDeviceType();
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMenuOpen, setMenuOpen] = useState(false);
-
-    const [width, setWidth] = useState<number>(100);
+    const [imageWidth, setImageWidth] = useState<number>(100);
 
     useEffect(() => {
         const wd = deviceType === 'tablet-lg' ||deviceType === 'tablet-sm' || deviceType === 'mobile' ? 50 : 100;
-        setWidth(wd);
+        setImageWidth(wd);
     }, [deviceType]);
 
     useEffect(() => {
@@ -41,7 +40,7 @@ const Header: React.FC = () => {
             <Nav>
                 <LogoContainer>
                     <Link href="/" passHref>
-                        <Image src={logo} alt="Logo" width={width} height={width} />
+                        <Image src={logo} alt="Logo" width={imageWidth} height={imageWidth} />
                     </Link>
                 </LogoContainer>
                 <NavList isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />

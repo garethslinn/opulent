@@ -2,9 +2,10 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import { NavListContainer, NavItem, NavLink } from './NavList.styles';
+import {NavListContainer, NavItem, NavLink, CloseButton} from './NavList.styles';
 import linkedinIcon from '../../../../public/assets/images/brands/linkedin.svg';
 import githubIcon from '../../../../public/assets/images/brands/github.svg';
+import useDeviceType from "@/app/utils/useDeviceType";
 
 interface NavListProps {
     isMenuOpen?: boolean;
@@ -12,12 +13,14 @@ interface NavListProps {
 }
 
 const NavList: React.FC<NavListProps> = ({ isMenuOpen = false, toggleMenu }) => {
+    const [deviceType, width] = useDeviceType();
     const pathname = usePathname();
 
     const isActive = (path: string) => pathname === path;
 
     return (
         <NavListContainer isOpen={isMenuOpen}>
+            <CloseButton onClick={toggleMenu} src={'../../assets/images/close.svg'} alt={'Close Button'} width={20} height={20} />
             <NavItem>
                 <Link href="/" passHref>
                     <NavLink onClick={toggleMenu} isActive={isActive('/')}>About</NavLink>
@@ -52,11 +55,22 @@ const NavList: React.FC<NavListProps> = ({ isMenuOpen = false, toggleMenu }) => 
                 <a href="https://www.linkedin.com/in/garethslinn/" target="_blank" rel="noopener noreferrer" onClick={toggleMenu}>
                     <Image src={linkedinIcon} alt="LinkedIn" width={30} height={30} />
                 </a>
-                &nbsp;&nbsp;
-                <a href="https://github.com/garethslinn/" target="_blank" rel="noopener noreferrer" onClick={toggleMenu}>
-                    <Image src={githubIcon} alt="GitHub" width={30} height={30} />
-                </a>
+                {width < 1150 &&
+                    <>
+                        &nbsp;&nbsp;
+                        <a href="https://github.com/garethslinn/" target="_blank" rel="noopener noreferrer" onClick={toggleMenu}>
+                            <Image src={githubIcon} alt="GitHub" width={30} height={30} />
+                        </a>
+                    </>
+                }
             </NavItem>
+            {width > 1150 &&
+                <NavItem>
+                    <a href="https://github.com/garethslinn/" target="_blank" rel="noopener noreferrer" onClick={toggleMenu}>
+                        <Image src={githubIcon} alt="GitHub" width={30} height={30} />
+                    </a>
+                </NavItem>
+            }
         </NavListContainer>
     );
 };

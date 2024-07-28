@@ -20,11 +20,24 @@ export const NavListContainer = styled.ul<{ isOpen?: boolean }>`
   }
 `;
 
-export const NavItem = styled.li`
-  padding: 10px 55px 10px 15px;
+export const CloseButton = styled.img`
+  display: none;
+  
+  @media (max-width: 1150px) {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+`;
 
+export const NavItem = styled.li`
+  padding: 20px 0px 10px 15px;
   &:last-child {
     border-bottom: none;
+  }
+
+  @media (max-width: 1150px) {
+    padding: 10px 55px 10px 15px;
   }
 `;
 
