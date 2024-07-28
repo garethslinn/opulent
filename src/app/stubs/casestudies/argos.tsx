@@ -25,13 +25,9 @@ const CaseStudyArgos = () => {
                 <ListItem>
                     Argos had a core JavaScript library developed solely for their use, which over time was layered with lots of jQuery code. This was done to simplify work for the external team managing the project before it was handed over to my team.
                 </ListItem>
-                <ListItem>
-                    This layering caused severe issues, such as:
-                    <InlineList>
-                        <InlineListItem>Slow implementation of new features.</InlineListItem>
-                        <InlineListItem>An ever-growing list of defects with each new deployment.</InlineListItem>
-                    </InlineList>
-                </ListItem>
+                <ListItem>This layering caused severe issues, such as:</ListItem>
+                <ListItem>Slow implementation of new features.</ListItem>
+                <ListItem>An ever-growing list of defects with each new deployment.</ListItem>
             </List>
             <Subtitle as="h3">2. Performance Issues</Subtitle>
             <List>
