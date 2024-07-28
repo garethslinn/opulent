@@ -55,6 +55,8 @@ export const CompanyImage = styled.img`
   width: auto;
   height: 45px;
   object-fit: cover;
+  position: relative;
+  top: 10px;
 
   @media (max-width: 900px) {
     height: 45px;
