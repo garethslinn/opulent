@@ -11,9 +11,10 @@ export const CardContainer = styled.div`
   max-width: 1024px;
   margin: 20px auto;
   
-  a {
+  .learn-more {
     padding: 5px 20px;
-    margin-left: 20px;
+    display: inline-block;
+    margin-top: 20px;
     color: #fff;
     background: #505275;
   }

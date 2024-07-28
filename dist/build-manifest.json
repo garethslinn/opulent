@@ -25,10 +25,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/experience": [
+    "/graphic-design": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/experience.js"
+      "static/chunks/pages/graphic-design.js"
     ],
     "/open-source": [
       "static/chunks/webpack.js",

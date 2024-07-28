@@ -6,8 +6,12 @@ export const Container = styled.div<{ backgroundColor: string; foregroundColor: 
   color: ${props => props.foregroundColor};
   display: flex;
   justify-content: center;
-  padding: ${props => (props.first ? '20px 0 20px 0' : '20px 0')};
+  // padding: ${props => (props.first ? '20px 0 20px 0' : '20px 0')};
 
+  padding: 20px;
+  max-width: 1024px;
+  margin: 0 auto;
+  
   a {
     .img {
       position: relative;
