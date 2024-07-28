@@ -30,11 +30,6 @@
       "static/chunks/main.js",
       "static/chunks/pages/case-studies.js"
     ],
-    "/experience": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/experience.js"
-    ],
     "/graphic-design": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",

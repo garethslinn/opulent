@@ -21,13 +21,9 @@ export const NavListContainer = styled.ul<{ isOpen?: boolean }>`
 `;
 
 export const CloseButton = styled.img`
-  display: none;
-  
-  @media (max-width: 1150px) {
     position: absolute;
     top: 10px;
     right: 10px;
-  }
 `;
 
 export const NavItem = styled.li`

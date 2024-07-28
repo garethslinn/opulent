@@ -20,7 +20,9 @@ const NavList: React.FC<NavListProps> = ({ isMenuOpen = false, toggleMenu }) => 
 
     return (
         <NavListContainer isOpen={isMenuOpen}>
-            <CloseButton onClick={toggleMenu} src={'../../assets/images/close.svg'} alt={'Close Button'} width={20} height={20} />
+            {width < 1150 &&
+                <CloseButton onClick={toggleMenu} src={'../../assets/images/close.svg'} alt={'Close Button'} width={20} height={20} />
+            }
             <NavItem>
                 <Link href="/" passHref>
                     <NavLink onClick={toggleMenu} isActive={isActive('/')}>About</NavLink>
