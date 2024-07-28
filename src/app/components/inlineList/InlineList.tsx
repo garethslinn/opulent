@@ -88,7 +88,7 @@ const InlineList: React.FC<CompaniesListProps> = ({
                         aria-label={`Company ${company.title}`}
                     >
                         <CompanyImage src={company.image} alt={company.title} />
-                        <CompanyTitle>{company.title}</CompanyTitle>
+                        <CompanyTitle>&nbsp;</CompanyTitle>
                     </Company>
                 ))}
             </CompaniesListWrapper>
