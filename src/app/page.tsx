@@ -19,9 +19,7 @@ const About: React.FC = () => {
                 and optimisation needs.
             </Paragraph>
 
-            <section aria-labelledby="Client success headlines with links to case studies">
-                <ResponsiveColumns columns={intro} />
-            </section>
+            <ResponsiveColumns columns={intro} />
 
             <Card
                 title="Frontend Development"

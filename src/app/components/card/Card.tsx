@@ -6,20 +6,18 @@ import { CardContainer, Title, Description, ImageWrapper, ContentWrapper } from 
 
 const Card: React.FC<CardProps> = ({ title, link, imageSrc, children }) => {
     return (
-        <section aria-labelledby={title}>
-            <CardContainer>
-                <Title>{title}</Title>
-                <ContentWrapper>
-                    <Description>{children}</Description>
-                    <ImageWrapper>
-                        <a href={link} target="_blank" rel="noopener noreferrer">
-                            <Image src={imageSrc} alt={title} width={300} height={300} />
-                        </a>
-                    </ImageWrapper>
-                </ContentWrapper>
-                <a className="learn-more" href={link} target="_blank" rel="noopener noreferrer">Learn more</a>
-            </CardContainer>
-        </section>
+        <CardContainer>
+            <Title>{title}</Title>
+            <ContentWrapper>
+                <Description>{children}</Description>
+                <ImageWrapper>
+                    <a href={link} target="_blank" rel="noopener noreferrer">
+                        <Image src={imageSrc} alt={title} width={300} height={300} />
+                    </a>
+                </ImageWrapper>
+            </ContentWrapper>
+            <a className="learn-more" href={link} target="_blank" rel="noopener noreferrer">Learn more</a>
+        </CardContainer>
     );
 };
 
