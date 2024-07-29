@@ -11,15 +11,13 @@ const About: React.FC = () => {
     return (
         <>
 
-            <section aria-labelledby="Developing Custom Solutions Tailored to Your Needs">
-                <Title first text="Developing Custom Solutions Tailored to Your Needs" />
-                <Paragraph first backgroundColor="#f1f1f1" foregroundColor="">
-                    GDS Consulting offers elegant, custom-built solutions from
-                    start to finish, addressing the significant challenges you face. I
-                    build entire products while also tackling your immediate development
-                    and optimisation needs.
-                </Paragraph>
-            </section>
+            <Title first text="Developing Custom Solutions Tailored to Your Needs" />
+            <Paragraph first backgroundColor="#f1f1f1" foregroundColor="">
+                GDS Consulting offers elegant, custom-built solutions from
+                start to finish, addressing the significant challenges you face. I
+                build entire products while also tackling your immediate development
+                and optimisation needs.
+            </Paragraph>
 
             <section aria-labelledby="Client success headlines with links to case studies">
                 <ResponsiveColumns columns={intro} />

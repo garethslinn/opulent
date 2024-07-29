@@ -35,7 +35,7 @@ export const SkipLink = styled.a`
   position: absolute;
   top: -2000px;
   z-index: 1000;
-  color: #fff;
+  color: #000;
 `;
 
 
