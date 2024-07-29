@@ -25,10 +25,20 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/experience": [
+    "/case-studies": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/experience.js"
+      "static/chunks/pages/case-studies.js"
+    ],
+    "/graphic-design": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/graphic-design.js"
+    ],
+    "/open-source": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/open-source.js"
     ]
   },
   "ampFirstPages": []

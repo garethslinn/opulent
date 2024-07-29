@@ -22,10 +22,13 @@ const Tabs: React.FC<TabsProps> = ({ tabs }) => {
 
     return (
         <div>
-            <TabButtons>
+            <TabButtons role="tablist">
                 {tabs.map((tab, index) => (
                     <TabButton
                         key={index}
+                        role="tab"
+                        aria-selected={activeTabIndex === index}
+                        aria-controls={`tabpanel-${index}`}
                         onClick={() => handleTabClick(index)}
                         isActive={activeTabIndex === index}
                     >
@@ -33,7 +36,11 @@ const Tabs: React.FC<TabsProps> = ({ tabs }) => {
                     </TabButton>
                 ))}
             </TabButtons>
-            <TabContent>
+            <TabContent
+                role="tabpanel"
+                id={`tabpanel-${activeTabIndex}`}
+                aria-labelledby={`tab-${activeTabIndex}`}
+            >
                 {tabs[activeTabIndex].content}
             </TabContent>
         </div>

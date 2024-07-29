@@ -20,13 +20,15 @@ const CaseStudies: React.FC = () => {
 
     return (
         <>
-            <Title first text="Case Studies" />
-            <Paragraph first backgroundColor="#f1f1f1" foregroundColor="">
-                Discover the impactful projects I have delivered for various organisations. These case studies
-                highlight my solutions to complex problems, innovative strategies, and measurable results
-                across different industries. Explore these examples to see my expertise in action and the
-                value I bring to each project.
-            </Paragraph>
+            <section aria-labelledby="Case Studies">
+                <Title first text="Case Studies" />
+                <Paragraph first backgroundColor="#f1f1f1" foregroundColor="">
+                    Discover the impactful projects I have delivered for various organisations. These case studies
+                    highlight my solutions to complex problems, innovative strategies, and measurable results
+                    across different industries. Explore these examples to see my expertise in action and the
+                    value I bring to each project.
+                </Paragraph>
+            </section>
             <Tabs tabs={tabs} />
         </>
     )

@@ -17,26 +17,40 @@ import React from "react";
 export default function Experience() {
     return (
         <>
-            <Title first text="Experience cannot be learned" />
-            <Paragraph first backgroundColor="#f1f1f1" foregroundColor="">
-                As a seasoned developer with over 20 years of commercial experience,
-                I have had the privilege of working across a myriad of industries
-                including telecommunications, e-commerce, digital agencies, finance,
-                gambling, retail, and many more. My journey is marked by a continuous
-                commitment to learning and adapting, allowing me to stay at the
-                forefront of technological advancements and industry best practices.
-            </Paragraph>
-            <Title text="Tech Skills by Years Experience" />
-            <SkillGrid data={techSkills} />
-            <Title text="Skill Metrics" />
-            <TwoColumnContainer backgroundColor="#f1f1f1">
-                <BarGraph data={industries} subtext='Number of Contracts by Industry'/>
-                <PieChart data={methodologies} subtext='Methodologies used the most' />
-            </TwoColumnContainer>
-            <Title text="Soft Skills" />
-            <SkillCards skills={softSkills} />
-            <Title backgroundColor="#f1f1f1" text="Clients" />
-            <QuoteTool />
+            <section aria-labelledby="Experience cannot be learned">
+                <Title first text="Experience cannot be learned" />
+                <Paragraph first backgroundColor="#f1f1f1" foregroundColor="">
+                    As a seasoned developer with over 20 years of commercial experience,
+                    I have had the privilege of working across a myriad of industries
+                    including telecommunications, e-commerce, digital agencies, finance,
+                    gambling, retail, and many more. My journey is marked by a continuous
+                    commitment to learning and adapting, allowing me to stay at the
+                    forefront of technological advancements and industry best practices.
+                </Paragraph>
+            </section>
+
+            <section aria-labelledby="Tech Skills by Years Experience">
+                <Title text="Tech Skills by Years Experience" />
+                <SkillGrid data={techSkills} />
+            </section>
+
+            <section aria-labelledby="Skill Metrics">
+                <Title text="Skill Metrics" />
+                <TwoColumnContainer backgroundColor="#f1f1f1">
+                    <BarGraph data={industries} subtext='Number of Contracts by Industry'/>
+                    <PieChart data={methodologies} subtext='Methodologies used the most' />
+                </TwoColumnContainer>
+            </section>
+
+            <section aria-labelledby="Soft Skills">
+                <Title text="Soft Skills" />
+                <SkillCards skills={softSkills} />
+            </section>
+
+            <section aria-labelledby="Clients">
+                <Title backgroundColor="#f1f1f1" text="Clients" />
+                <QuoteTool />
+            </section>
         </>
     );
 }
