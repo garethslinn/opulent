@@ -36,21 +36,23 @@ const Header: React.FC = () => {
 
 
     return (
-        <HeaderContainer isScrolled={isScrolled}>
-            <Nav role="navigation" aria-label="Main Navigation">
-                <LogoContainer>
-                    <Link href="/" passHref aria-label="Homepage">
-                        <Image src={logo} alt="GDS Consulting Logo" width={imageWidth} height={imageWidth} />
-                    </Link>
-                </LogoContainer>
-                <NavList isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
-                <BurgerMenu onClick={toggleMenu} aria-label={isMenuOpen ? "Close menu" : "Open menu"} aria-expanded={isMenuOpen} aria-controls="navigation-menu">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </BurgerMenu>
-            </Nav>
-        </HeaderContainer>
+        <header>
+            <HeaderContainer isScrolled={isScrolled}>
+                <Nav role="navigation" aria-label="Main Navigation">
+                    <LogoContainer>
+                        <Link href="/" passHref aria-label="Homepage">
+                            <Image src={logo} alt="GDS Consulting Logo" width={imageWidth} height={imageWidth} />
+                        </Link>
+                    </LogoContainer>
+                    <NavList isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
+                    <BurgerMenu onClick={toggleMenu} aria-label={isMenuOpen ? "Close menu" : "Open menu"} aria-expanded={isMenuOpen} aria-controls="navigation-menu">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </BurgerMenu>
+                </Nav>
+            </HeaderContainer>
+        </header>
     );
 };
 
