@@ -32,12 +32,14 @@ const TechSkillsGrid: React.FC<TechSkillsGridProps> = ({ data }) => {
 
     return (
         <FullWrapper>
-            <GridContainer>
+            <GridContainer role="list">
                 {sortedData.map((skill, index) => (
-                    <GridItem key={index}>
+                    <GridItem key={index} role="listitem">
                         <SkillImage src={skill.image} alt={skill.title} />
                         <SkillTitle>{skill.title}</SkillTitle>
-                        <SkillYears>{skill.years}</SkillYears>
+                        <SkillYears aria-label={`Years of experience: ${skill.years}`}>
+                            {skill.years}
+                        </SkillYears>
                     </GridItem>
                 ))}
             </GridContainer>

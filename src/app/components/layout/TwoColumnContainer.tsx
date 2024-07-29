@@ -4,9 +4,9 @@ import { Container, Column } from './TwoColumnContainer.styles';
 
 const TwoColumnContainer: React.FC<TwoColumnContainerProps> = ({ backgroundColor = 'lightgray', children }) => {
     return (
-        <Container backgroundColor={backgroundColor}>
+        <Container backgroundColor={backgroundColor} role="region" aria-label="Two Column Container">
             {React.Children.map(children, (child, index) => (
-                <Column key={index} className="column">{child}</Column>
+                <Column key={index} className="column" role="article">{child}</Column>
             ))}
         </Container>
     );
