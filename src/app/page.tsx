@@ -4,11 +4,6 @@ import React from 'react';
 import Title from "@/app/components/title/Title";
 import Paragraph from "@/app/components/paragraph/Paragraph";
 import Card from "@/app/components/card/Card";
-import BarGraph from "@/app/components/charts/barGraph/BarGraph";
-import {industries} from "@/app/stubs/industries";
-import PieChart from "@/app/components/charts/pieChart/PieChart";
-import {methodologies} from "@/app/stubs/methodologies";
-import TwoColumnContainer from "@/app/components/layout/TwoColumnContainer";
 import ResponsiveColumns from "@/app/components/responsiveColumns/ResponsiveColumns";
 import {intro} from "@/app/stubs/casestudies/intro";
 

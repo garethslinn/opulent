@@ -32,8 +32,8 @@ const NavList: React.FC<NavListProps> = ({ isMenuOpen = false, toggleMenu }) => 
 
     return (
         <>
-            <BackgroundOverlay isOpen={isMenuOpen} onClick={toggleMenu} aria-hidden={!isMenuOpen} />
-            <NavListContainer isOpen={isMenuOpen} role="menu" aria-hidden={!isMenuOpen}>
+            <BackgroundOverlay isOpen={isMenuOpen} onClick={toggleMenu} />
+            <NavListContainer isOpen={isMenuOpen} role="menu">
                 {width < 1150 &&
                     <CloseButton onClick={toggleMenu} src={'../../assets/images/close.svg'} alt={'Close Button'} width={20} height={20} aria-label="Close menu" />
                 }
