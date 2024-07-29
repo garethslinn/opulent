@@ -16,7 +16,7 @@ const Recommendations: React.FC<RecommendationsProps> = ({ recommendations }) =>
     return (
         <RecommendationWrapper>
             {recommendations.map((rec, index) => (
-                <RecommendationContainer key={index}>
+                <RecommendationContainer key={index} role="article" aria-labelledby={`rec-name-${index}`}>
                     <QuoteIconContainer>
                         <QuoteIcon
                             width="50mm"
@@ -39,7 +39,7 @@ const Recommendations: React.FC<RecommendationsProps> = ({ recommendations }) =>
                             </g>
                         </QuoteIcon>
                     </QuoteIconContainer>
-                    <Name>{rec.Name}</Name>
+                    <Name id={`rec-name-${index}`}>{rec.Name}</Name>
                     <Position>{rec.Position}</Position>
                     <Description>{rec.Description}</Description>
                     <ClosingQuoteContainer>

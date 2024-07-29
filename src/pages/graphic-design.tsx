@@ -18,20 +18,22 @@ import ImageDisplay from "@/app/components/imageDisplay/ImageDisplay";
 const GraphicDesign: React.FC = () => {
     return (
         <>
-            <Title first text="Graphic Design" />
-            <Paragraph first backgroundColor="#f1f1f1" foregroundColor="">
-                Though my commercial expertise is in development, I have always had a natural
-                talent for design and art. Drawing has been a part of my life since childhood,
-                and my early days as a print designer taught me the importance of precise color
-                codes in CMYK.
-                <br /><br />
-                While the industry has evolved, my design skills have seamlessly integrated
-                into my front-end development work, particularly in layout and aesthetics. I
-                can create icons and graphic layouts, leveraging my artistic background.
-                <br /><br />
-                Instead of mundane graphics, here is a brief exhibition of my more elaborate
-                designs for you to enjoy.
-            </Paragraph>
+            <section aria-labelledby="Graphic Design">
+                <Title first text="Graphic Design" />
+                <Paragraph first backgroundColor="#f1f1f1" foregroundColor="">
+                    Though my commercial expertise is in development, I have always had a natural
+                    talent for design and art. Drawing has been a part of my life since childhood,
+                    and my early days as a print designer taught me the importance of precise color
+                    codes in CMYK.
+                    <br /><br />
+                    While the industry has evolved, my design skills have seamlessly integrated
+                    into my front-end development work, particularly in layout and aesthetics. I
+                    can create icons and graphic layouts, leveraging my artistic background.
+                    <br /><br />
+                    Instead of mundane graphics, here is a brief exhibition of my more elaborate
+                    designs for you to enjoy.
+                </Paragraph>
+            </section>
 
             <ImageDisplay
                 title="A Matter Of Perspective"
