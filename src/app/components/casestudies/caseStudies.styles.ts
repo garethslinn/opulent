@@ -1,47 +1,47 @@
 import styled from 'styled-components';
 
 const Container = styled.div`
-  max-width: 800px;
+  max-width: ${({ theme }) => theme.widths.max};
   margin: 0 auto;
-  padding: 20px;
-  font-family: Arial, sans-serif;
+  padding: ${({ theme }) => theme.spacing.padding};
+  font-family: 'Roboto', sans-serif;
   line-height: 1.6;
 `;
 
 const Title = styled.h1`
-  font-size: 2em;
-  margin-bottom: 0.5em;
-  color: #333;
+  font-size: ${({ theme }) => theme.fontSizes.title || '2em'};
+  margin-bottom: ${({ theme }) => theme.spacing.small || '0.5em'};
+  color: ${({ theme }) => theme.colors.text};
 `;
 
 const Subtitle = styled.h2`
-  font-size: 1.5em;
-  margin-bottom: 0.5em;
-  color: #666;
+  font-size: ${({ theme }) => theme.fontSizes.subtitle || '1.5em'};
+  margin-bottom: ${({ theme }) => theme.spacing.small || '0.5em'};
+  color: ${({ theme }) => theme.colors.textSecondary || '#666'};
 `;
 
 const Paragraph = styled.p`
-  margin-bottom: 1em;
-  color: #444;
+  margin-bottom: ${({ theme }) => theme.spacing.margin};
+  color: ${({ theme }) => theme.colors.text};
 `;
 
 const List = styled.ul`
   list-style: none;
   padding: 0;
-  margin: 0 0 1em 0;
+  margin: 0 0 ${({ theme }) => theme.spacing.margin} 0;
 `;
 
 const ListItem = styled.li`
-  margin-bottom: 0.5em;
-  padding-left: 1.5em;
+  margin-bottom: ${({ theme }) => theme.spacing.small || '0.5em'};
+  padding-left: ${({ theme }) => theme.spacing.large || '1.5em'};
   position: relative;
-  color: #444;
+  color: ${({ theme }) => theme.colors.text};
 
   &:before {
     content: '•';
     position: absolute;
     left: 0;
-    color: #007bff;
+    color: ${({ theme }) => theme.colors.primary || '#007bff'};
   }
 `;
 
@@ -50,12 +50,12 @@ const InlineList = styled.ul`
   flex-wrap: wrap;
   list-style: none;
   padding: 0;
-  margin: 0 0 1em 0;
+  margin: 0 0 ${({ theme }) => theme.spacing.margin} 0;
 `;
 
 const InlineListItem = styled.li`
-  margin-right: 1.5em;
-  color: #444;
+  margin-right: ${({ theme }) => theme.spacing.large || '1.5em'};
+  color: ${({ theme }) => theme.colors.text};
 
   &:last-child {
     margin-right: 0;
@@ -63,8 +63,8 @@ const InlineListItem = styled.li`
 
   &:before {
     content: '•';
-    margin-right: 0.5em;
-    color: #007bff;
+    margin-right: ${({ theme }) => theme.spacing.small || '0.5em'};
+    color: ${({ theme }) => theme.colors.primary || '#007bff'};
   }
 `;
 

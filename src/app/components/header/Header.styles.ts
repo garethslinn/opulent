@@ -8,22 +8,22 @@ export const HeaderContainer = styled.header<HeaderContainerProps>`
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: ${(props) => (props.isScrolled ? '#fff' : 'transparent')};
-
-  box-shadow: ${(props) => (props.isScrolled ? '0 4px 6px rgba(0, 0, 0, 0.1)' : 'none')};
+  background-color: ${(props) =>
+    props.isScrolled ? props.theme.colors.white : 'transparent'};
+  box-shadow: ${(props) =>
+    props.isScrolled ? '0 4px 6px rgba(0, 0, 0, 0.1)' : 'none'};
   transition: background-color 0.3s, box-shadow 0.3s;
   z-index: 1000;
   font-family: 'Roboto', sans-serif;
-  
 `;
 
 export const Nav = styled.nav`
-  max-width: 1200px;
+  max-width: ${({ theme }) => theme.widths.max};
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 1rem;
+  padding: 0 ${({ theme }) => theme.spacing.padding};
 `;
 
 export const LogoContainer = styled.div`
@@ -35,13 +35,12 @@ export const SkipLink = styled.a`
   position: absolute;
   top: -2000px;
   z-index: 1000;
-  color: #000;
+  color: ${({ theme }) => theme.colors.text};
 `;
-
 
 export const NavListContainer = styled.ul<{ isOpen?: boolean }>`
   display: flex;
-  gap: 1rem;
+  gap: ${({ theme }) => theme.spacing.small};
   list-style: none;
   padding: 0;
   margin: 0;
@@ -49,19 +48,19 @@ export const NavListContainer = styled.ul<{ isOpen?: boolean }>`
   @media (max-width: 1100px) {
     display: ${(props) => (props.isOpen ? 'flex' : 'none')};
     flex-direction: column;
-    background-color: #fff;
+    background-color: ${({ theme }) => theme.colors.white};
     position: absolute;
     top: 70px;
     right: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    border-radius: ${({ theme }) => theme.borderRadius};
     overflow: hidden;
   }
 `;
 
 export const NavItem = styled.li`
-  padding: 1rem;
-  border-bottom: 1px solid #ddd;
+  padding: ${({ theme }) => theme.spacing.padding};
+  border-bottom: 1px solid ${({ theme }) => theme.colors.textSecondary};
 
   &:last-child {
     border-bottom: none;
@@ -72,10 +71,10 @@ export const NavLink = styled.a<{ isActive?: boolean }>`
   text-decoration: none;
   font-size: 1.1rem;
   transition: color 0.3s, border-bottom 0.3s;
-  border-bottom: ${(props) => (props.isActive ? '2px solid blue' : 'none')};
+  border-bottom: ${(props) => (props.isActive ? `2px solid ${props.theme.colors.primary}` : 'none')};
 
   &:hover {
-    color: #888;
+    color: ${({ theme }) => theme.colors.textSecondary};
   }
 `;
 
@@ -91,8 +90,9 @@ export const BurgerMenu = styled.div`
   div {
     width: 25px;
     height: 3px;
-    background-color: #505275;
-    margin: 4px 0;
+    background-color: ${({ theme }) => theme.colors.linkColor};
+    margin: ${({ theme }) => theme.spacing.tiny} 0;
     transition: 0.4s;
   }
 `;
+

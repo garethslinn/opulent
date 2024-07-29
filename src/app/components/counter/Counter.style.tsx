@@ -6,20 +6,20 @@ export const CounterStyle = styled.div`
   justify-content: center;
   width: 100%;
   position: relative;
-  padding: 10px 0;
-  
+  padding: ${({ theme }) => theme.spacing.small} 0;
+
   svg {
     flex-grow: 1;
-    margin: 0 10px;
+    margin: 0 ${({ theme }) => theme.spacing.small};
   }
 
   div {
-    font-size: 1.5rem;
+    font-size: ${({ theme }) => theme.fontSizes.title};
     font-weight: bold;
-    margin: 0 5px;
+    margin: 0 ${({ theme }) => theme.spacing.tiny};
   }
 
   button {
-    padding: 0 10px;
+    padding: 0 ${({ theme }) => theme.spacing.small};
   }
 `;

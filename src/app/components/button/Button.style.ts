@@ -9,17 +9,17 @@ interface ButtonStyledProps {
 }
 
 export const ButtonStyled = styled.div<ButtonStyledProps>`
-  background-color: ${({ backgroundColor }) => backgroundColor || '#f0f0f0'};
-  border: ${({ borderThickness }) => borderThickness || '2px'} solid ${({ borderColor }) => borderColor || '#333'};
-  color: ${({ foregroundColor }) => foregroundColor || '#000'};
-  padding: 10px; /* Padding inside the button */
-  display: inline-flex; /* Aligns items inside the button */
-  align-items: center; /* Vertically centers items */
-  justify-content: center; /* Horizontally centers items */
-  cursor: pointer; /* Pointer cursor on hover */
-  border-radius: 4px; /* Rounded corners */
+  background-color: ${({ backgroundColor, theme }) => backgroundColor || theme.colors.containerBackground};
+  border: ${({ borderThickness, theme }) => borderThickness || '2px'} solid ${({ borderColor, theme }) => borderColor || theme.colors.text};
+  color: ${({ foregroundColor, theme }) => foregroundColor || theme.colors.text};
+  padding: ${({ theme }) => theme.spacing.small};
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: ${({ theme }) => theme.borderRadius};
 
   &:hover {
-    background-color: ${({ hoverBackgroundColor }) => hoverBackgroundColor || '#e0e0e0'};
+    background-color: ${({ hoverBackgroundColor, theme }) => hoverBackgroundColor || theme.colors.background};
   }
 `;

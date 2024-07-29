@@ -3,42 +3,33 @@ import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
   :root {
-    /* Colors */
-    --color-primary: black;
-    --color-secondary: #0070f3;
-    --color-background: #fff;
-    --color-white: #fff;
-    --color-black: #000;
-    --color-text: #333;
-    --color-company-background: #505275;
-    --color-company-active-border: #333;
-    --color-company-active-background: #fff;
-    --color-counter-background: #3F404B;
-
-    /* Font sizes */
-    --font-size-title: 1.5rem;
-    --font-size-paragraph: 1rem;
-
-    /* Spacing */
-    --spacing-padding: 20px;
-    --spacing-margin: 20px;
-    --spacing-small: 10px;
-    --spacing-tiny: 5px;
-    --spacing-huge: 50px;
-
-    /* Sizes */
-    --size-large: 15px;
-    --size-huge: 50px;
-
-    /* Widths */
-    --width-full: 100%;
-    --width-max: 1024px;
-
-    /* Icon */
-    --icon-large: 180px;
-
-    /* Other */
-    --border-radius: 0.25rem;
+    --color-primary: ${({ theme }) => theme.colors.primary};
+    --color-secondary: ${({ theme }) => theme.colors.secondary};
+    --color-background: ${({ theme }) => theme.colors.background};
+    --color-text: ${({ theme }) => theme.colors.text};
+    --color-company-background: ${({ theme }) => theme.colors.companyBackground};
+    --color-company-active-border: ${({ theme }) => theme.colors.companyActiveBorder};
+    --color-company-active-background: ${({ theme }) => theme.colors.companyActiveBackground};
+    --color-counter-background: ${({ theme }) => theme.colors.counterBackground};
+    
+    --font-size-title: ${({ theme }) => theme.fontSizes.title};
+    --font-size-paragraph: ${({ theme }) => theme.fontSizes.paragraph};
+    
+    --spacing-padding: ${({ theme }) => theme.spacing.padding};
+    --spacing-margin: ${({ theme }) => theme.spacing.margin};
+    --spacing-small: ${({ theme }) => theme.spacing.small};
+    --spacing-tiny: ${({ theme }) => theme.spacing.tiny};
+    --spacing-huge: ${({ theme }) => theme.spacing.huge};
+    
+    --size-large: ${({ theme }) => theme.sizes.large};
+    --size-huge: ${({ theme }) => theme.sizes.huge};
+    
+    --width-full: ${({ theme }) => theme.widths.full};
+    --width-max: ${({ theme }) => theme.widths.max};
+    
+    --icon-large: ${({ theme }) => theme.icon.large};
+    
+    --border-radius: ${({ theme }) => theme.borderRadius};
   }
 
   * {

@@ -2,14 +2,12 @@ import styled from 'styled-components';
 
 export const Container = styled.div<{ backgroundColor: string; foregroundColor: string; first?: boolean }>`
   width: 100%;
-  background-color: ${props => props.backgroundColor};
-  color: ${props => props.foregroundColor};
+  background-color: ${({ backgroundColor }) => backgroundColor};
+  color: ${({ foregroundColor }) => foregroundColor};
   display: flex;
   justify-content: center;
-  // padding: ${props => (props.first ? '20px 0 20px 0' : '20px 0')};
-
-  padding: 20px;
-  max-width: 1024px;
+  padding: ${({ first, theme }) => (first ? theme.spacing.padding : theme.spacing.padding)};
+  max-width: ${({ theme }) => theme.widths.max};
   margin: 0 auto;
   
   a {
@@ -25,7 +23,7 @@ export const Container = styled.div<{ backgroundColor: string; foregroundColor: 
 
 export const Wrapper = styled.div`
   width: 100%;
-  max-width: 1024px;
+  max-width: ${({ theme }) => theme.widths.max};
   display: flex;
   align-items: center;
 `;
@@ -33,11 +31,11 @@ export const Wrapper = styled.div`
 export const ParagraphText = styled.div<{ first?: boolean }>`
   margin: 0;
   text-align: left;
-  font-size: ${props => (props.first ? '24px' : '18px')}; 
-  line-height: ${props => (props.first ? '46px' : '30px')};
+  font-size: ${({ first, theme }) => (first ? '24px' : theme.fontSizes.paragraph)}; 
+  line-height: ${({ first }) => (first ? '46px' : '30px')};
 
   @media (max-width: 900px) {
-    font-size: ${props => (props.first ? '20px' : '18px')};
-    line-height: ${props => (props.first ? 1.6 : 1.6)};
+    font-size: ${({ first }) => (first ? '20px' : '18px')};
+    line-height: 1.6;
   }
 `;
