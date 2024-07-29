@@ -40,16 +40,24 @@ const TechSkillBarGraph: React.FC<TechSkillBarGraphProps> = ({ data }) => {
     const maxYears = Math.max(...sortedData.map(skill => skill.years));
 
     return (
-        <GraphContainer>
+        <GraphContainer role="img" aria-label="Bar graph of technical skills">
             <h2>Tech Skills</h2>
             <BarContainer>
                 {sortedData.map((skill, index) => (
-                    <BarWrapper key={'bar' + index}>
+                    <BarWrapper key={'bar' + index} role="listitem">
                         <BarLabel>
                             <BarImage src={skill.image} alt={skill.title} />
-                            <BarTitle>{skill.title}</BarTitle>
+                            <BarTitle id={`bar-title-${index}`}>{skill.title}</BarTitle>
                         </BarLabel>
-                        <Bar width={(skill.years / maxYears) * 100} color={colors[skill.type]}>
+                        <Bar
+                            width={(skill.years / maxYears) * 100}
+                            color={colors[skill.type]}
+                            aria-labelledby={`bar-title-${index}`}
+                            role="progressbar"
+                            aria-valuenow={skill.years}
+                            aria-valuemin={0}
+                            aria-valuemax={maxYears}
+                        >
                             <BarValue>{skill.years}</BarValue>
                         </Bar>
                     </BarWrapper>

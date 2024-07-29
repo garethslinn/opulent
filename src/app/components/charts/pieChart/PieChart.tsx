@@ -50,7 +50,7 @@ const PieChart: React.FC<PieChartProps> = ({ data, subtext }) => {
 
     return (
         <FullWrapper>
-            <ChartContainer>
+            <ChartContainer role="img" aria-label={`Pie chart showing data on ${subtext}`}>
                 <Subtext>{subtext}</Subtext>
                 <ChartContent>
                     <SvgContainer>
@@ -61,13 +61,13 @@ const PieChart: React.FC<PieChartProps> = ({ data, subtext }) => {
                                 const d = describeArc(100, 100, radius, startAngle, endAngle);
                                 const color = colors[index % colors.length];
                                 startAngle = endAngle;
-                                return <Slice key={index} d={d} color={color} />;
+                                return <Slice key={index} d={d} color={color} aria-label={`${method.title}: ${method.percent}%`} />;
                             })}
                         </Svg>
                     </SvgContainer>
-                    <LegendContainer>
+                    <LegendContainer role="list">
                         {data.map((method, index) => (
-                            <LegendItem key={index}>
+                            <LegendItem key={index} role="listitem">
                                 <LegendColor color={colors[index % colors.length]} />
                                 <LegendLabel>{method.title}: {method.percent}%</LegendLabel>
                             </LegendItem>

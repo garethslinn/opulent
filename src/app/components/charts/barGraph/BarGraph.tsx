@@ -18,13 +18,20 @@ const BarGraph: React.FC<BarGraphProps> = ({ data, subtext }) => {
 
     return (
         <FullWrapper>
-            <GraphContainer>
+            <GraphContainer role="img" aria-label={`Bar graph showing data on ${subtext}`}>
                 <Subtext>{subtext}</Subtext>
                 <BarContainer>
                     {data.map((industry, index) => (
-                        <BarWrapper key={index}>
-                            <BarLabel>{industry.industry}</BarLabel>
-                            <Bar width={(industry.companies.length / maxCompanies) * 100}>
+                        <BarWrapper key={index} role="listitem">
+                            <BarLabel id={`bar-label-${index}`}>{industry.industry}</BarLabel>
+                            <Bar
+                                width={(industry.companies.length / maxCompanies) * 100}
+                                aria-labelledby={`bar-label-${index}`}
+                                role="progressbar"
+                                aria-valuenow={industry.companies.length}
+                                aria-valuemin={0}
+                                aria-valuemax={maxCompanies}
+                            >
                                 <BarValue>{industry.companies.length}</BarValue>
                             </Bar>
                         </BarWrapper>
