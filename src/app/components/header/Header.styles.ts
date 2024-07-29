@@ -31,6 +31,14 @@ export const LogoContainer = styled.div`
   align-items: center;
 `;
 
+export const SkipLink = styled.a`
+  position: absolute;
+  top: -2000px;
+  z-index: 1000;
+  color: #fff;
+`;
+
+
 export const NavListContainer = styled.ul<{ isOpen?: boolean }>`
   display: flex;
   gap: 1rem;

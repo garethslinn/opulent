@@ -42,7 +42,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <ThemeProvider theme={theme}>
             <GlobalStyle />
             <Header />
-            <main role="main">
+            <main id="main" role="main">
                 {isClient ? children : null}
             </main>
             <Footer />

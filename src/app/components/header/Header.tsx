@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { HeaderContainer, Nav, LogoContainer, BurgerMenu } from './Header.styles';
+import { HeaderContainer, Nav, LogoContainer, BurgerMenu, SkipLink } from './Header.styles';
 import logo from '../../../../public/assets/images/gds.svg';
 import NavList from './NavList';
 import useDeviceType from '@/app/utils/useDeviceType';
@@ -38,6 +38,7 @@ const Header: React.FC = () => {
     return (
         <header>
             <HeaderContainer isScrolled={isScrolled}>
+                <SkipLink className="skip-link" href="#main">skip to main content</SkipLink>
                 <Nav role="navigation" aria-label="Main Navigation">
                     <LogoContainer>
                         <Link href="/" passHref aria-label="Homepage">
