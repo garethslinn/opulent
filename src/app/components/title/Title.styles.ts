@@ -44,3 +44,16 @@ export const TitleText = styled.h2<TitleTextProps>`
     line-height: ${props => (props.first ? '1.4' : '1')};
   }
 `;
+
+export const MainTitle = styled.h1<TitleTextProps>`
+  text-align: left;
+  font-size: ${props => (props.first ? '45px' : '30px')};
+  line-height: ${props => (props.first ? '1.4' : '1')};
+
+  margin: 0 20px;
+  
+  @media (max-width: 900px) {
+    font-size: ${props => (props.first ? '30px' : '30px')};
+    line-height: ${props => (props.first ? '1.4' : '1')};
+  }
+`;
