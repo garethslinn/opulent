@@ -37,14 +37,14 @@ const Header: React.FC = () => {
 
     return (
         <HeaderContainer isScrolled={isScrolled}>
-            <Nav>
+            <Nav role="navigation" aria-label="Main Navigation">
                 <LogoContainer>
                     <Link href="/" passHref>
                         <Image src={logo} alt="Logo" width={imageWidth} height={imageWidth} />
                     </Link>
                 </LogoContainer>
                 <NavList isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
-                <BurgerMenu onClick={toggleMenu}>
+                <BurgerMenu onClick={toggleMenu} aria-label={isMenuOpen ? "Close menu" : "Open menu"} aria-expanded={isMenuOpen} aria-controls="navigation-menu">
                     <div></div>
                     <div></div>
                     <div></div>

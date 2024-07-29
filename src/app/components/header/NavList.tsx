@@ -32,57 +32,57 @@ const NavList: React.FC<NavListProps> = ({ isMenuOpen = false, toggleMenu }) => 
 
     return (
         <>
-            <BackgroundOverlay isOpen={isMenuOpen} onClick={toggleMenu} />
-            <NavListContainer isOpen={isMenuOpen}>
+            <BackgroundOverlay isOpen={isMenuOpen} onClick={toggleMenu} aria-hidden={!isMenuOpen} />
+            <NavListContainer isOpen={isMenuOpen} role="menu" aria-hidden={!isMenuOpen}>
                 {width < 1150 &&
-                    <CloseButton onClick={toggleMenu} src={'../../assets/images/close.svg'} alt={'Close Button'} width={20} height={20} />
+                    <CloseButton onClick={toggleMenu} src={'../../assets/images/close.svg'} alt={'Close Button'} width={20} height={20} aria-label="Close menu" />
                 }
-                <NavItem>
+                <NavItem role="none">
                     <Link href="/" passHref>
-                        <NavLink onClick={toggleMenu} isActive={isActive('/')}>About</NavLink>
+                        <NavLink onClick={toggleMenu} isActive={isActive('/')} role="menuitem" tabIndex={isMenuOpen ? 0 : -1}>About</NavLink>
                     </Link>
                 </NavItem>
-                <NavItem>
+                <NavItem role="none">
                     <Link href="/experience" passHref>
-                        <NavLink onClick={toggleMenu} isActive={isActive('/experience')}>Experience</NavLink>
+                        <NavLink onClick={toggleMenu} isActive={isActive('/experience')} role="menuitem" tabIndex={isMenuOpen ? 0 : -1}>Experience</NavLink>
                     </Link>
                 </NavItem>
-                <NavItem>
+                <NavItem role="none">
                     <Link href="/open-source" passHref>
-                        <NavLink onClick={toggleMenu} isActive={isActive('/open-source')}>Open&nbsp;Source</NavLink>
+                        <NavLink onClick={toggleMenu} isActive={isActive('/open-source')} role="menuitem" tabIndex={isMenuOpen ? 0 : -1}>Open&nbsp;Source</NavLink>
                     </Link>
                 </NavItem>
-                <NavItem>
+                <NavItem role="none">
                     <Link href="/case-studies" passHref>
-                        <NavLink onClick={toggleMenu} isActive={isActive('/case-studies')}>Case&nbsp;Studies</NavLink>
+                        <NavLink onClick={toggleMenu} isActive={isActive('/case-studies')} role="menuitem" tabIndex={isMenuOpen ? 0 : -1}>Case&nbsp;Studies</NavLink>
                     </Link>
                 </NavItem>
-                <NavItem>
+                <NavItem role="none">
                     <Link href="/graphic-design" passHref>
-                        <NavLink onClick={toggleMenu} isActive={isActive('/graphic-design')}>Design</NavLink>
+                        <NavLink onClick={toggleMenu} isActive={isActive('/graphic-design')} role="menuitem" tabIndex={isMenuOpen ? 0 : -1}>Design</NavLink>
                     </Link>
                 </NavItem>
-                <NavItem>
+                <NavItem role="none">
                     <Link href="/recommendations" passHref>
-                        <NavLink onClick={toggleMenu} isActive={isActive('/recommendations')}>Recommendations</NavLink>
+                        <NavLink onClick={toggleMenu} isActive={isActive('/recommendations')} role="menuitem" tabIndex={isMenuOpen ? 0 : -1}>Recommendations</NavLink>
                     </Link>
                 </NavItem>
-                <NavItem>
-                    <a href="https://www.linkedin.com/in/garethslinn/" target="_blank" rel="noopener noreferrer" onClick={toggleMenu}>
+                <NavItem role="none">
+                    <a href="https://www.linkedin.com/in/garethslinn/" target="_blank" rel="noopener noreferrer" onClick={toggleMenu} role="menuitem" tabIndex={isMenuOpen ? 0 : -1}>
                         <Image src={linkedinIcon} alt="LinkedIn" width={30} height={30} />
                     </a>
                     {width < 1150 &&
                         <>
                             &nbsp;&nbsp;
-                            <a href="https://github.com/garethslinn/" target="_blank" rel="noopener noreferrer" onClick={toggleMenu}>
+                            <a href="https://github.com/garethslinn/" target="_blank" rel="noopener noreferrer" onClick={toggleMenu} role="menuitem" tabIndex={isMenuOpen ? 0 : -1}>
                                 <Image src={githubIcon} alt="GitHub" width={30} height={30} />
                             </a>
                         </>
                     }
                 </NavItem>
                 {width > 1150 &&
-                    <NavItem>
-                        <a href="https://github.com/garethslinn/" target="_blank" rel="noopener noreferrer" onClick={toggleMenu}>
+                    <NavItem role="none">
+                        <a href="https://github.com/garethslinn/" target="_blank" rel="noopener noreferrer" onClick={toggleMenu} role="menuitem">
                             <Image src={githubIcon} alt="GitHub" width={30} height={30} />
                         </a>
                     </NavItem>
