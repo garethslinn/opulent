@@ -7,8 +7,6 @@ const Footer: React.FC = () => {
             <FooterContent>
                 <FooterText>&copy; {new Date().getFullYear()} GDS Consulting Ltd. All rights reserved.</FooterText>
                 <FooterLinks>
-                    <FooterLink href="/about">About</FooterLink>
-                    <FooterLink href="/contact">Contact</FooterLink>
                     <FooterLink href="/privacy">Privacy Policy</FooterLink>
                     <FooterLink href="/terms">Terms of Service</FooterLink>
                 </FooterLinks>
