@@ -11,9 +11,7 @@ const Card: React.FC<CardProps> = ({ title, link, imageSrc, children }) => {
             <ContentWrapper>
                 <Description>{children}</Description>
                 <ImageWrapper>
-                    <a href={link} target="_blank" rel="noopener noreferrer">
-                        <Image src={imageSrc} alt={title} width={300} height={300} />
-                    </a>
+                    <Image src={imageSrc} alt={title} width={300} height={300} />
                 </ImageWrapper>
             </ContentWrapper>
             <a className="learn-more" href={link} target="_blank" rel="noopener noreferrer"><span>Learn more</span></a>

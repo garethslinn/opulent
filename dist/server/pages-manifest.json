@@ -3,7 +3,6 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/case-studies": "pages/case-studies.js",
-  "/open-source": "pages/open-source.js",
-  "/experience": "pages/experience.js",
-  "/graphic-design": "pages/graphic-design.js"
+  "/graphic-design": "pages/graphic-design.js",
+  "/open-source": "pages/open-source.js"
 }
