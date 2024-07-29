@@ -14,9 +14,14 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Roboto', 'Helvetica Neue', sans-serif;
     background-color: #f1f1f1;
     color: ${theme.colors.text};
+    
   }
+  
   main {
     padding: 0 50px;
+
+    // Dark mode
+    //filter: invert(100%); 
     
     @media (max-width: 640px) {
       padding: 0 10px;
