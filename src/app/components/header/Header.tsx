@@ -39,8 +39,8 @@ const Header: React.FC = () => {
         <HeaderContainer isScrolled={isScrolled}>
             <Nav role="navigation" aria-label="Main Navigation">
                 <LogoContainer>
-                    <Link href="/" passHref>
-                        <Image src={logo} alt="Logo" width={imageWidth} height={imageWidth} />
+                    <Link href="/" passHref aria-label="Homepage">
+                        <Image src={logo} alt="GDS Consulting Logo" width={imageWidth} height={imageWidth} />
                     </Link>
                 </LogoContainer>
                 <NavList isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />

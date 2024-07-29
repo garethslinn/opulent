@@ -27,13 +27,13 @@ const ResponsiveColumns: React.FC<ResponsiveColumnsProps> = ({ columns }) => {
                     <Logo>
                         <Image
                             src={column.logo}
-                            alt=""
+                            alt={`Logo for ${column.description}`}
                             layout="fill"
                             objectFit="contain"
                         />
                     </Logo>
                     <Paragraph>{column.description}</Paragraph>
-                    <LearnMoreLink href={column.link}>Learn more</LearnMoreLink>
+                    <LearnMoreLink href={column.link} aria-label={`Learn more about ${column.description}`}>Learn more</LearnMoreLink>
                 </Column>
             ))}
         </Container>
