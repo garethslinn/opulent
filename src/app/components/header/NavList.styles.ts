@@ -39,7 +39,7 @@ export const NavItem = styled.li`
   }
 `;
 
-export const NavLink = styled.a<{ isActive?: boolean }>`
+export const NavLink = styled.span<{ isActive?: boolean }>`
   text-decoration: none;
   font-size: 18px;
   transition: color 0.3s, border-bottom 0.3s;
