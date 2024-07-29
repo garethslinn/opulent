@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "clean": "rm -rf .next && npm run build && npm run start",
     "build": "next build",
     "start": "next start",
     "deploy": "gh-pages -d out -r https://github.com/garethslinn/gds.github.io.git",
