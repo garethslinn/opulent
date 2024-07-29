@@ -18,12 +18,12 @@ interface CounterProps {
 }
 
 const Counter: React.FC<CounterProps> = ({
-                                             activeIndex,
-                                             totalItems,
-                                             handleNavLeft,
-                                             handleNavRight,
-                                             quotesArrowTheme
-                                         }) => {
+         activeIndex,
+         totalItems,
+         handleNavLeft,
+         handleNavRight,
+         quotesArrowTheme
+     }) => {
     return (
         <CounterStyle>
             <Button {...BUTTON_CONSTANTS.TRANSPARENT} onClick={handleNavLeft} aria-label="Previous item">

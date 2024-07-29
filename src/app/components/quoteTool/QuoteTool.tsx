@@ -86,7 +86,7 @@ const QuoteTool: React.FC<{ quoteText?: string }> = ({ quoteText = "Professional
                         <QuoteText>{quoteText}</QuoteText>
                     </LeftColumn>
                     <RightColumn>
-                        {deviceType === 'mobile' && <Title>{activeTitle}</Title> }
+                        {deviceType === 'mobile' && <Title>{activeTitle}</Title>}
                         <Counter
                             activeIndex={activeIndex}
                             totalItems={companies.length}
@@ -94,7 +94,7 @@ const QuoteTool: React.FC<{ quoteText?: string }> = ({ quoteText = "Professional
                             handleNavRight={handleNavRight}
                             quotesArrowTheme={quotesArrowTheme}
                         />
-                        {deviceType !== 'mobile' && <Title>{activeTitle}</Title> }
+                        {deviceType !== 'mobile' && <Title>{activeTitle}</Title>}
                         <BulletList>
                             {activeDescription.map((desc, index) => (
                                 <BulletItem key={index}>{desc}</BulletItem>
