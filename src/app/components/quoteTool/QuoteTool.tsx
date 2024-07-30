@@ -1,5 +1,3 @@
-"use client";
-
 import React, { useState, useEffect, useRef } from 'react';
 import {
     QuoteToolWrapper,
@@ -18,17 +16,11 @@ import {
 } from '../../components/bulletList/BulletList.styles';
 import InlineList from "@/app/components/inlineList/InlineList"; // Ensure correct casing
 import { companies } from "@/app/stubs/companies";
-import { techSkills } from "@/app/stubs/techSkills";
 import { items } from "@/app/stubs/items";
 import Item from "@/app/components/item/item";
 import Counter from "@/app/components/counter/Counter";
 import useDeviceType from "@/app/utils/useDeviceType";
-
-const quotesArrowTheme = {
-    fillColor: "transparent",
-    outlineColor: "#000",
-    hoverFillColor: "#ccc",
-};
+import { useTheme } from "styled-components"; // Import useTheme
 
 const QuoteTool: React.FC<{ quoteText?: string }> = ({ quoteText = "Professional Experience" }) => {
     const [activeIndex, setActiveIndex] = useState<number>(0);
@@ -39,6 +31,13 @@ const QuoteTool: React.FC<{ quoteText?: string }> = ({ quoteText = "Professional
     const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
     const [deviceType, width] = useDeviceType();
+    const theme = useTheme(); // Access the theme directly using useTheme hook
+
+    const quotesArrowTheme = {
+        fillColor: "transparent",
+        outlineColor: theme.colors.black, // Directly use theme's color
+        hoverFillColor: "#ccc",
+    };
 
     const handleNavLeft = () => {
         setIsUserInteracting(true);
@@ -92,7 +91,7 @@ const QuoteTool: React.FC<{ quoteText?: string }> = ({ quoteText = "Professional
                             totalItems={companies.length}
                             handleNavLeft={handleNavLeft}
                             handleNavRight={handleNavRight}
-                            quotesArrowTheme={quotesArrowTheme}
+                            quotesArrowTheme={quotesArrowTheme} // Pass theme as a prop
                         />
                         {deviceType !== 'mobile' && <Title>{activeTitle}</Title>}
                         <BulletList>
