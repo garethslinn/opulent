@@ -23,6 +23,7 @@ export const NavListContainer = styled.ul<{ isOpen?: boolean }>`
 
 export const CloseButton = styled.img`
   position: absolute;
+  // stroke: ${({ theme }) => theme.colors.black};
   top: ${({ theme }) => theme.spacing.tiny};
   right: ${({ theme }) => theme.spacing.tiny};
   cursor: pointer;

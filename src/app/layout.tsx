@@ -70,7 +70,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <body>
         <ThemeProvider theme={currentTheme}>
             <GlobalStyle />
-            <Header toggleTheme={toggleTheme} /> {/* Pass the toggleTheme function */}
+            <Header toggleTheme={toggleTheme} currentTheme={currentTheme} />
             <main id="main">{isClient ? children : null}</main>
             <Footer />
         </ThemeProvider>

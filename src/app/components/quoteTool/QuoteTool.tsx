@@ -14,7 +14,7 @@ import {
     BulletList,
     BulletItem
 } from '../../components/bulletList/BulletList.styles';
-import InlineList from "@/app/components/inlineList/InlineList"; // Ensure correct casing
+import InlineList from "@/app/components/inlineList/InlineList";
 import { companies } from "@/app/stubs/companies";
 import { items } from "@/app/stubs/items";
 import Item from "@/app/components/item/item";

@@ -82,7 +82,7 @@ export const BurgerMenu = styled.div`
   display: none;
   flex-direction: column;
   cursor: pointer;
-
+  
   @media (max-width: 1150px) {
     display: flex;
   }

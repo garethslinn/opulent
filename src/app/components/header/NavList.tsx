@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -18,18 +18,29 @@ interface NavListProps {
     isMenuOpen?: boolean;
     toggleMenu?: () => void;
     toggleTheme?: () => void;
+    currentTheme: string; // Define currentTheme as a string type
 }
 
 const NavList: React.FC<NavListProps> = ({
-         isMenuOpen = false,
-         toggleMenu,
-         toggleTheme,
-     }) => {
+                                             isMenuOpen = false,
+                                             toggleMenu,
+                                             toggleTheme,
+                                             currentTheme,
+                                         }) => {
     const [deviceType, width] = useDeviceType();
     const pathname = usePathname();
     const closeButtonRef = useRef<HTMLImageElement>(null);
+    const [theme, setTheme] = useState<string>(currentTheme); // Initialize theme state
 
     const isActive = (path: string) => pathname === path;
+
+    useEffect(() => {
+        // Access localStorage safely in a client-side context
+        if (typeof window !== "undefined") {
+            const storedTheme = localStorage.getItem("theme") || currentTheme;
+            setTheme(storedTheme);
+        }
+    }, [currentTheme]);
 
     useEffect(() => {
         if (isMenuOpen) {
@@ -41,9 +52,7 @@ const NavList: React.FC<NavListProps> = ({
 
         const handleEscape = (event: KeyboardEvent) => {
             if (event.key === "Escape" && isMenuOpen) {
-                if (toggleMenu) {
-                    toggleMenu();
-                }
+                toggleMenu?.();
             }
         };
 
@@ -54,6 +63,9 @@ const NavList: React.FC<NavListProps> = ({
             document.body.style.overflow = "auto";
         };
     }, [isMenuOpen, toggleMenu]);
+
+    // Log current theme for debugging purposes
+    console.log(">> currentTheme", currentTheme);
 
     return (
         <>
@@ -67,7 +79,11 @@ const NavList: React.FC<NavListProps> = ({
                     <CloseButton
                         ref={closeButtonRef}
                         onClick={toggleMenu}
-                        src={"../../assets/images/close.svg"}
+                        src={
+                            theme === "light"
+                                ? "/assets/images/close.svg"
+                                : "/assets/images/close_white.svg"
+                        }
                         alt={"Close Button"}
                         width={20}
                         height={20}
@@ -188,7 +204,18 @@ const NavList: React.FC<NavListProps> = ({
                 )}
                 {/* Theme Toggle Button */}
                 <NavItem role="none">
-                    <ThemeToggleButton onClick={toggleTheme} tabIndex={isMenuOpen ? 0 : -1} />
+                    <ThemeToggleButton
+                        onClick={() => {
+                            toggleTheme?.();
+                            // Update theme state and sync with localStorage
+                            const newTheme = theme === "light" ? "dark" : "light";
+                            setTheme(newTheme);
+                            if (typeof window !== "undefined") {
+                                localStorage.setItem("theme", newTheme);
+                            }
+                        }}
+                        tabIndex={isMenuOpen ? 0 : -1}
+                    />
                 </NavItem>
             </NavListContainer>
         </>

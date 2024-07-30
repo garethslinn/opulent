@@ -18,9 +18,10 @@ import useDeviceType from "@/app/utils/useDeviceType";
 
 interface HeaderProps {
     toggleTheme: () => void; // Define the toggleTheme prop type
+    currentTheme: any;
 }
 
-const Header: React.FC<HeaderProps> = ({ toggleTheme }) => { // Correctly destructure toggleTheme
+const Header: React.FC<HeaderProps> = ({ toggleTheme, currentTheme }) => { // Correctly destructure toggleTheme
     const [deviceType, width] = useDeviceType();
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMenuOpen, setMenuOpen] = useState(false);
@@ -71,7 +72,12 @@ const Header: React.FC<HeaderProps> = ({ toggleTheme }) => { // Correctly destru
                             />
                         </Link>
                     </LogoContainer>
-                    <NavList isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} toggleTheme={toggleTheme} />
+                    <NavList
+                        isMenuOpen={isMenuOpen}
+                         toggleMenu={toggleMenu}
+                         toggleTheme={toggleTheme}
+                        currentTheme={currentTheme}
+                    />
                     <BurgerMenu
                         onClick={toggleMenu}
                         aria-label={isMenuOpen ? "Close menu" : "Open menu"}
