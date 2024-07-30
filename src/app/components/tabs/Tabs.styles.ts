@@ -7,10 +7,12 @@ export const TabButtons = styled.div`
   margin: 0 auto 10px auto;
 `;
 
+
+
 export const TabButton = styled.button<{ isActive: boolean }>`
   padding: 10px 20px;
   margin-right: 10px;
-  background-color: ${(props) => (props.isActive ? '#505275' : '#fff')};
+  background-color: ${(props) => props.isActive ? props.theme.colors.companyBackground : props.theme.colors.white};
   color: ${(props) => (props.isActive ? '#fff' : '#000')};
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -40,5 +42,5 @@ export const TabContent = styled.div`
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  background-color: #fff;
+  background: ${({ theme }) => theme.colors.white};
 `;

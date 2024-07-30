@@ -2,22 +2,23 @@ import styled from 'styled-components';
 
 const Container = styled.div`
   max-width: ${({ theme }) => theme.widths.max};
+  background: ${({ theme }) => theme.colors.white};
   margin: 0 auto;
   padding: ${({ theme }) => theme.spacing.padding};
   font-family: 'Roboto', sans-serif;
   line-height: 1.6;
 `;
 
-const Title = styled.h1`
+const Title = styled.h2`
   font-size: ${({ theme }) => theme.fontSizes.title || '2em'};
   margin-bottom: ${({ theme }) => theme.spacing.small || '0.5em'};
-  color: ${({ theme }) => theme.colors.text};
+  color: ${({ theme }) => theme.colors.black};
 `;
 
-const Subtitle = styled.h2`
+const Subtitle = styled.h3`
   font-size: ${({ theme }) => theme.fontSizes.subtitle || '1.5em'};
   margin-bottom: ${({ theme }) => theme.spacing.small || '0.5em'};
-  color: ${({ theme }) => theme.colors.textSecondary || '#666'};
+  color: ${({ theme }) => theme.colors.black};
 `;
 
 const Paragraph = styled.p`

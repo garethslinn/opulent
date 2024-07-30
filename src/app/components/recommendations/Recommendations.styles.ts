@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const RecommendationWrapper = styled.div`
-  background: #f1f1f1;
+  background: ${({ theme }) => theme.colors.containerBackground};
   padding-bottom: 20px; 
   display: flex;
   flex-direction: column;
@@ -18,7 +18,7 @@ export const RecommendationWrapper = styled.div`
 export const RecommendationContainer = styled.div`
   display: flex;
   flex-direction: column;
-  background: #fff;
+  background: ${({ theme }) => theme.colors.white};
   border-radius: 8px;
   font-size: 18px;
   line-height: 1.6;
@@ -38,20 +38,20 @@ export const QuoteIconContainer = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  margin-bottom: 30px; /* Adjusted margin bottom */
+  margin-bottom: 30px;
 `;
 
 export const QuoteIcon = styled.svg`
-  width: 50px; /* Adjust as needed */
-  height: 50px; /* Adjust as needed */
-  margin-right: 10px; /* Adjust as needed */
+  width: 50px; 
+  height: 50px; 
+  margin-right: 10px; 
 `;
 
 export const ClosingQuoteContainer = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  margin-top: -20px; /* Adjust as needed */
+  margin-top: -20px; 
 `;
 
 export const ClosingQuoteIcon = styled.svg`
@@ -71,6 +71,6 @@ export const Position = styled.h4`
 
 export const Description = styled.p`
   margin: 10px 0 0;
-  color: #666;
+  background: ${({ theme }) => theme.colors.white};
   padding-right: 60px;
 `;

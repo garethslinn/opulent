@@ -35,15 +35,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/experience.js"
     ],
-    "/open-source": [
+    "/graphic-design": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/open-source.js"
-    ],
-    "/recommendations": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/recommendations.js"
+      "static/chunks/pages/graphic-design.js"
     ]
   },
   "ampFirstPages": []
