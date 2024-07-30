@@ -2,8 +2,8 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/case-studies": "pages/case-studies.js",
   "/experience": "pages/experience.js",
+  "/case-studies": "pages/case-studies.js",
   "/graphic-design": "pages/graphic-design.js",
   "/recommendations": "pages/recommendations.js"
 }

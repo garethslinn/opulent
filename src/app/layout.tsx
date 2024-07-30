@@ -1,12 +1,12 @@
 "use client";
 
-import React, { useEffect, useState } from 'react';
-import { createGlobalStyle, ThemeProvider } from 'styled-components';
-import { lightTheme, darkTheme } from '@/theme';
-import Header from './components/header/Header';
-import Footer from '@/app/components/footer/Footer';
-import '../../src/app/globals.css';
-import styled from 'styled-components';
+import React, { useEffect, useState } from "react";
+import { createGlobalStyle, ThemeProvider } from "styled-components";
+import { lightTheme, darkTheme } from "@/theme";
+import Header from "./components/header/Header";
+import Footer from "@/app/components/footer/Footer";
+import "../../src/app/globals.css";
+import styled from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -26,29 +26,43 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-const ToggleButton = styled.button`
-  background: ${({ theme }) => theme.colors.secondary};
-  color: ${({ theme }) => theme.colors.white};
-  border: none;
-  padding: ${({ theme }) => theme.spacing.small};
-  border-radius: ${({ theme }) => theme.borderRadius};
-  cursor: pointer;
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  z-index: 1000000;
-`;
-
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     const [isClient, setIsClient] = useState(false);
-    const [currentTheme, setCurrentTheme] = useState(lightTheme);
+    const [currentTheme, setCurrentTheme] = useState(lightTheme); // Initial default theme
 
     useEffect(() => {
-        setIsClient(true);
-    }, []);
+        // Ensure we are in a client-side environment
+        if (typeof window !== "undefined") {
+            // Retrieve the theme from local storage
+            const savedTheme = localStorage.getItem("theme");
+
+            // Debugging log to see what we get from local storage
+            console.log(`Retrieved theme from localStorage: ${savedTheme}`);
+
+            // Set the theme based on local storage, defaulting to lightTheme if none is set
+            if (savedTheme) {
+                setCurrentTheme(savedTheme === "dark" ? darkTheme : lightTheme);
+            } else {
+                setCurrentTheme(lightTheme); // Default to lightTheme if no theme is saved
+            }
+        }
+
+        setIsClient(true); // Ensure client-side rendering
+    }, []); // Empty dependency array ensures this runs only once on mount
 
     const toggleTheme = () => {
-        setCurrentTheme(prevTheme => (prevTheme === lightTheme ? darkTheme : lightTheme));
+        // Toggle between light and dark themes
+        const newTheme = currentTheme === lightTheme ? darkTheme : lightTheme;
+        setCurrentTheme(newTheme);
+
+        // Store the new theme in local storage
+        if (typeof window !== "undefined") {
+            const newThemeName = newTheme === lightTheme ? "light" : "dark";
+            localStorage.setItem("theme", newThemeName);
+
+            // Debugging log to confirm the new theme is saved
+            console.log(`Theme set to: ${newThemeName}`);
+        }
     };
 
     return (
@@ -66,14 +80,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <body>
         <ThemeProvider theme={currentTheme}>
             <GlobalStyle />
-            <Header />
-
-            <main id="main">
-                {isClient ? children : null}
-            </main>
-            <ToggleButton onClick={toggleTheme}>
-                Toggle Theme
-            </ToggleButton>
+            <Header toggleTheme={toggleTheme} /> {/* Pass the toggleTheme function */}
+            <main id="main">{isClient ? children : null}</main>
             <Footer />
         </ThemeProvider>
         </body>
