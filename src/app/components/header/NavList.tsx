@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
@@ -15,27 +15,48 @@ interface NavListProps {
 const NavList: React.FC<NavListProps> = ({ isMenuOpen = false, toggleMenu }) => {
     const [deviceType, width] = useDeviceType();
     const pathname = usePathname();
+    const closeButtonRef = useRef<HTMLImageElement>(null);
 
     const isActive = (path: string) => pathname === path;
 
     useEffect(() => {
         if (isMenuOpen) {
             document.body.style.overflow = 'hidden';
+            closeButtonRef.current?.focus();
         } else {
             document.body.style.overflow = 'auto';
         }
 
+        const handleEscape = (event: KeyboardEvent) => {
+            if (event.key === 'Escape' && isMenuOpen) {
+                if (toggleMenu) {
+                    toggleMenu();
+                }
+            }
+        };
+
+        document.addEventListener('keydown', handleEscape);
+
         return () => {
+            document.removeEventListener('keydown', handleEscape);
             document.body.style.overflow = 'auto';
         };
-    }, [isMenuOpen]);
+    }, [isMenuOpen, toggleMenu]);
 
     return (
         <>
-            <BackgroundOverlay isOpen={isMenuOpen} onClick={toggleMenu} />
-            <NavListContainer isOpen={isMenuOpen} role="menu">
+            <BackgroundOverlay isOpen={isMenuOpen} onClick={toggleMenu} aria-hidden={!isMenuOpen} />
+            <NavListContainer isOpen={isMenuOpen} role="dialog" aria-modal="true">
                 {width < 1150 &&
-                    <CloseButton onClick={toggleMenu} src={'../../assets/images/close.svg'} alt={'Close Button'} width={20} height={20} aria-label="Close menu" />
+                    <CloseButton
+                        ref={closeButtonRef}
+                        onClick={toggleMenu}
+                        src={'../../assets/images/close.svg'}
+                        alt={'Close Button'}
+                        width={20}
+                        height={20}
+                        aria-label="Close menu"
+                    />
                 }
                 <NavItem role="none">
                     <Link href="/" passHref>
