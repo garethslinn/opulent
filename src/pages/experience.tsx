@@ -3,8 +3,8 @@
 import QuoteTool from "@/app/components/quoteTool/QuoteTool";
 import PieChart from "@/app/components/charts/pieChart/PieChart";
 import { methodologies } from "@/app/stubs/methodologies";
-import BarGraph from "@/app/components/charts/barGraph/BarGraph";
 import { industries } from "@/app/stubs/industries";
+import BarGraph from "@/app/components/charts/barGraph/BarGraph";
 import SkillGrid from "@/app/components/skillGrid/SkillGrid";
 import { techSkills } from "@/app/stubs/techSkills";
 import TwoColumnContainer from "@/app/components/layout/TwoColumnContainer";
@@ -13,6 +13,7 @@ import SkillCards from "@/app/components/skillCards/SkillCards";
 import Title from "@/app/components/title/Title";
 import Paragraph from "@/app/components/paragraph/Paragraph";
 import React from "react";
+import ChartsContainer from "@/app/components/charts/chartsContainer/ChartsContainer";
 
 export default function Experience() {
     return (
@@ -36,10 +37,7 @@ export default function Experience() {
 
             <section aria-labelledby="Skill Metrics">
                 <Title text="Skill Metrics" />
-                <TwoColumnContainer backgroundColor="#f1f1f1">
-                    <BarGraph data={industries} subtext='Number of Contracts by Industry'/>
-                    <PieChart data={methodologies} subtext='Methodologies used the most' />
-                </TwoColumnContainer>
+                <ChartsContainer />
             </section>
 
             <section aria-labelledby="Soft Skills">

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const FullWrapper = styled.div`
-  background: ${({ theme }) => theme.colors.containerBackground};
+  background: transparent;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -20,9 +20,6 @@ export const ChartContainer = styled.div`
   width: 100%;
   max-width: ${({ theme }) => theme.widths.max};
   min-height: 388px;
-  background: ${({ theme }) => theme.colors.cardBackground};
-  border-radius: ${({ theme }) => theme.borderRadius};
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: ${({ theme }) => theme.spacing.padding};
 
   @media (max-width: 900px) {
@@ -73,7 +70,7 @@ export const LegendContainer = styled.div`
   margin-left: ${({ theme }) => theme.spacing.small};
 
   @media (max-width: 900px) {
-    margin-left: ${({ theme }) => `calc(${theme.spacing.small} + 2px)`};
+    margin-left: ${({ theme }) => `calc(${theme.spacing.medium})`};
   }
 `;
 
@@ -97,19 +94,22 @@ export const LegendColor = styled.span<{ color: string }>`
 `;
 
 export const LegendLabel = styled.span`
-  font-size: ${({ theme }) => theme.fontSizes.small};
+  font-size: ${({ theme }) => theme.fontSizes.medium};
 
   @media (max-width: 900px) {
-    font-size: ${({ theme }) => `calc(${theme.fontSizes.small} + 1px)`};
+    font-size: ${({ theme }) => `calc(${theme.fontSizes.medium})`};
   }
 `;
 
 export const Subtext = styled.h2`
   margin-bottom: ${({ theme }) => theme.spacing.margin};
-  font-size: ${({ theme }) => theme.fontSizes.medium};
+  font-size: ${({ theme }) => theme.fontSizes.large};
   font-weight: normal;
   color: ${({ theme }) => theme.colors.text};
   width: 100%;
   text-align: center;
   font-variant-caps: all-petite-caps;
+  @media (max-width: 900px) {
+    font-size: ${({ theme }) => `calc(${theme.fontSizes.medium})`};
+  }
 `;
