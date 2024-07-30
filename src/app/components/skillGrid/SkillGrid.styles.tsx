@@ -22,7 +22,7 @@ export const GridItem = styled.div`
     display: flex;
     align-items: center;
     margin: 10px 0;
-    background-color: ${({ theme }) => theme.colors.containerBackground};
+    background-color: ${({ theme }) => theme.colors.white};
     color: ${({ theme }) => theme.colors.black};
     padding: 10px;
     border-radius: 8px;

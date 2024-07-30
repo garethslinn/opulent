@@ -18,7 +18,7 @@ export const GridContainer = styled.div`
 `;
 
 export const SkillCard = styled.div`
-    background-color: ${({ theme }) => theme.colors.containerBackground};
+    background-color: ${({ theme }) => theme.colors.white};
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;

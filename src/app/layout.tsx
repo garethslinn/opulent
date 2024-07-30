@@ -33,35 +33,25 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     useEffect(() => {
         // Ensure we are in a client-side environment
         if (typeof window !== "undefined") {
-            // Retrieve the theme from local storage
             const savedTheme = localStorage.getItem("theme");
 
-            // Debugging log to see what we get from local storage
-            console.log(`Retrieved theme from localStorage: ${savedTheme}`);
-
-            // Set the theme based on local storage, defaulting to lightTheme if none is set
             if (savedTheme) {
                 setCurrentTheme(savedTheme === "dark" ? darkTheme : lightTheme);
             } else {
-                setCurrentTheme(lightTheme); // Default to lightTheme if no theme is saved
+                setCurrentTheme(lightTheme);
             }
         }
 
         setIsClient(true); // Ensure client-side rendering
-    }, []); // Empty dependency array ensures this runs only once on mount
+    }, []);
 
     const toggleTheme = () => {
-        // Toggle between light and dark themes
         const newTheme = currentTheme === lightTheme ? darkTheme : lightTheme;
         setCurrentTheme(newTheme);
 
-        // Store the new theme in local storage
         if (typeof window !== "undefined") {
             const newThemeName = newTheme === lightTheme ? "light" : "dark";
             localStorage.setItem("theme", newThemeName);
-
-            // Debugging log to confirm the new theme is saved
-            console.log(`Theme set to: ${newThemeName}`);
         }
     };
 
