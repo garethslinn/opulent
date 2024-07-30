@@ -18,7 +18,7 @@ export const GridContainer = styled.div`
 `;
 
 export const SkillCard = styled.div`
-    background: white;
+    background-color: ${({ theme }) => theme.colors.containerBackground};
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
@@ -44,9 +44,6 @@ export const SkillTitle = styled.h3`
 
   }
 `;
-
-
-
 
 export const SkillDescription = styled.p`
     margin: 0;

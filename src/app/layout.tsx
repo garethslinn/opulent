@@ -2,40 +2,54 @@
 
 import React, { useEffect, useState } from 'react';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
-import theme from '../theme';
+import { lightTheme, darkTheme } from '@/theme';
 import Header from './components/header/Header';
-import Footer from "@/app/components/footer/Footer";
+import Footer from '@/app/components/footer/Footer';
 import '../../src/app/globals.css';
+import styled from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', 'Helvetica Neue', sans-serif;
-    background-color: #f1f1f1;
-    color: ${theme.colors.text};
-    
+    background-color: ${({ theme }) => theme.colors.containerBackground};
+    color: ${({ theme }) => theme.colors.text};
   }
   
   main {
     padding: 0 50px;
-
-    // Dark mode
-    //filter: invert(100%); 
     
     @media (max-width: 640px) {
       padding: 0 10px;
     }
-    
   }
+`;
+
+const ToggleButton = styled.button`
+  background: ${({ theme }) => theme.colors.secondary};
+  color: ${({ theme }) => theme.colors.white};
+  border: none;
+  padding: ${({ theme }) => theme.spacing.small};
+  border-radius: ${({ theme }) => theme.borderRadius};
+  cursor: pointer;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1000000;
 `;
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     const [isClient, setIsClient] = useState(false);
+    const [currentTheme, setCurrentTheme] = useState(lightTheme);
 
     useEffect(() => {
         setIsClient(true);
     }, []);
+
+    const toggleTheme = () => {
+        setCurrentTheme(prevTheme => (prevTheme === lightTheme ? darkTheme : lightTheme));
+    };
 
     return (
         <html lang="en">
@@ -50,12 +64,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <title>GDS Consulting Ltd</title>
         </head>
         <body>
-        <ThemeProvider theme={theme}>
+        <ThemeProvider theme={currentTheme}>
             <GlobalStyle />
             <Header />
+
             <main id="main">
                 {isClient ? children : null}
             </main>
+            <ToggleButton onClick={toggleTheme}>
+                Toggle Theme
+            </ToggleButton>
             <Footer />
         </ThemeProvider>
         </body>

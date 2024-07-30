@@ -5,7 +5,7 @@ export const QuoteToolWrapper = styled.div`
   overflow: hidden;
   max-width: 1024px;
   margin: 0 auto;
-  background: #fff;
+  background: ${({ theme }) => theme.colors.white};
   padding-bottom: 20px;
   
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -124,7 +124,7 @@ export const Paragraph = styled.p`
 export const Line = styled.div`
   flex-grow: 1;
   height: 1px;
-  background: #ccc;
+  background: ${({ theme }) => theme.colors.containerBackground};
   margin: 0 var(--spacing-small);
 
   @media (max-width: 1100px) {

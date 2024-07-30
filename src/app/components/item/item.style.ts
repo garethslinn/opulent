@@ -7,7 +7,7 @@ interface ItemWrapperProps {
 export const ItemWrapper = styled.div<ItemWrapperProps>`
   border-radius: ${({ theme }) => theme.borderRadius};
   padding: ${({ theme }) => theme.spacing.tiny} ${({ theme }) => theme.spacing.small};
-  color: ${({ theme }) => theme.colors.white};
+  color: #fff;
   font-size: ${({ theme }) => theme.fontSizes.small};
   white-space: nowrap;
   background-color: ${({ type, theme }) => {

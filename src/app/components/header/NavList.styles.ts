@@ -17,7 +17,7 @@ export const NavListContainer = styled.ul<{ isOpen?: boolean }>`
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: ${({ theme }) => theme.borderRadius};
     overflow: hidden;
-    z-index: 1001; /* Ensure it is above the overlay */
+    z-index: 1001; 
   }
 `;
 
@@ -60,7 +60,7 @@ export const BackgroundOverlay = styled.div<{ isOpen?: boolean }>`
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Faded dark background */
-  z-index: 1000; /* Ensure it is behind the menu */
+  background: rgba(0, 0, 0, 0.5); 
+  z-index: 1000; 
   overflow: hidden;
 `;

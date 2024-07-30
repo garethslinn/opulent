@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div<{ backgroundColor: string; foregroundColor: string; first?: boolean }>`
   width: 100%;
-  background-color: ${({ backgroundColor }) => backgroundColor};
+  background-color: ${({ theme }) => theme.colors.containerBackground};
   color: ${({ foregroundColor }) => foregroundColor};
   display: flex;
   justify-content: center;

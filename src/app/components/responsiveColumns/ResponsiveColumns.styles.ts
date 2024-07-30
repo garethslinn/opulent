@@ -11,7 +11,7 @@ export const Container = styled.div`
 `;
 
 export const Column = styled.div`
-  background-color: white;
+  background-color: ${({ theme }) => theme.colors.white};
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   flex: 1 1 21%; /* 4 columns */
@@ -51,8 +51,8 @@ export const LearnMoreLink = styled.a`
   cursor: pointer;
   padding: 5px 20px;
   display: inline-block;
-  color: #fff;
-  background: #505275;
+  color: ${({ theme }) => theme.colors.white};
+  background: ${({ theme }) => theme.colors.linkColor};
   position: absolute;
   bottom: 20px; /* Adjust to ensure the link is within the column */
   left: 20px;

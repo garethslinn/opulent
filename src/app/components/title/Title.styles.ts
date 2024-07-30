@@ -9,8 +9,7 @@ interface ContainerProps {
 export const Container = styled.div<ContainerProps>`
   font-family: 'Roboto-bold', sans-serif;
   width: 100%;
-  background-color: ${props => props.backgroundColor};
-  color: ${props => props.foregroundColor};
+  background-color: ${({ theme }) => theme.colors.containerBackground};
   display: flex;
   justify-content: center;
   padding: ${props => (props.first ? '150px 0 20px 0' : '50px 0 20px 0')};
