@@ -14,30 +14,34 @@ import linkedinIconWhite from "../../../../public/assets/images/brands-white/lin
 import githubIcon from "../../../../public/assets/images/brands/github.svg";
 import githubIconWhite from "../../../../public/assets/images/brands-white/github.svg";
 import useDeviceType from "@/app/utils/useDeviceType";
-import ThemeToggleButton from "../themeToggleButton/ThemeToggleButton"; // Import the Theme Toggle Button component
+import ThemeToggleButton from "../themeToggleButton/ThemeToggleButton";
 
 interface NavListProps {
     isMenuOpen?: boolean;
     toggleMenu?: () => void;
     toggleTheme?: () => void;
-    currentTheme: string; // Define currentTheme as a string type
+    currentTheme: string;
 }
 
 const NavList: React.FC<NavListProps> = ({
-         isMenuOpen = false,
-         toggleMenu,
-         toggleTheme,
-         currentTheme,
-     }) => {
+                                             isMenuOpen = false,
+                                             toggleMenu,
+                                             toggleTheme,
+                                             currentTheme,
+                                         }) => {
     const [deviceType, width] = useDeviceType();
     const pathname = usePathname();
     const closeButtonRef = useRef<HTMLImageElement>(null);
-    const [theme, setTheme] = useState<string>(currentTheme); // Initialize theme state
+    const [theme, setTheme] = useState<string>(currentTheme);
 
-    const isActive = (path: string) => pathname === path;
+    const isActive = (path: string) => {
+        if (path === "/") {
+            return pathname === path;
+        }
+        return pathname.startsWith(path);
+    };
 
     useEffect(() => {
-        // Access localStorage safely in a client-side context
         if (typeof window !== "undefined") {
             const storedTheme = localStorage.getItem("theme") || currentTheme;
             setTheme(storedTheme);
@@ -66,27 +70,16 @@ const NavList: React.FC<NavListProps> = ({
         };
     }, [isMenuOpen, toggleMenu]);
 
-    // Log current theme for debugging purposes
-    console.log(">> currentTheme", currentTheme);
-
     return (
         <>
-            <BackgroundOverlay
-                isOpen={isMenuOpen}
-                onClick={toggleMenu}
-                aria-hidden={!isMenuOpen}
-            />
+            <BackgroundOverlay isOpen={isMenuOpen} onClick={toggleMenu} aria-hidden={!isMenuOpen} />
             <NavListContainer isOpen={isMenuOpen} role="dialog" aria-modal="true">
                 {width < 1150 && (
                     <CloseButton
                         ref={closeButtonRef}
                         onClick={toggleMenu}
-                        src={
-                            theme === "light"
-                                ? "/assets/images/close.svg"
-                                : "/assets/images/close_white.svg"
-                        }
-                        alt={"Close Button"}
+                        src={theme === "light" ? "/assets/images/close.svg" : "/assets/images/close_white.svg"}
+                        alt="Close Button"
                         width={20}
                         height={20}
                         aria-label="Close menu"
@@ -94,72 +87,42 @@ const NavList: React.FC<NavListProps> = ({
                 )}
                 <NavItem role="none">
                     <Link href="/" passHref>
-                        <NavLink
-                            onClick={toggleMenu}
-                            isActive={isActive("/")}
-                            role="menuitem"
-                            tabIndex={isMenuOpen ? 0 : -1}
-                        >
+                        <NavLink onClick={toggleMenu} isActive={isActive("/")} role="menuitem" tabIndex={isMenuOpen ? 0 : -1}>
                             About
                         </NavLink>
                     </Link>
                 </NavItem>
                 <NavItem role="none">
                     <Link href="/experience" passHref>
-                        <NavLink
-                            onClick={toggleMenu}
-                            isActive={isActive("/experience")}
-                            role="menuitem"
-                            tabIndex={isMenuOpen ? 0 : -1}
-                        >
+                        <NavLink onClick={toggleMenu} isActive={isActive("/experience")} role="menuitem" tabIndex={isMenuOpen ? 0 : -1}>
                             Experience
                         </NavLink>
                     </Link>
                 </NavItem>
                 <NavItem role="none">
                     <Link href="/open-source" passHref>
-                        <NavLink
-                            onClick={toggleMenu}
-                            isActive={isActive("/open-source")}
-                            role="menuitem"
-                            tabIndex={isMenuOpen ? 0 : -1}
-                        >
+                        <NavLink onClick={toggleMenu} isActive={isActive("/open-source")} role="menuitem" tabIndex={isMenuOpen ? 0 : -1}>
                             Open&nbsp;Source
                         </NavLink>
                     </Link>
                 </NavItem>
                 <NavItem role="none">
                     <Link href="/case-studies" passHref>
-                        <NavLink
-                            onClick={toggleMenu}
-                            isActive={isActive("/case-studies")}
-                            role="menuitem"
-                            tabIndex={isMenuOpen ? 0 : -1}
-                        >
+                        <NavLink onClick={toggleMenu} isActive={isActive("/case-studies")} role="menuitem" tabIndex={isMenuOpen ? 0 : -1}>
                             Case&nbsp;Studies
                         </NavLink>
                     </Link>
                 </NavItem>
                 <NavItem role="none">
                     <Link href="/graphic-design" passHref>
-                        <NavLink
-                            onClick={toggleMenu}
-                            isActive={isActive("/graphic-design")}
-                            role="menuitem"
-                            tabIndex={isMenuOpen ? 0 : -1}
-                        >
+                        <NavLink onClick={toggleMenu} isActive={isActive("/graphic-design")} role="menuitem" tabIndex={isMenuOpen ? 0 : -1}>
                             Design
                         </NavLink>
                     </Link>
                 </NavItem>
                 <NavItem role="none">
                     <Link href="/recommendations" passHref>
-                        <NavLink
-                            onClick={toggleMenu}
-                            isActive={isActive("/recommendations")}
-                            role="menuitem"
-                            tabIndex={isMenuOpen ? 0 : -1}
-                        >
+                        <NavLink onClick={toggleMenu} isActive={isActive("/recommendations")} role="menuitem" tabIndex={isMenuOpen ? 0 : -1}>
                             Recommendations
                         </NavLink>
                     </Link>
@@ -173,7 +136,6 @@ const NavList: React.FC<NavListProps> = ({
                         role="menuitem"
                         tabIndex={isMenuOpen ? 0 : -1}
                     >
-
                         <Image src={theme === "light" ? linkedinIcon : linkedinIconWhite} alt="LinkedIn" width={30} height={30} />
                     </a>
                     {width < 1150 && (
@@ -188,7 +150,6 @@ const NavList: React.FC<NavListProps> = ({
                                 tabIndex={isMenuOpen ? 0 : -1}
                             >
                                 <Image src={theme === "light" ? githubIcon : githubIconWhite} alt="GitHub" width={30} height={30} />
-
                             </a>
                         </>
                     )}
@@ -202,22 +163,14 @@ const NavList: React.FC<NavListProps> = ({
                             onClick={toggleMenu}
                             role="menuitem"
                         >
-
-                            <Image
-                                src={theme === "light" ? githubIcon : githubIconWhite}
-                                alt="GitHub"
-                                width={30}
-                                height={30}
-                            />
+                            <Image src={theme === "light" ? githubIcon : githubIconWhite} alt="GitHub" width={30} height={30} />
                         </a>
                     </NavItem>
                 )}
-                {/* Theme Toggle Button */}
                 <NavItem role="none">
                     <ThemeToggleButton
                         onClick={() => {
                             toggleTheme?.();
-                            // Update theme state and sync with localStorage
                             const newTheme = theme === "light" ? "dark" : "light";
                             setTheme(newTheme);
                             if (typeof window !== "undefined") {
