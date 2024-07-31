@@ -19,7 +19,7 @@ export const techSkills: TechSkill[] = [
     },
     {
         abbr: "ReactJS",
-        title:  "React JavaSript",
+        title:  "React JavaScript",
         type: 1,
         image: "/assets/images/skill/react.svg",
         year_started: "2016",
