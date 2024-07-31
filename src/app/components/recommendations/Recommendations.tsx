@@ -11,8 +11,10 @@ import {
     Description
 } from './Recommendations.styles';
 import { RecommendationsProps } from "@/app/components/recommendations/Recommendations.types";
+import {useTheme} from "@/app/context/ThemeContext";
 
 const Recommendations: React.FC<RecommendationsProps> = ({ recommendations }) => {
+    const { currentTheme: { theme } } = useTheme();
     return (
         <RecommendationWrapper>
             {recommendations.map((rec, index) => (
@@ -24,11 +26,11 @@ const Recommendations: React.FC<RecommendationsProps> = ({ recommendations }) =>
                             viewBox="0 0 50 41"
                             xmlns="http://www.w3.org/2000/svg"
                         >
-                            <g style={{ stroke: '#989cf5' }}>
+                            <g>
                                 <path
                                     style={{
                                         fill: 'none',
-                                        stroke: '#989cf5',
+                                        stroke: theme === 'light' ? '#989cf5' : '#fff',
                                         strokeWidth: '.7',
                                         strokeLinecap: 'round',
                                         strokeLinejoin: 'round'
@@ -49,11 +51,11 @@ const Recommendations: React.FC<RecommendationsProps> = ({ recommendations }) =>
                             viewBox="0 0 50 41"
                             xmlns="http://www.w3.org/2000/svg"
                         >
-                            <g style={{ stroke: '#989cf5' }}>
+                            <g>
                                 <path
                                     style={{
                                         fill: 'none',
-                                        stroke: '#989cf5',
+                                        stroke: theme === 'light' ? '#989cf5' : '#fff',
                                         strokeWidth: '.7',
                                         strokeLinecap: 'round',
                                         strokeLinejoin: 'round'
