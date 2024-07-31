@@ -5,7 +5,8 @@ import Title from "@/app/components/title/Title";
 import Paragraph from "@/app/components/paragraph/Paragraph";
 import Card from "@/app/components/card/Card";
 import ResponsiveColumns from "@/app/components/responsiveColumns/ResponsiveColumns";
-import { intro } from "@/app/stubs/casestudies/intro";
+import {intro} from "@/app/stubs/casestudies/intro";
+
 
 const About: React.FC = () => {
 

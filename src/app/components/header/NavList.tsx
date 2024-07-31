@@ -167,7 +167,6 @@ const NavList: React.FC<NavListProps> = ({
                         onClick={() => {
                             toggleTheme?.();
                             const newTheme = theme === "light" ? "dark" : "light";
-                            setTheme(newTheme);
                             if (typeof window !== "undefined") {
                                 localStorage.setItem("theme", newTheme);
                             }

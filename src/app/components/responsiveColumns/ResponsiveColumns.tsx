@@ -12,6 +12,7 @@ import {useTheme} from "@/app/context/ThemeContext";
 
 interface ColumnData {
     logo: string;
+    logoWhite: string;
     description: string;
     link: string;
 }
@@ -20,8 +21,11 @@ interface ResponsiveColumnsProps {
     columns: ColumnData[];
 }
 
+
 const ResponsiveColumns: React.FC<ResponsiveColumnsProps> = ({ columns }) => {
     const { currentTheme: { theme } } = useTheme();
+
+    console.log('columns: ', columns)
 
     return (
         <Container>
