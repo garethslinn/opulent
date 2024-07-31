@@ -5,8 +5,11 @@ import Title from "@/app/components/title/Title";
 import Paragraph from "@/app/components/paragraph/Paragraph";
 import Card from "@/app/components/card/Card";
 import Image from "next/image";
+import {useTheme} from "@/app/context/ThemeContext";
 
 const OpenSource: React.FC = () => {
+    const { currentTheme: { theme } } = useTheme();
+
     return (
         <>
             <section aria-labelledby="open-source-title">
@@ -19,7 +22,13 @@ const OpenSource: React.FC = () => {
                     solutions that are both easy to use and highly effective.
                     <br /><br />
                     <a href="https://github.com/garethslinn" target="_blank" rel="noopener noreferrer" aria-label="Visit Gareth Slinn's GitHub">
-                        <Image className="img" src='/assets/images/brands/github.svg' alt='GitHub Link' width={30} height={30} />
+                        <Image
+                            className="img"
+                            src={theme === "light" ? "/assets/images/brands/github.svg" : "/assets/images/brands-white/github.svg"}
+                            alt='GitHub Link'
+                            width={30}
+                            height={30}
+                        />
                         &nbsp;<span>Visit my GitHub</span>
                     </a>
                 </Paragraph>

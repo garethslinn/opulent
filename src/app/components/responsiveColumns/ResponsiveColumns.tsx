@@ -25,8 +25,6 @@ interface ResponsiveColumnsProps {
 const ResponsiveColumns: React.FC<ResponsiveColumnsProps> = ({ columns }) => {
     const { currentTheme: { theme } } = useTheme();
 
-    console.log('columns: ', columns)
-
     return (
         <Container>
             {columns.map((column, index) => (
