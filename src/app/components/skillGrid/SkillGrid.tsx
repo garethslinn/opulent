@@ -36,7 +36,7 @@ const TechSkillsGrid: React.FC<TechSkillsGridProps> = ({ data }) => {
                 {sortedData.map((skill, index) => (
                     <GridItem key={index} role="listitem">
                         <SkillImage src={skill.image} alt={skill.title} />
-                        <SkillTitle>{skill.title}</SkillTitle>
+                        <SkillTitle><abbr title={skill.title}>{skill.abbr}</abbr></SkillTitle>
                         <SkillYears aria-label={`Years of experience: ${skill.years}`}>
                             {skill.years}
                         </SkillYears>
