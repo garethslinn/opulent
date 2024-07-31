@@ -13,6 +13,7 @@ import {
     NavLink,
 } from "./Header.styles";
 import logo from "../../../../public/assets/images/gds.svg";
+import logoWhite from "../../../../public/assets/images/gds-white.svg";
 import NavList from "./NavList";
 import useDeviceType from "@/app/utils/useDeviceType";
 
@@ -55,6 +56,8 @@ const Header: React.FC<HeaderProps> = ({ toggleTheme, currentTheme }) => { // Co
         }
     };
 
+    console.log('>> currentTheme', currentTheme)
+
     return (
         <header>
             <HeaderContainer isScrolled={isScrolled}>
@@ -65,7 +68,7 @@ const Header: React.FC<HeaderProps> = ({ toggleTheme, currentTheme }) => { // Co
                     <LogoContainer>
                         <Link href="/" passHref aria-label="Homepage">
                             <Image
-                                src={logo}
+                                src={currentTheme.colors.primary === "#000" ? logo : logoWhite}
                                 alt="GDS Consulting Logo"
                                 width={imageWidth}
                                 height={imageWidth}

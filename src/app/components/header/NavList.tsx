@@ -10,7 +10,9 @@ import {
     BackgroundOverlay,
 } from "./NavList.styles";
 import linkedinIcon from "../../../../public/assets/images/brands/linkedin.svg";
+import linkedinIconWhite from "../../../../public/assets/images/brands-white/linkedin.svg";
 import githubIcon from "../../../../public/assets/images/brands/github.svg";
+import githubIconWhite from "../../../../public/assets/images/brands-white/github.svg";
 import useDeviceType from "@/app/utils/useDeviceType";
 import ThemeToggleButton from "../themeToggleButton/ThemeToggleButton"; // Import the Theme Toggle Button component
 
@@ -22,11 +24,11 @@ interface NavListProps {
 }
 
 const NavList: React.FC<NavListProps> = ({
-                                             isMenuOpen = false,
-                                             toggleMenu,
-                                             toggleTheme,
-                                             currentTheme,
-                                         }) => {
+         isMenuOpen = false,
+         toggleMenu,
+         toggleTheme,
+         currentTheme,
+     }) => {
     const [deviceType, width] = useDeviceType();
     const pathname = usePathname();
     const closeButtonRef = useRef<HTMLImageElement>(null);
@@ -171,7 +173,8 @@ const NavList: React.FC<NavListProps> = ({
                         role="menuitem"
                         tabIndex={isMenuOpen ? 0 : -1}
                     >
-                        <Image src={linkedinIcon} alt="LinkedIn" width={30} height={30} />
+
+                        <Image src={theme === "light" ? linkedinIcon : linkedinIconWhite} alt="LinkedIn" width={30} height={30} />
                     </a>
                     {width < 1150 && (
                         <>
@@ -184,7 +187,8 @@ const NavList: React.FC<NavListProps> = ({
                                 role="menuitem"
                                 tabIndex={isMenuOpen ? 0 : -1}
                             >
-                                <Image src={githubIcon} alt="GitHub" width={30} height={30} />
+                                <Image src={theme === "light" ? githubIcon : githubIconWhite} alt="GitHub" width={30} height={30} />
+
                             </a>
                         </>
                     )}
@@ -198,7 +202,13 @@ const NavList: React.FC<NavListProps> = ({
                             onClick={toggleMenu}
                             role="menuitem"
                         >
-                            <Image src={githubIcon} alt="GitHub" width={30} height={30} />
+
+                            <Image
+                                src={theme === "light" ? githubIcon : githubIconWhite}
+                                alt="GitHub"
+                                width={30}
+                                height={30}
+                            />
                         </a>
                     </NavItem>
                 )}
