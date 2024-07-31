@@ -61,7 +61,7 @@ const PieChart: React.FC<PieChartProps> = ({ data, subtext }) => {
                                 const d = describeArc(100, 100, radius, startAngle, endAngle);
                                 const color = colors[index % colors.length];
                                 startAngle = endAngle;
-                                return <Slice key={index} d={d} color={color} aria-label={`${method.title}: ${method.percent}%`} />;
+                                return <Slice key={index} d={d} color={color} />;
                             })}
                         </Svg>
                     </SvgContainer>

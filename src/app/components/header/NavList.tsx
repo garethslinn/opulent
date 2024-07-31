@@ -74,7 +74,7 @@ const NavList: React.FC<NavListProps> = ({
     return (
         <>
             <BackgroundOverlay isOpen={isMenuOpen} onClick={toggleMenu} aria-hidden={!isMenuOpen} />
-            <NavListContainer isOpen={isMenuOpen} role="dialog" aria-modal="true">
+            <NavListContainer isOpen={isMenuOpen} role="dialog" aria-labelledby="main-navigation" aria-modal="true">
                 {width < 1150 && (
                     <CloseButton
                         ref={closeButtonRef}
