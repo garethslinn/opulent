@@ -56,6 +56,7 @@
 // export default theme;
 
 const lightTheme = {
+    theme: 'light',
     colors: {
         primary: '#000',
         secondary: '#0070f3',
@@ -72,6 +73,7 @@ const lightTheme = {
         tabActiveColor: '#fff',
         tabInactiveColor: '#000',
         containerBackground: '#f1f1f1',
+        brandContainer: '#f0f0f0',
         lightBlue: '#989cf5',
         cardBackground: '#fff',
         linkColor: '#505275',
@@ -110,6 +112,7 @@ const lightTheme = {
 };
 
 const darkTheme = {
+    theme: 'dark',
     colors: {
         primary: '#fff',
         secondary: '#1E90FF',
@@ -126,6 +129,7 @@ const darkTheme = {
         tabActiveColor: '#e0e0e0',
         tabInactiveColor: '#757575',
         containerBackground: '#1e1e1e',
+        brandContainer: '#999',
         lightBlue: '#7289da',
         cardBackground: '#212121',
         linkColor: '#fff',

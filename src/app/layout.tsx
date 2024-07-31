@@ -1,12 +1,11 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
-import { createGlobalStyle, ThemeProvider } from "styled-components";
-import { lightTheme, darkTheme } from "@/theme";
+import React from "react";
+import { createGlobalStyle, ThemeProvider as StyledThemeProvider } from "styled-components";
+import { ThemeProvider as ContextThemeProvider, useTheme } from "@/app/context/ThemeContext";
 import Header from "./components/header/Header";
 import Footer from "@/app/components/footer/Footer";
 import "../../src/app/globals.css";
-import styled from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -16,10 +15,10 @@ const GlobalStyle = createGlobalStyle`
     background-color: ${({ theme }) => theme.colors.containerBackground};
     color: ${({ theme }) => theme.colors.text};
   }
-  
+
   main {
     padding: 0 50px;
-    
+
     @media (max-width: 640px) {
       padding: 0 10px;
     }
@@ -27,34 +26,6 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-    const [isClient, setIsClient] = useState(false);
-    const [currentTheme, setCurrentTheme] = useState(lightTheme); // Initial default theme
-
-    useEffect(() => {
-        // Ensure we are in a client-side environment
-        if (typeof window !== "undefined") {
-            const savedTheme = localStorage.getItem("theme");
-
-            if (savedTheme) {
-                setCurrentTheme(savedTheme === "dark" ? darkTheme : lightTheme);
-            } else {
-                setCurrentTheme(lightTheme);
-            }
-        }
-
-        setIsClient(true); // Ensure client-side rendering
-    }, []);
-
-    const toggleTheme = () => {
-        const newTheme = currentTheme === lightTheme ? darkTheme : lightTheme;
-        setCurrentTheme(newTheme);
-
-        if (typeof window !== "undefined") {
-            const newThemeName = newTheme === lightTheme ? "light" : "dark";
-            localStorage.setItem("theme", newThemeName);
-        }
-    };
-
     return (
         <html lang="en">
         <head>
@@ -68,13 +39,23 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <title>GDS Consulting Ltd</title>
         </head>
         <body>
-        <ThemeProvider theme={currentTheme}>
-            <GlobalStyle />
-            <Header toggleTheme={toggleTheme} currentTheme={currentTheme} />
-            <main id="main">{isClient ? children : null}</main>
-            <Footer />
-        </ThemeProvider>
+        <ContextThemeProvider>
+            <Content>{children}</Content>
+        </ContextThemeProvider>
         </body>
         </html>
     );
 }
+
+const Content: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+    const { currentTheme, toggleTheme } = useTheme();
+
+    return (
+        <StyledThemeProvider theme={currentTheme}>
+            <GlobalStyle />
+            <Header toggleTheme={toggleTheme} currentTheme={currentTheme} />
+            <main id="main">{children}</main>
+            <Footer />
+        </StyledThemeProvider>
+    );
+};

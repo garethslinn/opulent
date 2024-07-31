@@ -56,8 +56,6 @@ const Header: React.FC<HeaderProps> = ({ toggleTheme, currentTheme }) => { // Co
         }
     };
 
-    console.log('>> currentTheme', currentTheme)
-
     return (
         <header>
             <HeaderContainer isScrolled={isScrolled}>

@@ -38,15 +38,21 @@ export const SkillTitle = styled.h3`
     top: 0; 
     transform: translateY(0);
     width: 20px;
-    height: 20px; 
-    background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwbW0iIGhlaWdodD0iMjAwbW0iIHZpZXdCb3g9IjAgMCAyMDAgMjAwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIHN0eWxlPSJmaWxsOiMwMDA7c3Ryb2tlOiMwMDA7c3Ryb2tlLXdpZHRoOjIuNjk5OTk7c3Ryb2tlLWxpbmVjYXA6cm91bmQ7c3Ryb2tlLWxpbmVqb2luOnJvdW5kIiBkPSJtLTg1LjU5MyA5NC4wNjgtNzAuODE4LTQ1Ljc5Ny02OC40MiA0OS4zMDYgMjEuNjcxLTgxLjUwMy02OC4wMzUtNDkuODM2IDg0LjIxLTQuNTc1IDI2LjM3My04MC4xMDYgMzAuMzc0IDc4LjY3NiA4NC4zMzQuMzI3LTY1LjQzOSA1My4yeiIgZmlsbD0iIzAwMCIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjIuNjk5OTkiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgdHJhbnNmb3JtPSJtYXRyaXgoLjg2NjMyIC4wMTgzNSAtLjAxODIgLjg0NDYgMjM4LjI1NCAxMTMuMTE5KSIvPjwvc3ZnPg==') no-repeat center center;
+    height: 20px;
+    background: ${({ theme }) => `
+      url('data:image/svg+xml;base64,${btoa(`
+        <svg xmlns="http://www.w3.org/2000/svg" width="20mm" height="20mm" viewBox="0 0 200 200">
+          <path d="m-85.593 94.068-70.818-45.797-68.42 49.306 21.671-81.503-68.035-49.836 84.21-4.575 26.373-80.106 30.374 78.676 84.334.327-65.439 53.2z"
+            style="fill:${theme.colors.black};stroke:none;stroke-width:2.69999;stroke-linecap:round;stroke-linejoin:round"
+            transform="matrix(.86632 .01835 -.01882 .8446 238.254 113.119)"/>
+        </svg>
+      `)}') no-repeat center center;
+    `};
     background-size: contain;
-
   }
 `;
 
 export const SkillDescription = styled.p`
     margin: 0;
     font-size: 18px;
-
 `;

@@ -38,7 +38,7 @@ export const Logo = styled.div`
   width: 100%;
   height: 100px;
   margin-bottom: 15px;
-  background-color: #f0f0f0; /* Placeholder for logo */
+  background-color: ${({ theme }) => theme.colors.brandContainer};
 `;
 
 export const Paragraph = styled.p`

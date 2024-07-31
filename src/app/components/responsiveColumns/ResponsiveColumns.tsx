@@ -8,6 +8,7 @@ import {
     Paragraph,
     LearnMoreLink
 } from './ResponsiveColumns.styles';
+import {useTheme} from "@/app/context/ThemeContext";
 
 interface ColumnData {
     logo: string;
@@ -20,13 +21,15 @@ interface ResponsiveColumnsProps {
 }
 
 const ResponsiveColumns: React.FC<ResponsiveColumnsProps> = ({ columns }) => {
+    const { currentTheme: { theme } } = useTheme();
+
     return (
         <Container>
             {columns.map((column, index) => (
                 <Column key={index}>
                     <Logo>
                         <Image
-                            src={column.logo}
+                            src={theme === 'light' ? column.logo : column.logoWhite}
                             alt={`Logo for ${column.description}`}
                             layout="fill"
                             objectFit="contain"

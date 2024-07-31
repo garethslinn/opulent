@@ -9,6 +9,7 @@ import {
 import { Skill, SkillCardsProps } from "@/app/components/skillCards/SkillCards.types";
 
 const SkillCards: React.FC<SkillCardsProps> = ({ skills }) => {
+
     return (
         <GridContainer role="list">
             {skills.map((skill, index) => (

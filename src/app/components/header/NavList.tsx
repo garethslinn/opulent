@@ -15,6 +15,7 @@ import githubIcon from "../../../../public/assets/images/brands/github.svg";
 import githubIconWhite from "../../../../public/assets/images/brands-white/github.svg";
 import useDeviceType from "@/app/utils/useDeviceType";
 import ThemeToggleButton from "../themeToggleButton/ThemeToggleButton";
+import {useTheme} from "@/app/context/ThemeContext";
 
 interface NavListProps {
     isMenuOpen?: boolean;
@@ -24,15 +25,15 @@ interface NavListProps {
 }
 
 const NavList: React.FC<NavListProps> = ({
-                                             isMenuOpen = false,
-                                             toggleMenu,
-                                             toggleTheme,
-                                             currentTheme,
-                                         }) => {
+         isMenuOpen = false,
+         toggleMenu,
+         toggleTheme,
+         currentTheme,
+     }) => {
     const [deviceType, width] = useDeviceType();
     const pathname = usePathname();
     const closeButtonRef = useRef<HTMLImageElement>(null);
-    const [theme, setTheme] = useState<string>(currentTheme);
+    const { currentTheme: { theme } } = useTheme();
 
     const isActive = (path: string) => {
         if (!pathname) return false;
@@ -41,13 +42,6 @@ const NavList: React.FC<NavListProps> = ({
         }
         return pathname.startsWith(path);
     };
-
-    useEffect(() => {
-        if (typeof window !== "undefined") {
-            const storedTheme = localStorage.getItem("theme") || currentTheme;
-            setTheme(storedTheme);
-        }
-    }, [currentTheme]);
 
     useEffect(() => {
         if (isMenuOpen) {
