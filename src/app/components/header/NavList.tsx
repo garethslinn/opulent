@@ -35,6 +35,7 @@ const NavList: React.FC<NavListProps> = ({
     const [theme, setTheme] = useState<string>(currentTheme);
 
     const isActive = (path: string) => {
+        if (!pathname) return false;
         if (path === "/") {
             return pathname === path;
         }
