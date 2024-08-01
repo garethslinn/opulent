@@ -1,7 +1,7 @@
 import React from 'react';
 import Title from "@/app/components/title/Title";
 import RecommendationsComponent from "@/app/components/recommendations/Recommendations";
-import { recommendations } from "@/app/stubs/recommendations";
+import { recommendations } from "@/app/constants/recommendations";
 import Paragraph from "@/app/components/paragraph/Paragraph";
 
 const Recommendations: React.FC = () => {

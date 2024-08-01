@@ -10,8 +10,8 @@ import {
 } from './ChartsContainer.styles';
 import BarGraph from "@/app/components/charts/barGraph/BarGraph";
 import PieChart from "@/app/components/charts/pieChart/PieChart";
-import { methodologies } from "@/app/stubs/methodologies";
-import { industries } from "@/app/stubs/industries";
+import { methodologies } from "@/app/constants/methodologies";
+import { industries } from "@/app/constants/industries";
 
 const ChartsContainer: React.FC = () => {
 

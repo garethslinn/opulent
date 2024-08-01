@@ -15,11 +15,11 @@ import {
     BulletItem
 } from '../../components/bulletList/BulletList.styles';
 import InlineList from "@/app/components/inlineList/InlineList";
-import { companies } from "@/app/stubs/companies";
-import { items } from "@/app/stubs/items";
+import { companies } from "@/app/constants/companies";
+import { items } from "@/app/constants/items";
 import Item from "@/app/components/item/item";
 import Counter from "@/app/components/counter/Counter";
-import useDeviceType from "@/app/utils/useDeviceType";
+import useDeviceType from "@/app/hooks/useDeviceType";
 import { useTheme } from "styled-components"; // Import useTheme
 
 const QuoteTool: React.FC<{ quoteText?: string }> = ({ quoteText = "Professional Experience" }) => {

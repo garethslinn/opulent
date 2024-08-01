@@ -4,10 +4,10 @@ import React from 'react';
 import Title from "@/app/components/title/Title";
 import Paragraph from "@/app/components/paragraph/Paragraph";
 import Tabs from "@/app/components/tabs/Tabs";
-import CaseStudyArgos from "@/app/stubs/casestudies/argos";
-import CaseStudyAIG from "@/app/stubs/casestudies/aig";
-import CaseStudyDugout from "@/app/stubs/casestudies/dugout";
-import CaseStudyBT from "@/app/stubs/casestudies/bt";
+import CaseStudyArgos from "@/app/constants/casestudies/argos";
+import CaseStudyAIG from "@/app/constants/casestudies/aig";
+import CaseStudyDugout from "@/app/constants/casestudies/dugout";
+import CaseStudyBT from "@/app/constants/casestudies/bt";
 
 const CaseStudies: React.FC = () => {
 

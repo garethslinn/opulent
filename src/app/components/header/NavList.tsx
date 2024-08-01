@@ -13,10 +13,10 @@ import linkedinIcon from "../../../../public/assets/images/brands/linkedin.svg";
 import linkedinIconWhite from "../../../../public/assets/images/brands-white/linkedin.svg";
 import githubIcon from "../../../../public/assets/images/brands/github.svg";
 import githubIconWhite from "../../../../public/assets/images/brands-white/github.svg";
-import useDeviceType from "@/app/utils/useDeviceType";
+import useDeviceType from "@/app/hooks/useDeviceType";
 import ThemeToggleButton from "../themeToggleButton/ThemeToggleButton";
 import { useTheme } from "@/app/context/ThemeContext";
-import useNoScroll from "@/app/utils/useNoScroll";  // Import the useNoScroll hook
+import useNoScroll from "@/app/hooks/useNoScroll";  // Import the useNoScroll hook
 
 interface NavListProps {
     isMenuOpen?: boolean;

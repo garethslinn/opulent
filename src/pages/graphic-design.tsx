@@ -4,15 +4,15 @@ import React from 'react';
 import Title from "@/app/components/title/Title";
 import Paragraph from "@/app/components/paragraph/Paragraph";
 import SkillGrid from "@/app/components/skillGrid/SkillGrid";
-import { techSkills } from "@/app/stubs/techSkills";
+import { techSkills } from "@/app/constants/techSkills";
 import QuoteTool from "../app/components/quoteTool/QuoteTool";
 import TwoColumnContainer from "@/app/components/layout/TwoColumnContainer";
 import BarGraph from "@/app/components/charts/barGraph/BarGraph";
-import { industries } from "@/app/stubs/industries";
+import { industries } from "@/app/constants/industries";
 import PieChart from "@/app/components/charts/pieChart/PieChart";
-import { methodologies } from "@/app/stubs/methodologies";
+import { methodologies } from "@/app/constants/methodologies";
 import SkillCards from "@/app/components/skillCards/SkillCards";
-import { softSkills } from "@/app/stubs/softSkills";
+import { softSkills } from "@/app/constants/softSkills";
 import ImageDisplay from "@/app/components/imageDisplay/ImageDisplay";
 
 const GraphicDesign: React.FC = () => {

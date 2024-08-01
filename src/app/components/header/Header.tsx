@@ -15,7 +15,7 @@ import {
 import logo from "../../../../public/assets/images/gds.svg";
 import logoWhite from "../../../../public/assets/images/gds-white.svg";
 import NavList from "./NavList";
-import useDeviceType from "@/app/utils/useDeviceType";
+import useDeviceType from "@/app/hooks/useDeviceType";
 
 interface HeaderProps {
     toggleTheme: () => void; // Define the toggleTheme prop type

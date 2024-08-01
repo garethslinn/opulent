@@ -3,7 +3,7 @@ import Button from "@/app/components/button/Button";
 import ArrowButton from "@/app/components/arrow/Arrow"; // Ensure this matches the correct casing in the filesystem
 import { BUTTON_CONST as BUTTON_CONSTANTS } from "@/app/components/button/Button.const";
 import { CounterStyle } from './Counter.style';
-import { companies } from "@/app/stubs/companies";
+import { companies } from "@/app/constants/companies";
 
 interface CounterProps {
     activeIndex: number;

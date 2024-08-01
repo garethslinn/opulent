@@ -2,13 +2,13 @@
 
 import QuoteTool from "@/app/components/quoteTool/QuoteTool";
 import PieChart from "@/app/components/charts/pieChart/PieChart";
-import { methodologies } from "@/app/stubs/methodologies";
-import { industries } from "@/app/stubs/industries";
+import { methodologies } from "@/app/constants/methodologies";
+import { industries } from "@/app/constants/industries";
 import BarGraph from "@/app/components/charts/barGraph/BarGraph";
 import SkillGrid from "@/app/components/skillGrid/SkillGrid";
-import { techSkills } from "@/app/stubs/techSkills";
+import { techSkills } from "@/app/constants/techSkills";
 import TwoColumnContainer from "@/app/components/layout/TwoColumnContainer";
-import {softSkills} from "@/app/stubs/softSkills";
+import {softSkills} from "@/app/constants/softSkills";
 import SkillCards from "@/app/components/skillCards/SkillCards";
 import Title from "@/app/components/title/Title";
 import Paragraph from "@/app/components/paragraph/Paragraph";
