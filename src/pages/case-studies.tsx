@@ -20,8 +20,8 @@ const CaseStudies: React.FC = () => {
 
     return (
         <>
-            <section aria-labelledby="Case Studies">
-                <Title first text="Case Studies" />
+            <section aria-labelledby="case-studies">
+                <Title id="case-studies" first text="Case Studies" />
                 <Paragraph first backgroundColor="#f1f1f1" foregroundColor="">
                     Discover the impactful projects I have delivered for various organisations. These case studies
                     highlight my solutions to complex problems, innovative strategies, and measurable results

@@ -7,8 +7,8 @@ import Paragraph from "@/app/components/paragraph/Paragraph";
 const Recommendations: React.FC = () => {
     return (
         <>
-            <section aria-labelledby="Recommendations and Customer Testimonials">
-                <Title first text="Recommendations and Customer Testimonials" />
+            <section aria-labelledby="recommendations">
+                <Title id="recommendations" first text="Recommendations and Customer Testimonials" />
                 <Paragraph first backgroundColor="#f1f1f1" foregroundColor="">
                     Here is a list of public recommendations extracted from my
                     <a href="https://www.linkedin.com/in/garethslinn/details/recommendations/?detailScreenTabIndex=0">

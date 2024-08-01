@@ -18,8 +18,8 @@ import ImageDisplay from "@/app/components/imageDisplay/ImageDisplay";
 const GraphicDesign: React.FC = () => {
     return (
         <>
-            <section aria-labelledby="Graphic Design">
-                <Title first text="Graphic Design" />
+            <section aria-labelledby="design">
+                <Title id="design" first text="Graphic Design" />
                 <Paragraph first backgroundColor="#f1f1f1" foregroundColor="">
                     Though my commercial expertise is in development, I have always had a natural
                     talent for design and art. Drawing has been a part of my life since childhood,

@@ -12,8 +12,8 @@ const OpenSource: React.FC = () => {
 
     return (
         <>
-            <section aria-labelledby="open-source-title">
-                <Title first text="Open Source" />
+            <section aria-labelledby="open-source">
+                <Title id="open-source" first text="Open Source" />
                 <Paragraph first backgroundColor="#f1f1f1" foregroundColor="">
                     Whether you are working with complex data manipulations, need robust validation methods,
                     or require specialised functionality for your JavaScript applications, these packages
