@@ -15,7 +15,8 @@ import githubIcon from "../../../../public/assets/images/brands/github.svg";
 import githubIconWhite from "../../../../public/assets/images/brands-white/github.svg";
 import useDeviceType from "@/app/utils/useDeviceType";
 import ThemeToggleButton from "../themeToggleButton/ThemeToggleButton";
-import {useTheme} from "@/app/context/ThemeContext";
+import { useTheme } from "@/app/context/ThemeContext";
+import useNoScroll from "@/app/utils/useNoScroll";  // Import the useNoScroll hook
 
 interface NavListProps {
     isMenuOpen?: boolean;
@@ -25,11 +26,11 @@ interface NavListProps {
 }
 
 const NavList: React.FC<NavListProps> = ({
-         isMenuOpen = false,
-         toggleMenu,
-         toggleTheme,
-         currentTheme,
-     }) => {
+                                             isMenuOpen = false,
+                                             toggleMenu,
+                                             toggleTheme,
+                                             currentTheme,
+                                         }) => {
     const [deviceType, width] = useDeviceType();
     const pathname = usePathname();
     const closeButtonRef = useRef<HTMLImageElement>(null);
@@ -43,12 +44,11 @@ const NavList: React.FC<NavListProps> = ({
         return pathname.startsWith(path);
     };
 
+    useNoScroll(isMenuOpen);  // Use the hook here
+
     useEffect(() => {
         if (isMenuOpen) {
-            document.body.style.overflow = "hidden";
             closeButtonRef.current?.focus();
-        } else {
-            document.body.style.overflow = "auto";
         }
 
         const handleEscape = (event: KeyboardEvent) => {
@@ -61,7 +61,6 @@ const NavList: React.FC<NavListProps> = ({
 
         return () => {
             document.removeEventListener("keydown", handleEscape);
-            document.body.style.overflow = "auto";
         };
     }, [isMenuOpen, toggleMenu]);
 
