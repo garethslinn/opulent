@@ -27,7 +27,8 @@ const ResponsiveColumns: React.FC<ResponsiveColumnsProps> = ({ columns }) => {
 
     return (
         <Container>
-            {columns.map((column, index) => (
+
+            {columns && columns.map((column, index) => (
                 <Column key={index}>
                     <Logo>
                         <Image
