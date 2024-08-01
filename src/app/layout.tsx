@@ -41,6 +41,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
             <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png" />
             <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png" />
+            <meta charSet="UTF-8"/>
+            <meta name="description" content="GDS Consulting Ltd provides expert consulting services in the fields of technology, frontend development, business strategy, and digital transformation. We help businesses thrive in the digital age."/>
+            <meta name="keywords" content="GDS Consulting, frontend development, business consulting, technology consulting, digital transformation, business strategy"/>
+            <meta name="author" content="GDS Consulting Ltd"/>
             <title>GDS Consulting Ltd</title>
         </head>
         <body>
