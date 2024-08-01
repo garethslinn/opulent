@@ -23,6 +23,11 @@ const GlobalStyle = createGlobalStyle`
       padding: 0 10px;
     }
   }
+  
+  .accessible {
+    position: absolute;
+    top: -3000px;
+  }
 `;
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

@@ -26,11 +26,11 @@ interface NavListProps {
 }
 
 const NavList: React.FC<NavListProps> = ({
-                                             isMenuOpen = false,
-                                             toggleMenu,
-                                             toggleTheme,
-                                             currentTheme,
-                                         }) => {
+         isMenuOpen = false,
+         toggleMenu,
+         toggleTheme,
+         currentTheme,
+     }) => {
     const [deviceType, width] = useDeviceType();
     const pathname = usePathname();
     const closeButtonRef = useRef<HTMLImageElement>(null);
@@ -44,7 +44,7 @@ const NavList: React.FC<NavListProps> = ({
         return pathname.startsWith(path);
     };
 
-    useNoScroll(isMenuOpen);  // Use the hook here
+    useNoScroll(isMenuOpen);
 
     useEffect(() => {
         if (isMenuOpen) {
@@ -67,7 +67,8 @@ const NavList: React.FC<NavListProps> = ({
     return (
         <>
             <BackgroundOverlay isOpen={isMenuOpen} onClick={toggleMenu} aria-hidden={!isMenuOpen} />
-            <NavListContainer isOpen={isMenuOpen} role="dialog" aria-labelledby="main-navigation" aria-modal="true">
+            <NavListContainer isOpen={isMenuOpen} role="dialog" aria-labelledby="dialogTitle1" aria-modal="true">
+                <h2 className="accessible" id="dialogTitle1">Main Navigation</h2>
                 {width < 1150 && (
                     <CloseButton
                         ref={closeButtonRef}
@@ -81,42 +82,42 @@ const NavList: React.FC<NavListProps> = ({
                 )}
                 <NavItem role="none">
                     <Link href="/" passHref>
-                        <NavLink onClick={toggleMenu} isActive={isActive("/")} role="menuitem" tabIndex={isMenuOpen ? 0 : -1}>
+                        <NavLink onClick={toggleMenu} isActive={isActive("/")} tabIndex={isMenuOpen ? 0 : -1}>
                             About
                         </NavLink>
                     </Link>
                 </NavItem>
                 <NavItem role="none">
                     <Link href="/experience" passHref>
-                        <NavLink onClick={toggleMenu} isActive={isActive("/experience")} role="menuitem" tabIndex={isMenuOpen ? 0 : -1}>
+                        <NavLink onClick={toggleMenu} isActive={isActive("/experience")} tabIndex={isMenuOpen ? 0 : -1}>
                             Experience
                         </NavLink>
                     </Link>
                 </NavItem>
                 <NavItem role="none">
                     <Link href="/open-source" passHref>
-                        <NavLink onClick={toggleMenu} isActive={isActive("/open-source")} role="menuitem" tabIndex={isMenuOpen ? 0 : -1}>
+                        <NavLink onClick={toggleMenu} isActive={isActive("/open-source")} tabIndex={isMenuOpen ? 0 : -1}>
                             Open&nbsp;Source
                         </NavLink>
                     </Link>
                 </NavItem>
                 <NavItem role="none">
                     <Link href="/case-studies" passHref>
-                        <NavLink onClick={toggleMenu} isActive={isActive("/case-studies")} role="menuitem" tabIndex={isMenuOpen ? 0 : -1}>
+                        <NavLink onClick={toggleMenu} isActive={isActive("/case-studies")} tabIndex={isMenuOpen ? 0 : -1}>
                             Case&nbsp;Studies
                         </NavLink>
                     </Link>
                 </NavItem>
                 <NavItem role="none">
                     <Link href="/graphic-design" passHref>
-                        <NavLink onClick={toggleMenu} isActive={isActive("/graphic-design")} role="menuitem" tabIndex={isMenuOpen ? 0 : -1}>
+                        <NavLink onClick={toggleMenu} isActive={isActive("/graphic-design")} tabIndex={isMenuOpen ? 0 : -1}>
                             Design
                         </NavLink>
                     </Link>
                 </NavItem>
                 <NavItem role="none">
                     <Link href="/recommendations" passHref>
-                        <NavLink onClick={toggleMenu} isActive={isActive("/recommendations")} role="menuitem" tabIndex={isMenuOpen ? 0 : -1}>
+                        <NavLink onClick={toggleMenu} isActive={isActive("/recommendations")} tabIndex={isMenuOpen ? 0 : -1}>
                             Recommendations
                         </NavLink>
                     </Link>
@@ -127,7 +128,6 @@ const NavList: React.FC<NavListProps> = ({
                         target="_blank"
                         rel="noopener noreferrer"
                         onClick={toggleMenu}
-                        role="menuitem"
                         tabIndex={isMenuOpen ? 0 : -1}
                     >
                         <Image src={theme === "light" ? linkedinIcon : linkedinIconWhite} alt="LinkedIn" width={30} height={30} />
@@ -140,7 +140,6 @@ const NavList: React.FC<NavListProps> = ({
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 onClick={toggleMenu}
-                                role="menuitem"
                                 tabIndex={isMenuOpen ? 0 : -1}
                             >
                                 <Image src={theme === "light" ? githubIcon : githubIconWhite} alt="GitHub" width={30} height={30} />
@@ -155,7 +154,6 @@ const NavList: React.FC<NavListProps> = ({
                             target="_blank"
                             rel="noopener noreferrer"
                             onClick={toggleMenu}
-                            role="menuitem"
                         >
                             <Image src={theme === "light" ? githubIcon : githubIconWhite} alt="GitHub" width={30} height={30} />
                         </a>

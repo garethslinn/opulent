@@ -1,5 +1,3 @@
-"use client";
-
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -9,8 +7,6 @@ import {
     LogoContainer,
     BurgerMenu,
     SkipLink,
-    NavItem,
-    NavLink,
 } from "./Header.styles";
 import logo from "../../../../public/assets/images/gds.svg";
 import logoWhite from "../../../../public/assets/images/gds-white.svg";
@@ -18,23 +14,18 @@ import NavList from "./NavList";
 import useDeviceType from "@/app/hooks/useDeviceType";
 
 interface HeaderProps {
-    toggleTheme: () => void; // Define the toggleTheme prop type
+    toggleTheme: () => void;
     currentTheme: any;
 }
 
-const Header: React.FC<HeaderProps> = ({ toggleTheme, currentTheme }) => { // Correctly destructure toggleTheme
+const Header: React.FC<HeaderProps> = ({ toggleTheme, currentTheme }) => {
     const [deviceType, width] = useDeviceType();
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMenuOpen, setMenuOpen] = useState(false);
     const [imageWidth, setImageWidth] = useState<number>(100);
 
     useEffect(() => {
-        const wd =
-            deviceType === "tablet-lg" ||
-            deviceType === "tablet-sm" ||
-            deviceType === "mobile"
-                ? 50
-                : 100;
+        const wd = deviceType === "tablet-lg" || deviceType === "tablet-sm" || deviceType === "mobile" ? 50 : 100;
         setImageWidth(wd);
     }, [deviceType]);
 
@@ -42,25 +33,21 @@ const Header: React.FC<HeaderProps> = ({ toggleTheme, currentTheme }) => { // Co
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 0);
         };
-
         window.addEventListener("scroll", handleScroll);
-
         return () => {
             window.removeEventListener("scroll", handleScroll);
         };
     }, []);
 
     const toggleMenu = () => {
-        {
-            width < 1150 && setMenuOpen(!isMenuOpen);
-        }
+        width < 1150 && setMenuOpen(!isMenuOpen);
     };
 
     return (
         <header>
             <HeaderContainer isScrolled={isScrolled}>
                 <SkipLink className="skip-link" href="#main">
-                    skip to main content
+                    Skip to main content
                 </SkipLink>
                 <Nav role="navigation" aria-label="Main Navigation">
                     <LogoContainer>
@@ -75,15 +62,16 @@ const Header: React.FC<HeaderProps> = ({ toggleTheme, currentTheme }) => { // Co
                     </LogoContainer>
                     <NavList
                         isMenuOpen={isMenuOpen}
-                         toggleMenu={toggleMenu}
-                         toggleTheme={toggleTheme}
+                        toggleMenu={toggleMenu}
+                        toggleTheme={toggleTheme}
                         currentTheme={currentTheme}
                     />
                     <BurgerMenu
                         onClick={toggleMenu}
                         aria-label={isMenuOpen ? "Close menu" : "Open menu"}
                         aria-expanded={isMenuOpen}
-                        aria-controls="navigation-menu"
+                        aria-controls="main-navigation"
+                        role="button"
                     >
                         <div></div>
                         <div></div>
