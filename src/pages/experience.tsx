@@ -18,8 +18,8 @@ import ChartsContainer from "@/app/components/charts/chartsContainer/ChartsConta
 export default function Experience() {
     return (
         <>
-            <section aria-labelledby="Experience cannot be learned">
-                <Title first text="Experience cannot be learned" />
+            <section aria-labelledby="experience">
+                <Title id="experience" first text="Experience cannot be learned" />
                 <Paragraph first backgroundColor="#f1f1f1" foregroundColor="">
                     As a seasoned developer with over 20 years of commercial experience,
                     I have had the privilege of working across a myriad of industries
@@ -30,23 +30,23 @@ export default function Experience() {
                 </Paragraph>
             </section>
 
-            <section aria-labelledby="Tech Skills by Years Experience">
-                <Title text="Tech Skills by Years Experience" />
+            <section aria-labelledby="tech-skills">
+                <Title id="tech-skills" text="Tech Skills by Years Experience" />
                 <SkillGrid data={techSkills} />
             </section>
 
-            <section aria-labelledby="Skill Metrics">
-                <Title text="Skill Metrics" />
+            <section aria-labelledby="metrics">
+                <Title id="metrics" text="Skill Metrics" />
                 <ChartsContainer />
             </section>
 
-            <section aria-labelledby="Soft Skills">
-                <Title text="Soft Skills" />
+            <section aria-labelledby="soft-skills">
+                <Title id="soft-skills" text="Soft Skills" />
                 <SkillCards skills={softSkills} />
             </section>
 
-            <section aria-labelledby="Clients">
-                <Title backgroundColor="#f1f1f1" text="Clients" />
+            <section aria-labelledby="clients">
+                <Title id="clients" backgroundColor="#f1f1f1" text="Clients" />
                 <QuoteTool />
             </section>
         </>
