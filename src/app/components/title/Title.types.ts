@@ -3,4 +3,5 @@ export interface TitleProps {
     text: string;
     foregroundColor?: string;
     first?: boolean;
+    id?: string;
 }
