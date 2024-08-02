@@ -1,5 +1,11 @@
 export const recommendations = [
   {
+    "Name": "Louis Da Silva",
+      "image": "/assets/images/recommendations/louis.jpeg",
+      "Position": "Senior Contract Recruiter - JavaScript | Organiser - Leadership Roundtable...",
+      "Description": "What can I say about Gareth? If you want a top tier developer engaged on a project from start to finish then he is your man. Very easy to work with, will always be honest and upfront about things and best of all the work he does speaks for itself. Gareth is very proactive and dedicated developer that I'd happily recommend.,"
+  },
+  {
     "Name": "Anish Mehan",
     "image": "/assets/images/recommendations/anish.jpeg",
     "Position": "Lead eCommerce Tech Recruitment Consultant",
