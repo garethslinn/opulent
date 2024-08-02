@@ -27,7 +27,7 @@ const QuoteTool: React.FC<{ quoteText?: string }> = ({ quoteText = "Professional
     const [activeTitle, setActiveTitle] = useState<string>(companies[0].title);
     const [activeDescription, setActiveDescription] = useState<string[]>(companies[0].description); // Updated to string[]
     const [activeSkills, setActiveSkills] = useState<string[]>(companies[0].skills.split(', '));
-    const [isUserInteracting, setIsUserInteracting] = useState<boolean>(false);
+    const [isUserInteracting, setIsUserInteracting] = useState<boolean>(true); // cancel automation
     const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
     const [deviceType, width] = useDeviceType();
