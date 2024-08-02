@@ -81,6 +81,6 @@ export const BackgroundOverlay = styled.div<{ isOpen?: boolean }>`
   opacity: 1;
   z-index: 1000;
   overflow: hidden;
-  backdrop-filter: blur(20px); 
-
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px); 
 `;

@@ -29,6 +29,11 @@
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/development.js"
+    ],
+    "/graphic-design": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/graphic-design.js"
     ]
   },
   "ampFirstPages": []
