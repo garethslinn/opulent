@@ -6,6 +6,8 @@ import Paragraph from "@/app/components/paragraph/Paragraph";
 import Card from "@/app/components/card/Card";
 import ResponsiveColumns from "@/app/components/responsiveColumns/ResponsiveColumns";
 import {intro} from "@/app/constants/casestudies/intro";
+// import {steps} from "@/app/constants/steps";
+// import StepIndicator from "@/app/components/stepIndicator/StepIndicator";
 
 
 const About: React.FC = () => {
@@ -16,6 +18,9 @@ const About: React.FC = () => {
             <Paragraph first foregroundColor="">
                 GDS Consulting offers elegant, custom-built solutions from start to finish, addressing the significant challenges you face. I build entire products while also tackling your immediate development and optimisation needs.
             </Paragraph>
+
+            {/*<StepIndicator steps={steps} currentStep={1} />*/}
+
             <ResponsiveColumns columns={intro} />
             <Card
                 title="Frontend Development"
