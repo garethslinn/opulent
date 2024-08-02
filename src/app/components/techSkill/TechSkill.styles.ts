@@ -11,7 +11,7 @@ export const Container = styled.div`
 `;
 
 export const Card = styled.div`
-  background-color: white;
+  background-color: ${({ theme }) => theme.colors.white};
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
@@ -49,7 +49,7 @@ export const DescriptionList = styled.ul`
 `;
 
 export const DescriptionItem = styled.li`
-  font-size: 14px;
+  font-size: 18px;
   margin-bottom: 5px;
 `;
 
