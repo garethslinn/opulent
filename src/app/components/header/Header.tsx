@@ -5,13 +5,13 @@ import {
     HeaderContainer,
     Nav,
     LogoContainer,
-    BurgerMenu,
     SkipLink,
 } from "./Header.styles";
 import logo from "../../../../public/assets/images/gds.svg";
 import logoWhite from "../../../../public/assets/images/gds-white.svg";
 import NavList from "./NavList";
 import useDeviceType from "@/app/hooks/useDeviceType";
+import BurgerMenu from "@/app/components/burgerMenu/BurgerMenu";
 
 interface HeaderProps {
     toggleTheme: () => void;
@@ -66,17 +66,7 @@ const Header: React.FC<HeaderProps> = ({ toggleTheme, currentTheme }) => {
                         toggleTheme={toggleTheme}
                         currentTheme={currentTheme}
                     />
-                    <BurgerMenu
-                        onClick={toggleMenu}
-                        aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-                        aria-expanded={isMenuOpen}
-                        aria-controls="main-navigation"
-                        role="button"
-                    >
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </BurgerMenu>
+                    <BurgerMenu isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
                 </Nav>
             </HeaderContainer>
         </header>

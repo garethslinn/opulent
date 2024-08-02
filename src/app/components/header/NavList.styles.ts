@@ -21,11 +21,28 @@ export const NavListContainer = styled.ul<{ isOpen?: boolean }>`
   }
 `;
 
-export const CloseButton = styled.img`
-  position: absolute;
-  top: ${({ theme }) => theme.spacing.tiny};
-  right: ${({ theme }) => theme.spacing.tiny};
+export const CloseButtonContainer = styled.div`
+  display: flex;
+  align-items: center;
+  gap: ${({ theme }) => theme.spacing.small};
+  border: 2px solid ${({ theme }) => theme.colors.primary};
+  border-radius: ${({ theme }) => theme.borderRadius};
+  padding: ${({ theme }) => theme.spacing.tiny};
   cursor: pointer;
+  position: absolute;
+  top: -4000px;
+  // top: ${({ theme }) => theme.spacing.tiny};
+  right: ${({ theme }) => theme.spacing.tiny};
+`;
+
+export const CloseButton = styled.img`
+  width: 20px;
+  height: 20px;
+`;
+
+export const MenuText = styled.span`
+  font-size: ${({ theme }) => theme.fontSizes.medium};
+  color: ${({ theme }) => theme.colors.primary};
 `;
 
 export const NavItem = styled.li`
@@ -46,7 +63,7 @@ export const NavLink = styled.span<{ isActive?: boolean }>`
   transition: color 0.3s, border-bottom 0.3s;
   margin-bottom: ${({ theme }) => theme.spacing.tiny};
   border-bottom: ${(props) => (props.isActive ? `2px solid ${props.theme.colors.primary}` : 'none')};
-  white-space: nowrap; /* Ensure text doesn't wrap */
+  white-space: nowrap;
 
   &:hover {
     color: ${({ theme }) => theme.colors.textSecondary};
@@ -60,7 +77,8 @@ export const BackgroundOverlay = styled.div<{ isOpen?: boolean }>`
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); 
+  background: ${({ theme }) => theme.colors.white};
+  opacity: 0.9;
   z-index: 1000; 
   overflow: hidden;
 `;

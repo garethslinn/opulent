@@ -29,6 +29,7 @@ export const Nav = styled.nav`
 export const LogoContainer = styled.div`
   display: flex;
   align-items: center;
+  z-index: 4000;
 `;
 
 export const SkipLink = styled.a`
@@ -78,21 +79,4 @@ export const NavLink = styled.a<{ isActive?: boolean }>`
   }
 `;
 
-export const BurgerMenu = styled.div`
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  
-  @media (max-width: 1150px) {
-    display: flex;
-  }
-
-  div {
-    width: 25px;
-    height: 3px;
-    background-color: ${({ theme }) => theme.colors.linkColor};
-    margin: ${({ theme }) => theme.spacing.tiny} 0;
-    transition: 0.4s;
-  }
-`;
 

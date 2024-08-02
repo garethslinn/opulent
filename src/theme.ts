@@ -59,6 +59,7 @@ const lightTheme = {
     theme: 'light',
     colors: {
         primary: '#000',
+        corporate: '#505275',
         secondary: '#0070f3',
         background: '#fff',
         text: '#333',
@@ -115,6 +116,7 @@ const darkTheme = {
     theme: 'dark',
     colors: {
         primary: '#fff',
+        corporate: '#fff',
         secondary: '#1E90FF',
         background: '#121212',
         text: '#e0e0e0',
@@ -123,7 +125,7 @@ const darkTheme = {
         companyBackground: '#383838',
         companyActiveBorder: '#e0e0e0',
         companyActiveBackground: '#212121',
-        counterBackground: '#505275',
+        counterBackground: '#fff',
         tabActiveBackground: '#383838',
         tabInactiveBackground: '#212121',
         tabActiveColor: '#e0e0e0',

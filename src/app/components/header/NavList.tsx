@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -6,7 +6,9 @@ import {
     NavListContainer,
     NavItem,
     NavLink,
+    CloseButtonContainer,
     CloseButton,
+    MenuText,
     BackgroundOverlay,
 } from "./NavList.styles";
 import linkedinIcon from "../../../../public/assets/images/brands/linkedin.svg";
@@ -16,7 +18,7 @@ import githubIconWhite from "../../../../public/assets/images/brands-white/githu
 import useDeviceType from "@/app/hooks/useDeviceType";
 import ThemeToggleButton from "../themeToggleButton/ThemeToggleButton";
 import { useTheme } from "@/app/context/ThemeContext";
-import useNoScroll from "@/app/hooks/useNoScroll";  // Import the useNoScroll hook
+import useNoScroll from "@/app/hooks/useNoScroll";
 
 interface NavListProps {
     isMenuOpen?: boolean;
@@ -26,11 +28,11 @@ interface NavListProps {
 }
 
 const NavList: React.FC<NavListProps> = ({
-         isMenuOpen = false,
-         toggleMenu,
-         toggleTheme,
-         currentTheme,
-     }) => {
+                                             isMenuOpen = false,
+                                             toggleMenu,
+                                             toggleTheme,
+                                             currentTheme,
+                                         }) => {
     const [deviceType, width] = useDeviceType();
     const pathname = usePathname();
     const closeButtonRef = useRef<HTMLImageElement>(null);
@@ -70,15 +72,15 @@ const NavList: React.FC<NavListProps> = ({
             <NavListContainer isOpen={isMenuOpen} role="dialog" aria-labelledby="dialogTitle1" aria-modal="true">
                 <h2 className="accessible" id="dialogTitle1">Main Navigation</h2>
                 {width < 1150 && (
-                    <CloseButton
-                        ref={closeButtonRef}
-                        onClick={toggleMenu}
-                        src={theme === "light" ? "/assets/images/close.svg" : "/assets/images/close_white.svg"}
-                        alt="Close Button"
-                        width={20}
-                        height={20}
-                        aria-label="Close menu"
-                    />
+                    <CloseButtonContainer onClick={toggleMenu} role="button" tabIndex={0}>
+                        <CloseButton
+                            ref={closeButtonRef}
+                            src={theme === "light" ? "/assets/images/close.svg" : "/assets/images/close_white.svg"}
+                            alt="Close Button"
+                            aria-label="Close menu"
+                        />
+                        <MenuText>Menu</MenuText>
+                    </CloseButtonContainer>
                 )}
                 <NavItem role="none">
                     <Link href="/" passHref>
