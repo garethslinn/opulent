@@ -1,9 +1,0 @@
-{
-  "/_app": "pages/_app.js",
-  "/_error": "pages/_error.js",
-  "/_document": "pages/_document.js",
-  "/recommendations": "pages/recommendations.js",
-  "/graphic-design": "pages/graphic-design.js",
-  "/experience": "pages/experience.js",
-  "/open-source": "pages/open-source.js"
-}
