@@ -1,10 +1,17 @@
 import styled from "styled-components";
 
+interface LineProps {
+  isOpen: boolean;
+}
+
+interface WrapperProps {
+  isOpen: boolean;
+}
+
 export const BurgerMenuContainer = styled.div`
   align-items: center;
   background: ${({ theme }) => theme.colors.corporate};
   border-radius: 10px;
-  padding: ${({ theme }) => theme.spacing.tiny};
   cursor: pointer;
   z-index: 4000;
   display: none;
@@ -16,7 +23,7 @@ export const BurgerMenuContainer = styled.div`
   }
 `;
 
-export const BurgerMenuWrapper = styled.div`
+export const BurgerMenuWrapper = styled.div<WrapperProps>`
   display: none;
   flex-direction: column;
   margin-left: ${({ theme }) => theme.spacing.small};
@@ -26,7 +33,7 @@ export const BurgerMenuWrapper = styled.div`
   }
 `;
 
-export const Line = styled.div`
+export const Line = styled.div<LineProps>`
   width: 25px;
   height: 3px;
   background-color: ${({ theme }) => theme.colors.white};
