@@ -19,14 +19,14 @@ const About: React.FC = () => {
             <ResponsiveColumns columns={intro} />
             <Card
                 title="Frontend Development"
-                link="/experience"
+                link="/development"
                 imageSrc="/assets/images/frontend.svg"
             >
                 I excel in building products primarily around frontend technologies. The world of frontend moves fast, but my extensive experience with developing open source, rapid performance, and advanced UX/UI ensures that I can contribute effectively and stay updated with new tech.
             </Card>
             <Card
                 title="Backend Development"
-                link="/experience"
+                link="/development"
                 imageSrc="/assets/images/backend.svg"
             >
                 My backend stack includes TypeScript, Express, NodeJS, and MongoDB, ensuring your backend is robust and efficient. I can also assist with Python as when needed.
