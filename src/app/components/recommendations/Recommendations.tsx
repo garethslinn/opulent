@@ -12,6 +12,7 @@ import {
 } from './Recommendations.styles';
 import { RecommendationsProps } from "@/app/components/recommendations/Recommendations.types";
 import {useTheme} from "@/app/context/ThemeContext";
+import Image from "next/image";
 
 const Recommendations: React.FC<RecommendationsProps> = ({ recommendations }) => {
     const { currentTheme: { theme } } = useTheme();
@@ -41,7 +42,16 @@ const Recommendations: React.FC<RecommendationsProps> = ({ recommendations }) =>
                             </g>
                         </QuoteIcon>
                     </QuoteIconContainer>
-                    <Name id={`rec-name-${index}`}>{rec.Name}</Name>
+                    <Name id={`rec-name-${index}`}>
+                            <Image
+                                src={rec.image}
+                                alt={rec.Name}
+                                width={50}
+                                height={50}
+                                style={{ borderRadius: '50%', objectFit: 'cover' }}
+                            />
+
+                        <span>{rec.Name}</span></Name>
                     <Position>{rec.Position}</Position>
                     <Description>{rec.Description}</Description>
                     <ClosingQuoteContainer>

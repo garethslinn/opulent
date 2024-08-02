@@ -63,6 +63,11 @@ export const ClosingQuoteIcon = styled.svg`
 
 export const Name = styled.h2`
   margin: 0;
+  span {
+    position: relative;
+    left: 14px;
+    bottom: 7px;
+  }
 `;
 
 export const Position = styled.h4`

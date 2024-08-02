@@ -28,11 +28,11 @@ interface NavListProps {
 }
 
 const NavList: React.FC<NavListProps> = ({
-                                             isMenuOpen = false,
-                                             toggleMenu,
-                                             toggleTheme,
-                                             currentTheme,
-                                         }) => {
+         isMenuOpen = false,
+         toggleMenu,
+         toggleTheme,
+         currentTheme,
+     }) => {
     const [deviceType, width] = useDeviceType();
     const pathname = usePathname();
     const closeButtonRef = useRef<HTMLImageElement>(null);
