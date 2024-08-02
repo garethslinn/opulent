@@ -25,7 +25,7 @@ const Header: React.FC<HeaderProps> = ({ toggleTheme, currentTheme }) => {
     const [imageWidth, setImageWidth] = useState<number>(100);
 
     useEffect(() => {
-        const wd = deviceType === "tablet-lg" || deviceType === "tablet-sm" || deviceType === "mobile" ? 50 : 100;
+        const wd = deviceType === "tablet-lg" || deviceType === "tablet-sm" || deviceType === "mobile" ? 60 : 100;
         setImageWidth(wd);
     }, [deviceType]);
 
