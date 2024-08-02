@@ -33,12 +33,12 @@ export const Column = styled.div`
   }
 `;
 
-export const Logo = styled.div`
+export const Logo = styled.div<{ color: string }>`
   position: relative;
   width: 100%;
   height: 100px;
   margin-bottom: 15px;
-  background-color: ${({ theme }) => theme.colors.brandContainer};
+  background-color: ${({ color }) => color}; 
 `;
 
 export const Paragraph = styled.p`

@@ -15,6 +15,7 @@ interface ColumnData {
     logoWhite: string;
     description: string;
     link: string;
+    color: string;
 }
 
 interface ResponsiveColumnsProps {
@@ -27,12 +28,11 @@ const ResponsiveColumns: React.FC<ResponsiveColumnsProps> = ({ columns }) => {
 
     return (
         <Container>
-
             {columns && columns.map((column, index) => (
                 <Column key={index}>
-                    <Logo>
+                    <Logo color={column.color}>
                         <Image
-                            src={theme === 'light' ? column.logo : column.logoWhite}
+                            src={theme === 'light' ? column.logoWhite : column.logoWhite}
                             alt={`Logo for ${column.description}`}
                             layout="fill"
                             objectFit="contain"
