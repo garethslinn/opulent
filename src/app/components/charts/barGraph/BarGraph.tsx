@@ -30,19 +30,18 @@ const BarGraph: React.FC<BarGraphProps> = ({ data, subtext }) => {
 
     return (
         <FullWrapper>
-            <Accessible>
+            <GraphContainer>
                 <Subtext>{subtext}</Subtext>
-                <ol>
-                    {industryArr.map(({ key, industry, companiesLength }) => (
-                        <li key={key}>
-                            {industry}: {companiesLength}
-                        </li>
-                    ))}
-                </ol>
-            </Accessible>
-            <GraphContainer aria-hidden="true">
-                <Subtext>{subtext}</Subtext>
-                <BarContainer>
+                <Accessible>
+                    <ol>
+                        {industryArr.map(({ key, industry, companiesLength }) => (
+                            <li key={key}>
+                                {industry}: {companiesLength}
+                            </li>
+                        ))}
+                    </ol>
+                </Accessible>
+                <BarContainer aria-hidden="true">
                     {industryArr.map(({ key, industry, companiesLength }) => (
                         <BarWrapper key={key}>
                             <BarLabel id={`bar-label-${key}`}>{industry}</BarLabel>
