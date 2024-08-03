@@ -10,29 +10,46 @@ import {
     Bar,
     BarLabel,
     BarValue,
-    Subtext
+    Subtext,
+    Accessible
 } from './BarGraph.styles';
 
 const BarGraph: React.FC<BarGraphProps> = ({ data, subtext }) => {
-    const maxCompanies = Math.max(...data.map(industry => industry.companies.length));
+    const { maxCompanies, industryArr } = data.reduce((acc, industry, index) => {
+        const companiesLength = industry.companies.length;
+        if (companiesLength > acc.maxCompanies) {
+            acc.maxCompanies = companiesLength;
+        }
+        acc.industryArr.push({
+            key: index,
+            industry: industry.industry,
+            companiesLength: companiesLength,
+        });
+        return acc;
+    }, { maxCompanies: 0, industryArr: [] });
 
     return (
         <FullWrapper>
-            <GraphContainer role="img" aria-label={`Bar graph showing data on ${subtext}`}>
+            <Accessible>
+                <Subtext>{subtext}</Subtext>
+                <ol>
+                    {industryArr.map(({ key, industry, companiesLength }) => (
+                        <li key={key}>
+                            {industry}: {companiesLength}
+                        </li>
+                    ))}
+                </ol>
+            </Accessible>
+            <GraphContainer aria-hidden="true">
                 <Subtext>{subtext}</Subtext>
                 <BarContainer>
-                    {data.map((industry, index) => (
-                        <BarWrapper key={index} role="listitem">
-                            <BarLabel id={`bar-label-${index}`}>{industry.industry}</BarLabel>
+                    {industryArr.map(({ key, industry, companiesLength }) => (
+                        <BarWrapper key={key}>
+                            <BarLabel id={`bar-label-${key}`}>{industry}</BarLabel>
                             <Bar
-                                width={(industry.companies.length / maxCompanies) * 100}
-                                aria-labelledby={`bar-label-${index}`}
-                                role="progressbar"
-                                aria-valuenow={industry.companies.length}
-                                aria-valuemin={0}
-                                aria-valuemax={maxCompanies}
+                                width={(companiesLength / maxCompanies) * 100}
                             >
-                                <BarValue>{industry.companies.length}</BarValue>
+                                <BarValue>{companiesLength}</BarValue>
                             </Bar>
                         </BarWrapper>
                     ))}

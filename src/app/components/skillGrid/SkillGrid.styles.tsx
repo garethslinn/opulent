@@ -48,6 +48,11 @@ export const SkillImage = styled.img`
 export const SkillTitle = styled.div`
     flex: 1;
     font-size: 18px;
+      abbr[title] {
+        border-bottom: none; 
+        text-decoration: none;
+        cursor: pointer;
+      }
 `;
 
 export const SkillYears = styled.div`

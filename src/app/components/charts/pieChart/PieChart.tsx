@@ -13,7 +13,8 @@ import {
     LegendItem,
     LegendColor,
     LegendLabel,
-    Subtext
+    Subtext,
+    Accessible
 } from './PieChart.style';
 
 const colors = [
@@ -50,9 +51,18 @@ const PieChart: React.FC<PieChartProps> = ({ data, subtext }) => {
 
     return (
         <FullWrapper>
-            <ChartContainer role="img" aria-label={`Pie chart showing data on ${subtext}`}>
+            <ChartContainer>
                 <Subtext>{subtext}</Subtext>
-                <ChartContent>
+                <Accessible>
+                    <ol>
+                        {data.map((method, index) => (
+                            <li key={index}>
+                                {method.title}: {method.percent}%
+                            </li>
+                        ))}
+                    </ol>
+                </Accessible>
+                <ChartContent aria-hidden="true">
                     <SvgContainer>
                         <Svg viewBox="0 0 200 200">
                             {data.map((method, index) => {
@@ -65,9 +75,9 @@ const PieChart: React.FC<PieChartProps> = ({ data, subtext }) => {
                             })}
                         </Svg>
                     </SvgContainer>
-                    <LegendContainer role="list">
+                    <LegendContainer>
                         {data.map((method, index) => (
-                            <LegendItem key={index} role="listitem">
+                            <LegendItem key={index}>
                                 <LegendColor color={colors[index % colors.length]} />
                                 <LegendLabel>{method.title}: {method.percent}%</LegendLabel>
                             </LegendItem>

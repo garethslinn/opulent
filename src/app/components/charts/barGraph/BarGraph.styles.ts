@@ -9,6 +9,12 @@ export const FullWrapper = styled.div`
   }
 `;
 
+export const Accessible = styled.div`
+  position: absolute;
+  top: -4000px;
+`;
+
+
 export const GraphContainer = styled.div`
   display: flex;
   flex-direction: column;
