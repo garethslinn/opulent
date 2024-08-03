@@ -85,6 +85,7 @@ const QuoteTool: React.FC<{ quoteText?: string }> = ({ quoteText = "Professional
                         <QuoteText>{quoteText}</QuoteText>
                     </LeftColumn>
                     <RightColumn>
+                        accessibley
                         {deviceType === 'mobile' && <Title>{activeTitle}</Title>}
                         <Counter
                             activeIndex={activeIndex}

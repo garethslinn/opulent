@@ -3,5 +3,6 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/experience": "pages/experience.js",
-  "/case-studies": "pages/case-studies.js"
+  "/recommendations": "pages/recommendations.js",
+  "/open-source": "pages/open-source.js"
 }

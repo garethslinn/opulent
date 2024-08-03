@@ -15,7 +15,7 @@ export const BurgerMenuContainer = styled.div`
   cursor: pointer;
   z-index: 4000;
   display: none;
-  padding: 1px 10px;
+  padding: 5px 10px;
   
   @media (max-width: 1150px) {
     display: flex;
