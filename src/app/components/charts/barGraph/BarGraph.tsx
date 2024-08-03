@@ -14,8 +14,17 @@ import {
     Accessible
 } from './BarGraph.styles';
 
+interface Accumulator {
+    maxCompanies: number;
+    industryArr: {
+        key: number;
+        industry: string;
+        companiesLength: number;
+    }[];
+}
+
 const BarGraph: React.FC<BarGraphProps> = ({ data, subtext }) => {
-    const { maxCompanies, industryArr } = data.reduce((acc, industry, index) => {
+    const { maxCompanies, industryArr } = data.reduce<Accumulator>((acc, industry, index) => {
         const companiesLength = industry.companies.length;
         if (companiesLength > acc.maxCompanies) {
             acc.maxCompanies = companiesLength;
