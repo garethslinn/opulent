@@ -30,7 +30,8 @@ export const CloseButtonContainer = styled.div`
   padding: ${({ theme }) => theme.spacing.tiny};
   cursor: pointer;
   position: absolute;
-  top: ${({ theme }) => theme.spacing.tiny};
+  top: -4000px;
+  // top: ${({ theme }) => theme.spacing.tiny};
   right: ${({ theme }) => theme.spacing.tiny};
 `;
 
@@ -56,7 +57,7 @@ export const NavItem = styled.li`
   }
 `;
 
-export const NavLink = styled.a<{ isActive?: boolean }>`
+export const NavLink = styled.span<{ isActive?: boolean }>`
   text-decoration: none;
   font-size: ${({ theme }) => theme.fontSizes.large};
   transition: color 0.3s, border-bottom 0.3s;
