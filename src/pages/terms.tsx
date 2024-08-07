@@ -22,7 +22,7 @@ const Terms: React.FC = () => {
 
                 <h2>3. Services</h2>
                 <p>
-                    GDS Consulting Ltd provides [describe services]. We reserve the right to modify or discontinue the service with or without notice at any time.
+                    We reserve the right to modify or discontinue the service with or without notice at any time.
                 </p>
 
                 <h2>4. User Responsibilities</h2>
