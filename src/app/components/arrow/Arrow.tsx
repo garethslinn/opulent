@@ -17,6 +17,7 @@ const ArrowButton: React.FC<ArrowButtonProps> = ({ rotate = 0, fillColor = 'none
         hoverFillColor={hoverFillColor}
         aria-label={ariaLabel}
     >
+        <title>Arrow Navigiation</title>
         <svg
             viewBox="0 0 26 50"
             xmlns="http://www.w3.org/2000/svg"
