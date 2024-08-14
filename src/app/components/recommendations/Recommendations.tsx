@@ -27,6 +27,7 @@ const Recommendations: React.FC<RecommendationsProps> = ({ recommendations }) =>
                             viewBox="0 0 50 41"
                             xmlns="http://www.w3.org/2000/svg"
                         >
+                            <title>Opening quotation</title>
                             <g>
                                 <path
                                     style={{
@@ -61,6 +62,7 @@ const Recommendations: React.FC<RecommendationsProps> = ({ recommendations }) =>
                             viewBox="0 0 50 41"
                             xmlns="http://www.w3.org/2000/svg"
                         >
+                            <title>Closing quotation</title>
                             <g>
                                 <path
                                     style={{
