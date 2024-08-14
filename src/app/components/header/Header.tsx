@@ -49,7 +49,7 @@ const Header: React.FC<HeaderProps> = ({ toggleTheme, currentTheme }) => {
                 <SkipLink className="skip-link" href="#main">
                     Skip to main content
                 </SkipLink>
-                <Nav role="navigation" aria-label="Main Navigation">
+                <Nav aria-label="Main Navigation">
                     <LogoContainer>
                         <Link href="/" passHref aria-label="Homepage">
                             <Image
