@@ -38,8 +38,7 @@ const Tabs: React.FC<TabsProps> = ({ tabs }) => {
             </TabButtons>
             <TabContent
                 role="tabpanel"
-                id={`tabpanel-${activeTabIndex}`}
-                aria-labelledby={`tab-${activeTabIndex}`}
+                aria-labelledby={`tabpanel-${activeTabIndex}`}
             >
                 {tabs[activeTabIndex].content}
             </TabContent>
