@@ -29,6 +29,7 @@ const Tabs: React.FC<TabsProps> = ({ tabs }) => {
                         role="tab"
                         aria-selected={activeTabIndex === index}
                         aria-controls={`tabpanel-${index}`}
+                        aria-labelledby={`tabpanel-${activeTabIndex}`}
                         onClick={() => handleTabClick(index)}
                         isActive={activeTabIndex === index}
                     >
@@ -38,7 +39,7 @@ const Tabs: React.FC<TabsProps> = ({ tabs }) => {
             </TabButtons>
             <TabContent
                 role="tabpanel"
-                aria-labelledby={`tabpanel-${activeTabIndex}`}
+                id={`tabpanel-${activeTabIndex}`}
             >
                 {tabs[activeTabIndex].content}
             </TabContent>
