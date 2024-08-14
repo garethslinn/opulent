@@ -70,7 +70,7 @@ export const Name = styled.h2`
   }
 `;
 
-export const Position = styled.h4`
+export const Position = styled.h3`
   margin: 5px 0;
 `;
 
